@@ -1,11 +1,17 @@
 @font-face {
-  font-family: "Open sans";
-  font-weight: 400;
-  src: url(../fonts/opensans.woff2), url(../fonts/opensans.woff);
+  font-family: "Trivia sans";
+  font-weight: 100;
+  src: url(../fonts/TriviaSansLight.otf);
 }
 
 @font-face {
-  font-family: "Open sans";
+  font-family: "Trivia sans";
+  font-weight: 400;
+  src: url(../fonts/TriviaSansRegular.otf);
+}
+
+@font-face {
+  font-family: "Trivia sans";
   font-weight: 700;
-  src: url(../fonts/opensansbold.woff2), url(../fonts/opensansbold.woff);
+  src: url(../fonts/TriviaSansRegular-Bold.otf);
 }

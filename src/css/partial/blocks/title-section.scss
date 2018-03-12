@@ -1,0 +1,27 @@
+.title-section {
+  @extend %grid-padding;
+  @extend %container;
+  &--main {
+    background-image: url(../img/index-women.png);
+    padding-bottom: 20px;
+    background-repeat: no-repeat;
+    background-position: 77px 100%;
+  }
+  &__sub-text {
+    padding-right: 51px;
+  }
+  &__link {
+    display: block;
+    margin-top: 140px;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #fff;
+    font-weight: 700;
+    font-size: 15px;
+    text-align: center;
+    padding-top: 12px;
+    padding-bottom: 8px;
+    border-radius: 50px;
+    background-image: linear-gradient(to right, #dc4506, #fe8764);
+  }
+}

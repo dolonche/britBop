@@ -2,4 +2,9 @@
 @import 'partial/global/fonts';
 @import 'partial/global/variable';
 @import 'partial/global/mixins';
-@import 'partial/blocks/heade';
+@import 'partial/global/common';
+@import 'partial/blocks/page';
+@import 'partial/blocks/page-header';
+@import 'partial/blocks/main-nav';
+@import 'partial/blocks/title-section';
+@import 'partial/blocks/lesson-level';
