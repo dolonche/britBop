@@ -1,9 +1,48 @@
 .main-nav {
   border-right: 1px solid $lines-color;
   padding-right: 20px;
+}
+
+.main-nav__list {
+  position: absolute;
+  left: 0;
+  top: 0;
+  background-color: #445;
+  padding: 0;
+  margin: 0;
+  padding-top: 30px;
+  padding-left: 19px;
+  padding-right: 13px;
+  list-style: none;
+  &-item {
+    padding-top: 13px;
+    padding-bottom: 13px;
+    &-arrow {
+      display: block;
+      float: right;
+      font-size: 0;
+      width: 6px;
+      height: 6px;
+      border-bottom: 2px solid #fff;
+      border-left: 2px solid #fff;
+      margin-left: 40px;
+      margin-top: 6px;
+      transform: rotate(-135deg);
+    }
+    & > a {
+      color: #fff;
+      text-transform: uppercase;
+    }
+  }
+  a {
+    text-decoration: none;
+  }
+  &-level1 {
+    list-style: none;
+  }
   &--closed {
     .main-nav__list {
-      display: none;
+      //      display: none;
     }
   }
   &--opened {
