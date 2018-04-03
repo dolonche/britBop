@@ -4,12 +4,14 @@
 	"description": "Start pack for Front-end develop",
 	"author": "Ivan Ivanov",
 	"license": "MIT",
-	"dependencies": {},
+	"dependencies": {
+		"npm": "^5.8.0"
+	},
 	"scripts": {
 		"gulp": "gulp"
 	},
 	"devDependencies": {
-		"gulp": "latest",
+		"gulp": "^3.9.1",
 		"gulp-autoprefixer": "latest",
 		"gulp-connect": "^5.2.0",
 		"gulp-imagemin": "latest",
