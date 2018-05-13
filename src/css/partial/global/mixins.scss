@@ -1,14 +1,27 @@
-$base-font: "Helvetica","Arial",sans-serif;
+$base-font: "Helvetica", "Arial", sans-serif;
 $lines-color: #dddddd;
 $text-color: #000000;
+$orange: #dc4405;
+$brown: #603d20;
 $cream: #efd19f;
-$background: #ebecf3;
+$bg-grey: #ebecf3;
+$texty: #000;
+$text-light: #333;
+$lines-white: #ddd;
+$lines-grey: #dde;
+$titles: #bbc;
+$dividers: #667;
+$bg-insta: #556;
+$bg-foot: #445;
+$white: #fff;
+
 @mixin font($font-size: 16px, $line-height: 24px, $font-weight: 400, $color: $text-color) {
   font-size: $font-size;
   line-height: $line-height;
   font-weight: $font-weight;
   color: $color;
 }
+
 %clearfix {
   &::after {
     content: "";
@@ -16,11 +29,13 @@ $background: #ebecf3;
     clear: both;
   }
 }
-%grid-padding{
+
+%grid-padding {
   box-sizing: border-box;
   padding-left: 20px;
   padding-right: 20px;
 }
+
 %center {
   position: absolute;
   top: 50%;
@@ -31,9 +46,11 @@ $background: #ebecf3;
 %container {
   width: 320px;
   margin: 0 auto;
+
   @media #{$tablet-widths} {
     width: 768px;
   }
+
   @media #{$desktop-widths} {
     width: 1200px;
   }
