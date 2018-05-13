@@ -1,0 +1,24 @@
+.welcome {
+  @extend %grid-padding;
+
+  background-image: url(../img/index-women.png);
+  padding-bottom: 20px;
+  background-repeat: no-repeat;
+  background-position: 77px 100%;
+  position: relative;
+  overflow: hidden;
+
+  &__title {
+
+  }
+
+  &__descr {
+    padding: 0 51px 140px 0;
+  }
+
+  &__link {
+    position: absolute;
+    bottom: 20px;
+    width: 87%;
+  }
+}

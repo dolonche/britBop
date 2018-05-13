@@ -1,78 +1,168 @@
-.main-nav {
+.page-header__bar {
+  position: relative;
+}
+
+.mnav {
   border-right: 1px solid $lines-color;
   padding-right: 20px;
+
+  &--closed {
+    .mnav__menu {
+      display: none;
+    }
+  }
+
+  &--opened {
+    .mnav__menu {
+      display: block;
+    }
+  }
 }
 
-.main-nav__list {
+.mnav__menu > .mnav__menu-item > a {
+  text-transform: uppercase;
+}
+
+.mnav__menu {
+  width: 90%;
   position: absolute;
   left: 0;
-  top: 0;
-  background-color: #445;
-  padding: 0;
+  top: 50px;
+  background-color: $bg-foot;
   margin: 0;
-  padding-top: 30px;
-  padding-left: 19px;
-  padding-right: 13px;
+  padding: 0 0 9px 0;
   list-style: none;
+  z-index: 100;
+
   &-item {
-    padding-top: 13px;
-    padding-bottom: 13px;
-    &-arrow {
-      display: block;
-      float: right;
-      font-size: 0;
-      width: 6px;
-      height: 6px;
-      border-bottom: 2px solid #fff;
-      border-left: 2px solid #fff;
-      margin-left: 40px;
-      margin-top: 6px;
-      transform: rotate(-135deg);
-    }
-    & > a {
-      color: #fff;
-      text-transform: uppercase;
-    }
-  }
-  a {
-    text-decoration: none;
-  }
-  &-level1 {
-    list-style: none;
-  }
-  &--closed {
-    .main-nav__list {
-      //      display: none;
-    }
-  }
-  &--opened {
-    .main-nav__list {
+    padding: 0;
+    position: relative;
+
+    span.parent {
       display: block;
       position: absolute;
-      top: 100%;
-      left: 0;
-      width: 100%;
+      right: 15px;
+      top: 15px;
+      width: 5px;
+      height: 5px;
+      border-right: 2px solid $white;
+      border-bottom: 2px solid $white;
+      transform: rotate(-45deg);
+
+      &::after {
+        content: "";
+        display: block;
+        width: 15px;
+        height: 15px;
+        padding: 5px 0 0 5px;
+        margin: -5px 0 0 -5px;
+      }
+
+      &:hover {
+        border-color: $orange;
+      }
+    }
+
+    &--closed {
+      .mnav__menu-stage2, .mnav__menu-stage3 {
+        display: none;
+      }
+
+      & > a span.parent {
+        transform: rotate(-45deg);
+      }
+    }
+
+    &--opened {
+      background-color: $bg-insta;
+
+      & > a span.parent {
+        transform: rotate(45deg);
+      }
+    }
+
+    a {
+      position: relative;
+      text-decoration: none;
+      padding: 9px 4px 9px 18px;
+      font-size: 13px;
+      color: $white;
+      display: block;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+
+    &.active > a {
+      color: $cream;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  &-stage2 {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    a {
+      color: $titles;
+      padding: 4px 4px 4px 18px;
+    }
+  }
+
+  &-stage3 {
+    list-style: none;
+    padding: 4px 0;
+    border-top: 1px solid $dividers;
+
+    a {
+      padding: 4px 4px 4px 38px;
     }
   }
 }
 
-.main-nav__toggle {
-  margin-top: 17px;
-  height: 15px;
+.mnav__toggle {
+  margin-top: 23px;
+  height: 2px;
   width: 20px;
   font-size: 0;
-  background-color: transparent;
+  background-color: #000;
   border: none;
   cursor: pointer;
   position: relative;
-  &::after {
+  transition: 0.3s background-color;
+
+  &:before, &:after {
     content: "";
     position: absolute;
     width: 20px;
     height: 2px;
     background-color: #000;
     right: 0;
-    top: 0;
-    box-shadow: 0 6px 0 0 #000, 0 12px 0 0 #000;
+    transition: 0.3s transform;
+  }
+
+  &::before {
+    top: -6px;
+  }
+
+  &::after {
+    top: 6px;
+  }
+}
+
+.mnav__toggle--opened {
+  background-color: transparent;
+
+  &::before {
+    transform: rotate(45deg) translate(4px, 4px);
+  }
+
+  &::after {
+    transform: rotate(-45deg) translate(4px, -4px);
   }
 }
