@@ -1,9 +1,6 @@
-.page-header {
-  @extend %container;
-}
-
 .page-header__logo {
   @extend %grid-padding;
+
   img {
     width: 200px;
     margin-top: 22px;
@@ -12,16 +9,19 @@
 
 .page-header__bar {
   @extend %grid-padding;
+
   display: flex;
   border-top: 1px solid $lines-color;
   border-bottom: 1px solid $lines-color;
-  &-search{
+
+  &-search {
     margin-left: auto;
     padding-top: 15px;
     padding-bottom: 7px;
     padding-left: 20px;
     border-left: 1px solid $lines-color;
-    img{
+
+    img {
       width: 19px;
       height: 19px;
     }

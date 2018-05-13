@@ -1,76 +1,189 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-  <meta charset="UTF-8">
-  <title>Document</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="css/styles.min.css">
-</head>
-
-<body class="page">
-  <div class="page-header__wrapper">
-    <header class="page-header">
-      <div class="page-header__logo"><img src="img/logo.png" alt=""></div>
-      <div class="page-header__bar">
-        <nav class="main-nav main-nav--closed main-nav--no-js">
-          <button class="main-nav__toggle" type="button">Открыть меню</button>
-          <ul class="main-nav__list">
-            <li class="main-nav__list-item"><a href="">Курсы для начинающих <span class="main-nav__list-item-arrow"></span></a>
-              <ul class="main-nav__list-level1">
-                <li class="main-nav__list-level1-item"><a href="">Британская классика</a></li>
-                <li class="main-nav__list-level1-item"><a href=""></a></li>
-                <li class="main-nav__list-level1-item"><a href=""></a></li>
+  <head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.min.css">
+  </head>
+  <body>
+    <div class="container">
+      <header class="page-header">
+          <div class="page-header__logo"><img src="img/logo-britbob.png" alt="Britbob logo"></div>
+          <div class="page-header__bar">
+            <nav class="mnav mnav--closed mnav--no-js">
+              <button class="mnav__toggle mnav__toggle--closed" type="button">Открыть меню</button>
+              <ul class="mnav__menu">
+                <li class="mnav__menu-item mnav__menu-item--opened parent">
+                  <a href="">Курсы для начинающих<span class=" parent"><span></a>
+                  <ul class="mnav__menu-stage2">
+                    <li class="mnav__menu-item"><a href="">Британская классика</a></li>
+                    <li class="mnav__menu-item"><a href="">Причёски из длинных волос</a></li>
+                    <li class="mnav__menu-item"><a href="">Техники окрашивания волос</a></li>
+                  </ul>
+                </li>
+                <li class="mnav__menu-item parent"><a href="">Курсы для практикующих</a></li>
+                <li class="mnav__menu-item parent"><a href="">Иностранные специалисты</a></li>
+                <li class="mnav__menu-item"><a href="">Расписание</a></li>
+                <li class="mnav__menu-item mnav__menu-item--opened">
+                  <a href="">Магазин<span class=" parent"><span></a>
+                  <ul class="mnav__menu-stage2">
+                    <li class="mnav__menu-item mnav__menu-item--closed">
+                      <a href="">Категория 1<span class=" parent"><span></a>
+                      <ul class="mnav__menu-stage3">
+                        <li class="mnav__menu-item"><a href="">Пунтк 3го уровня 1</a></li>
+                        <li class="mnav__menu-item"><a href="">Пунтк 3го уровня 2</a></li>
+                        <li class="mnav__menu-item"><a href="">Пунтк 3го уровня 3</a></li>
+                      </ul>
+                    </li>
+                    <li class="mnav__menu-item mnav__menu-item--opened">
+                      <a href="">Категория 2<span class=" parent"><span></a>
+                      <ul class="mnav__menu-stage3">
+                        <li class="mnav__menu-item"><a href="">Пунтк 3го уровня 1</a></li>
+                        <li class="mnav__menu-item active"><a href="">Пунтк 3го уровня 2</a></li>
+                      </ul>
+                    </li>
+                  </ul>
+                </li>
+                <li class="mnav__menu-item"><a href="">Блог</a></li>
+                <li class="mnav__menu-item"><a href="">Наша школа</a></li>
               </ul>
-            </li>
-            <li class="main-nav__list-item"><a href="">Курсы для начинающих</a></li>
-            <li class="main-nav__list-item"><a href="">Курсы для начинающих</a></li>
-            <li class="main-nav__list-item"><a href="">Курсы для начинающих</a></li>
-            <li class="main-nav__list-item"><a href="">Курсы для начинающих</a></li>
-            <li class="main-nav__list-item"><a href="">Курсы для начинающих</a></li>
-            <li class="main-nav__list-item"><a href="">Курсы для начинающих</a></li>
-            <li class="main-nav__list-item"><a href="">Курсы для начинающих</a></li>
-          </ul>
-        </nav>
-        <div class="page-header__bar-search"><img src="img/search.svg" alt=""></div>
-      </div>
-    </header>
-  </div>
-  <div class="title-section__wrapper">
-    <section class="title-section title-section--main">
-      <h1 class="title-section__main-text">Профессиональная школа BritBob <br>для парикмахеров</h1>
-      <p class="title-section__sub-text">Британские техники <br> и качественное образование для начинающих <br>и для практикующих парикмахеров</p>
-      <a href="" class="title-section__link">Расписание курсов</a>
-    </section>
-  </div>
-  <div class="lesson-level__wrapper">
-    <section class="lesson-level">
-      <div class="lesson-level__item">
-        <img src="img/level-1.png" alt="" class="lesson-level__item-image">
-        <div class="lesson-level__item-title">
-          <span class="lesson-level__item-value">Уровень 1</span>
-          <h2 class="lesson-level__item-name">Курсы для начинающих парикмахеров</h2>
-        </div>
-        <div class="lesson-level__item-features">
-          <div class="lesson-level__item-features-descr lesson-level__item-features-descr--background">
-            <b class="lesson-level__item-features-descr-title">Британская классика</b>
-            <p class="lesson-level__item-features-descr-content">Базовый курс для обучения начинающих с нуля</p>
+            </nav>
+            <div class="page-header__bar-search"><img src="img/search.svg" alt=""></div>
           </div>
-          <div class="lesson-level__item-features-descr">
-            <b class="lesson-level__item-features-descr-title">Прически из длинных волос</b>
-            <p class="lesson-level__item-features-descr-content">Вечерние, свадебные укладки, прически для начинающих</p>
+        </header>
+      <section class="welcome">
+        <h1 class="welcome__title">Профессиональная школа BritBob <br>для парикмахеров</h1>
+        <p class="welcome__descr">Британские техники <br> и качественное образование для начинающих <br>и практикующих парикмахеров</p>
+        <a href="" class="button-link welcome__link">Расписание курсов<span class="button-link__arrow-r"></span></a>
+      </section>
+      <section class="lvls">
+        <article class="lvls__lvl">
+          <header class="lvls__lvl-header lvls__lvl-header--1">
+            <p class="lvls__lvl-value"><span class="lvls__lvl-value-inner">Уровень 1</span></p>
+            <h2 class="lvls__lvl-header-title">Курсы для начинающих парикмахеров</h2>
+          </header>
+          <div class="lvls__lvl-content">
+            <a class="lvls__lvl-content-link">
+              <article class="lvls__lvl-item">
+                <h3 class="lvls__lvl-item-title">Британская классика</h3>
+                <p class="lvls__lvl-item-descr">Базовый курс для обучения начинающих с нуля</p>
+              </article>
+            </a>
+            <a class="lvls__lvl-content-link">
+              <article class="lvls__lvl-item">
+                <h3 class="lvls__lvl-item-title">Прически из длинных волос</h3>
+                <p class="lvls__lvl-item-descr">Вечерние, свадебные укладки, прически для начинающих</p>
+              </article>
+            </a>
+            <a class="lvls__lvl-content-link">
+              <article class="lvls__lvl-item">
+                <h3 class="lvls__lvl-item-title">Техники окрашивания волос</h3>
+                <p class="lvls__lvl-item-descr">Обучение новым техникам. Тренинги для молодых колористов</p>
+              </article>
+            </a>
           </div>
-          <div class="lesson-level__item-features-descr">
-            <b class="lesson-level__item-features-descr-title">Техники окрашивания волос</b>
-            <p class="lesson-level__item-features-descr-content">Обучение новым техникам. Тренинги для молодых колористов</p>
+        </article>
+        <article class="lvls__lvl">
+          <header class="lvls__lvl-header lvls__lvl-header--2">
+            <p class="lvls__lvl-value"><span class="lvls__lvl-value-inner">Уровень 2</span></p>
+            <h2 class="lvls__lvl-header-title">Курсы для практикующих парикмахеров</h2>
+          </header>
+          <div class="lvls__lvl-content">
+            <a class="lvls__lvl-content-link">
+              <article class="lvls__lvl-item">
+                <h3 class="lvls__lvl-item-title">Мастер классы</h3>
+                <p class="lvls__lvl-item-descr">Семинары и мастер классы по стрижкам и окрашиванию</p>
+              </article>
+            </a>
+            <a class="lvls__lvl-content-link">
+              <article class="lvls__lvl-item">
+                <h3 class="lvls__lvl-item-title">Семинары по колористике</h3>
+                <p class="lvls__lvl-item-descr">Семинары по техникам окрашивания и цветотипированию</p>
+              </article>
+            </a>
+            <a class="lvls__lvl-content-link">
+              <article class="lvls__lvl-item">
+                <h3 class="lvls__lvl-item-title">Индивидуальные тренинги</h3>
+                <p class="lvls__lvl-item-descr">Интенсивные тренинги для парикмахеров, тема по запросу</p>
+              </article>
+            </a>
           </div>
-        </div>
-      </div>
-      <div class="lesson-level__item"></div>
-      <div class="lesson-level__item"></div>
-    </section>
-  </div>
-  
-</body>
-
+        </article>
+        <article class="lvls__lvl">
+          <header class="lvls__lvl-header lvls__lvl-header--3">
+            <p class="lvls__lvl-value"><span class="lvls__lvl-value-inner">Уровень 3</span></p>
+            <h2 class="lvls__lvl-header-title">Курсы иностранных специалистов <br>(с переводчиком)</h2>
+          </header>
+          <div class="lvls__lvl-content">
+            <a class="lvls__lvl-content-link">
+              <article class="lvls__lvl-item">
+                <h3 class="lvls__lvl-item-title">Vidal Sassoon Academy</h3>
+              </article>
+            </a>
+            <a class="lvls__lvl-content-link">
+              <article class="lvls__lvl-item">
+                <h3 class="lvls__lvl-item-title">ZGAT</h3>
+              </article>
+            </a>
+            <a class="lvls__lvl-content-link">
+              <article class="lvls__lvl-item">
+                <h3 class="lvls__lvl-item-title">Jan Przhemyk</h3>
+              </article>
+            </a>
+            <a class="lvls__lvl-content-link">
+              <article class="lvls__lvl-item">
+                <h3 class="lvls__lvl-item-title">Kim Martin</h3>
+              </article>
+            </a>
+          </div>
+        </article>
+      </section>
+      <footer class="page-footer">
+      	<div class="page-footer__title">Контакты</div>
+      	<div class="page-footer__contacts">
+      		<div class="page-footer__contacts-bunch">
+      			<div class="page-footer__contacts-bunch-left">Адрес:</div>
+      			<div class="page-footer__contacts-bunch-right">Москва, Малая Дмитровка 23/15</div>
+      		</div>
+      		<div class="page-footer__contacts-bunch">
+      			<div class="page-footer__contacts-bunch-left">E-mail:</div>
+      			<div class="page-footer__contacts-bunch-right"><a href="mailto:info@britbob.ru">info@britbob.ru</a></div>
+      		</div>
+      		<div class="page-footer__contacts-bunch">
+      			<div class="page-footer__contacts-bunch-left">Тел.:</div>
+      			<div class="page-footer__contacts-bunch-right">+7 (495) 215 03 32</div>
+      		</div>
+      		<div class="page-footer__contacts-bunch">
+      			<div class="page-footer__contacts-bunch-left">Моб.:</div>
+      			<div class="page-footer__contacts-bunch-right">+7 (965) 277 26 48</div>
+      		</div>
+      	</div>
+      	<div class="page-footer__title">Социальные сети</div>
+      	<div class="page-footer__social">
+      		<a href="https://www.facebook.com/britbobschool" class="page-footer__social-item page-footer__social-item--facebook"></a>
+      		<a href="https://vk.com/britbob" class="page-footer__social-item page-footer__social-item--vk"></a>
+      		<a href="https://www.youtube.com/channel/UCGpOYfMWv7djf83iHIq9sZQ" class="page-footer__social-item page-footer__social-item--youtube"></a>
+      		<a href="https://www.instagram.com/brit_bob/" class="page-footer__social-item page-footer__social-item--insta"></a>
+      	</div>
+      	<div class="page-footer__title">Принимаем к оплате</div>
+      	<div class="page-footer__payment">
+      		<div class="page-footer__payment-item page-footer__payment-item--visa"></div>
+      		<div class="page-footer__payment-item page-footer__payment-item--mastercard"></div>
+      		<div class="page-footer__payment-item page-footer__payment-item--maestro"></div>
+      		<div class="page-footer__payment-item page-footer__payment-item--sber"></div>
+      	</div>
+      	<nav class="page-footer__nav">
+      		<ul class="page-footer__nav-menu">
+      			<li class="page-footer__nav-menu-item"><a href>Политика конфиденциальности</a></li>
+      			<li class="page-footer__nav-menu-item"><a href>Карта сайта</a></li>
+      			<li class="page-footer__nav-menu-item"><a href>Контакты</a></li>
+      			<li class="page-footer__nav-menu-item"><a href>О компании</a></li>
+      			<li class="page-footer__nav-menu-item"><a href>Реквизиты</a></li>
+      		</ul>
+      	</nav>
+      	<div class="page-footer__copyright">&copy; Britbob 2010-2018</div>
+      </footer>
+    </div>
+  </body>
 </html>

@@ -1,0 +1,90 @@
+.lvls__lvl {
+  position: relative;
+
+  &-header {
+    @extend %grid-padding;
+
+    border-bottom-left-radius: 160px 20px;
+    border-bottom-right-radius: 160px 20px;
+    overflow: hidden;
+    z-index: 3;
+    position: relative;
+    box-sizing: border-box;
+    height: 240px;
+
+    &--1 {
+      background: url(../img/level1-bg.png) 50% 0 no-repeat;
+    }
+
+    &--2 {
+      background: url(../img/level2-bg.png) 50% 0 no-repeat;
+    }
+
+    &--3 {
+      background: url(../img/level3-bg.png) 50% 0 no-repeat;
+    }
+
+    &-title {
+      color: $white;
+      margin-top: 10px;
+    }
+  }
+
+  &-value {
+    color: $cream;
+    text-transform: uppercase;
+    font-size: 12px;
+    margin-top: 35px;
+
+    &-inner {
+      border-bottom: 2px solid $cream;
+      padding-bottom: 5px;
+    }
+  }
+
+  &-content {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+
+    &-link {
+      @extend %grid-padding;
+
+      border-bottom: 2px solid $lines-color;
+      z-index: 2;
+
+      &:hover {
+        background-color: $bg-grey;
+        cursor: pointer;
+      }
+
+      &:first-child {
+        margin-top: -20px;
+
+        .lvls__lvl-item-title {
+          padding-top: 20px;
+        }
+      }
+
+      &:last-child {
+        border-bottom: 0;
+      }
+    }
+  }
+
+  &-item {
+    &-title {
+      text-transform: uppercase;
+      font-size: 15px;
+      margin-top: 20px;
+      margin-bottom: 5px;
+    }
+
+    &-descr {
+      margin-top: 0;
+      line-height: 20px;
+      font-size: 16px;
+      color: #333;
+    }
+  }
+}

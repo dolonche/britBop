@@ -1,0 +1,160 @@
+.page-footer {
+  background-color: $bg-foot;
+  color: $white;
+  overflow: hidden;
+  padding-top: 20px;
+
+  & a {
+    text-decoration: none;
+    color: $white;
+
+    &:hover {
+      color: $dividers;
+    }
+  }
+
+  &__title {
+    @extend %grid-padding;
+
+    color: $titles;
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: 700;
+    margin: 10px 0;
+  }
+
+  &__contacts {
+    @extend %grid-padding;
+
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 35px;
+
+    &-bunch {
+      display: flex;
+      flex-direction: row;
+
+      &-left {
+        width: 60px;
+        font-size: 16px;
+      }
+
+      &-right {
+        font-size: 14px;
+        font-weight: 100;
+      }
+    }
+  }
+
+  &__nav {
+    @extend %grid-padding;
+
+    border-top: 1px solid $dividers;
+    border-bottom: 1px solid $dividers;
+    padding-top: 10px;
+    padding-bottom: 10px;
+
+    &-menu {
+      list-style: none;
+      padding-left: 0;
+
+      a {
+        text-transform: uppercase;
+        font-size: 13px;
+        font-weight: 100;
+      }
+    }
+  }
+
+  &__copyright {
+    @extend %grid-padding;
+
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+
+  &__social {
+    @extend %grid-padding;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 35px;
+
+    &-item {
+      display: block;
+      width: 51px;
+      height: 51px;
+      background-position: 0;
+      background-repeat: no-repeat;
+
+      &--facebook {
+        background-image: url(../img/facebook.svg);
+
+        &:hover {
+          background-image: url(../img/facebook-h.svg);
+        }
+      }
+
+      &--vk {
+        background-image: url(../img/vk.svg);
+
+        &:hover {
+          background-image: url(../img/vk-h.svg);
+        }
+      }
+
+      &--youtube {
+        background-image: url(../img/youtube.svg);
+
+        &:hover {
+          background-image: url(../img/youtube-h.svg);
+        }
+      }
+
+      &--insta {
+        background-image: url(../img/insta.svg);
+
+        &:hover {
+          background-image: url(../img/insta-h.svg);
+        }
+      }
+    }
+  }
+
+  &__payment {
+    @extend %grid-padding;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 35px;
+
+    &-item {
+      display: block;
+      height: 32px;
+      background-repeat: no-repeat;
+      background-image: url(../img/payment-sprite.png);
+
+      &--visa {
+        width: 79px;
+        background-position: 0;
+      }
+
+      &--mastercard {
+        width: 54px;
+        background-position: -79px 0;
+      }
+
+      &--maestro {
+        width: 53px;
+        background-position: -133px 0;
+      }
+
+      &--sber {
+        width: 30px;
+        background-position: -186px 0;
+      }
+    }
+  }
+}
