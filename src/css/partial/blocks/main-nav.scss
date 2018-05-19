@@ -36,13 +36,15 @@
 
   &-item {
     padding: 0;
-    position: relative;
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: space-between;
 
     span.parent {
       display: block;
-      position: absolute;
-      right: 15px;
-      top: 15px;
+      margin-top: -5px;
+      margin-right: 15px;
       width: 5px;
       height: 5px;
       border-right: 2px solid $white;
@@ -52,10 +54,10 @@
       &::after {
         content: "";
         display: block;
-        width: 15px;
-        height: 15px;
+        width: 18px;
+        height: 18px;
         padding: 5px 0 0 5px;
-        margin: -5px 0 0 -5px;
+        margin: -8px 0 0 -8px;
       }
 
       &:hover {
@@ -63,12 +65,16 @@
       }
     }
 
+    & > .mnav__menu-stage2, & > .mnav__menu-stage3 {
+      display: none;
+    }
+
     &--closed {
       .mnav__menu-stage2, .mnav__menu-stage3 {
         display: none;
       }
 
-      & > a span.parent {
+      & > span.parent {
         transform: rotate(-45deg);
       }
     }
@@ -76,18 +82,22 @@
     &--opened {
       background-color: $bg-insta;
 
-      & > a span.parent {
+      & > .mnav__menu-stage2, & > .mnav__menu-stage3 {
+        display: block;
+      }
+
+      & > span.parent {
         transform: rotate(45deg);
       }
     }
 
     a {
-      position: relative;
       text-decoration: none;
       padding: 9px 4px 9px 18px;
       font-size: 13px;
       color: $white;
       display: block;
+      width: 80%;
 
       &:hover {
         text-decoration: underline;
@@ -107,6 +117,7 @@
     list-style: none;
     margin: 0;
     padding: 0;
+    width: 100%;
 
     a {
       color: $titles;
@@ -118,6 +129,7 @@
     list-style: none;
     padding: 4px 0;
     border-top: 1px solid $dividers;
+    width: 100%;
 
     a {
       padding: 4px 4px 4px 38px;
@@ -129,6 +141,7 @@
   margin-top: 23px;
   height: 2px;
   width: 20px;
+  padding: 0;
   font-size: 0;
   background-color: #000;
   border: none;
@@ -141,6 +154,7 @@
     position: absolute;
     width: 20px;
     height: 2px;
+    padding: 0;
     background-color: #000;
     right: 0;
     transition: 0.3s transform;
