@@ -34,6 +34,34 @@ $white: #fff;
   box-sizing: border-box;
   padding-left: 20px;
   padding-right: 20px;
+
+  @media #{$tablet-widths} {
+    padding-left: 94px;
+    padding-right: 94px;
+  }
+}
+
+%grid-padding20 {
+  box-sizing: border-box;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+%grid-padding20-footer {
+  box-sizing: border-box;
+  padding-left: 20px;
+  padding-right: 20px;
+
+  @media #{$tablet-widths} {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+%grid-margin {
+  box-sizing: border-box;
+  margin-left: 94px;
+  margin-right: 94px;
 }
 
 %center {
@@ -46,6 +74,7 @@ $white: #fff;
 %container {
   width: 320px;
   margin: 0 auto;
+  box-sizing: border-box;
 
   @media #{$tablet-widths} {
     width: 768px;

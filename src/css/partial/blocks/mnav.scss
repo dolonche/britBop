@@ -180,3 +180,19 @@
     transform: rotate(-45deg) translate(4px, -4px);
   }
 }
+
+@media #{$tablet-widths} {
+  .mnav {
+    &__menu {
+      width: 40%;
+    }
+  }
+}
+
+@media #{$desktop-widths} {
+  .mnav {
+    &__menu {
+      width: 25%;
+    }
+  }
+}

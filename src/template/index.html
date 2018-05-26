@@ -9,93 +9,129 @@
   <body>
     <div class="container">
       //= include/header.html
-      <section class="welcome">
-        <h1 class="welcome__title">Профессиональная школа BritBob <br>для парикмахеров</h1>
-        <p class="welcome__descr">Британские техники <br> и качественное образование для начинающих <br>и практикующих парикмахеров</p>
-        <a href="" class="button-link welcome__link">Расписание курсов<span class="button-link__arrow-r"></span></a>
-      </section>
-      <section class="lvls">
-        <article class="lvls__lvl">
-          <header class="lvls__lvl-header lvls__lvl-header--1">
-            <p class="lvls__lvl-value"><span class="lvls__lvl-value-inner">Уровень 1</span></p>
-            <h2 class="lvls__lvl-header-title">Курсы для начинающих парикмахеров</h2>
-          </header>
-          <div class="lvls__lvl-content">
-            <a class="lvls__lvl-content-link">
-              <article class="lvls__lvl-item">
-                <h3 class="lvls__lvl-item-title">Британская классика</h3>
-                <p class="lvls__lvl-item-descr">Базовый курс для обучения начинающих с нуля</p>
-              </article>
-            </a>
-            <a class="lvls__lvl-content-link">
-              <article class="lvls__lvl-item">
-                <h3 class="lvls__lvl-item-title">Прически из длинных волос</h3>
-                <p class="lvls__lvl-item-descr">Вечерние, свадебные укладки, прически для начинающих</p>
-              </article>
-            </a>
-            <a class="lvls__lvl-content-link">
-              <article class="lvls__lvl-item">
-                <h3 class="lvls__lvl-item-title">Техники окрашивания волос</h3>
-                <p class="lvls__lvl-item-descr">Обучение новым техникам. Тренинги для молодых колористов</p>
-              </article>
-            </a>
-          </div>
-        </article>
-        <article class="lvls__lvl">
-          <header class="lvls__lvl-header lvls__lvl-header--2">
-            <p class="lvls__lvl-value"><span class="lvls__lvl-value-inner">Уровень 2</span></p>
-            <h2 class="lvls__lvl-header-title">Курсы для практикующих парикмахеров</h2>
-          </header>
-          <div class="lvls__lvl-content">
-            <a class="lvls__lvl-content-link">
-              <article class="lvls__lvl-item">
-                <h3 class="lvls__lvl-item-title">Мастер классы</h3>
-                <p class="lvls__lvl-item-descr">Семинары и мастер классы по стрижкам и окрашиванию</p>
-              </article>
-            </a>
-            <a class="lvls__lvl-content-link">
-              <article class="lvls__lvl-item">
-                <h3 class="lvls__lvl-item-title">Семинары по колористике</h3>
-                <p class="lvls__lvl-item-descr">Семинары по техникам окрашивания и цветотипированию</p>
-              </article>
-            </a>
-            <a class="lvls__lvl-content-link">
-              <article class="lvls__lvl-item">
-                <h3 class="lvls__lvl-item-title">Индивидуальные тренинги</h3>
-                <p class="lvls__lvl-item-descr">Интенсивные тренинги для парикмахеров, тема по запросу</p>
-              </article>
-            </a>
-          </div>
-        </article>
-        <article class="lvls__lvl">
-          <header class="lvls__lvl-header lvls__lvl-header--3">
-            <p class="lvls__lvl-value"><span class="lvls__lvl-value-inner">Уровень 3</span></p>
-            <h2 class="lvls__lvl-header-title">Курсы иностранных специалистов <br>(с переводчиком)</h2>
-          </header>
-          <div class="lvls__lvl-content">
-            <a class="lvls__lvl-content-link">
-              <article class="lvls__lvl-item">
-                <h3 class="lvls__lvl-item-title">Vidal Sassoon Academy</h3>
-              </article>
-            </a>
-            <a class="lvls__lvl-content-link">
-              <article class="lvls__lvl-item">
-                <h3 class="lvls__lvl-item-title">ZGAT</h3>
-              </article>
-            </a>
-            <a class="lvls__lvl-content-link">
-              <article class="lvls__lvl-item">
-                <h3 class="lvls__lvl-item-title">Jan Przhemyk</h3>
-              </article>
-            </a>
-            <a class="lvls__lvl-content-link">
-              <article class="lvls__lvl-item">
-                <h3 class="lvls__lvl-item-title">Kim Martin</h3>
-              </article>
-            </a>
-          </div>
-        </article>
-      </section>
+      <div class="welcome__wrapper">
+        <section class="welcome">
+          <h1 class="welcome__title">Профессиональная школа BritBob <br>для парикмахеров</h1>
+          <p class="welcome__descr">Британские техники и качественное образование для начинающих и практикующих парикмахеров</p>
+          <a href="" class="button-link welcome__link">Расписание курсов<span class="button-link__arrow-r"></span></a>
+          <div class="welcome__image"></div>
+        </section>
+        
+      </div>
+      <div class="lvls__wrapper">
+        <section class="lvls">
+          <article class="lvls__lvl">
+            <header class="lvls__lvl-header lvls__lvl-header--1">
+              <p class="lvls__lvl-value"><span class="lvls__lvl-value-inner">Уровень 1</span></p>
+              <h2 class="lvls__lvl-header-title">Курсы для начинающих парикмахеров</h2>
+            </header>
+            <div class="lvls__lvl-content">
+              <a class="lvls__lvl-content-link">
+                <article class="lvls__lvl-item">
+                  <h3 class="lvls__lvl-item-title">Британская классика</h3>
+                  <p class="lvls__lvl-item-descr">Базовый курс для обучения начинающих с нуля</p>
+                </article>
+                <div class="lvls__lvl-arrow-r">
+                  <div class="orange-arrow-right"></div>
+                </div>
+              </a>
+              <a class="lvls__lvl-content-link">
+                <article class="lvls__lvl-item">
+                  <h3 class="lvls__lvl-item-title">Прически из длинных волос</h3>
+                  <p class="lvls__lvl-item-descr">Вечерние, свадебные укладки, прически для начинающих</p>
+                </article>
+                <div class="lvls__lvl-arrow-r">
+                  <div class="orange-arrow-right"></div>
+                </div>
+              </a>
+              <a class="lvls__lvl-content-link">
+                <article class="lvls__lvl-item">
+                  <h3 class="lvls__lvl-item-title">Техники окрашивания волос</h3>
+                  <p class="lvls__lvl-item-descr">Обучение новым техникам. Тренинги для молодых колористов</p>
+                </article>
+                <div class="lvls__lvl-arrow-r">
+                  <div class="orange-arrow-right"></div>
+                </div>
+              </a>
+            </div>
+          </article>
+          <article class="lvls__lvl">
+            <header class="lvls__lvl-header lvls__lvl-header--2">
+              <p class="lvls__lvl-value"><span class="lvls__lvl-value-inner">Уровень 2</span></p>
+              <h2 class="lvls__lvl-header-title">Курсы для практикующих парикмахеров</h2>
+            </header>
+            <div class="lvls__lvl-content">
+              <a class="lvls__lvl-content-link">
+                <article class="lvls__lvl-item">
+                  <h3 class="lvls__lvl-item-title">Мастер классы</h3>
+                  <p class="lvls__lvl-item-descr">Семинары и мастер классы по стрижкам и окрашиванию</p>
+                </article>
+                <div class="lvls__lvl-arrow-r">
+                  <div class="orange-arrow-right"></div>
+                </div>
+              </a>
+              <a class="lvls__lvl-content-link">
+                <article class="lvls__lvl-item">
+                  <h3 class="lvls__lvl-item-title">Семинары по колористике</h3>
+                  <p class="lvls__lvl-item-descr">Семинары по техникам окрашивания и цветотипированию</p>
+                </article>
+                <div class="lvls__lvl-arrow-r">
+                  <div class="orange-arrow-right"></div>
+                </div>
+              </a>
+              <a class="lvls__lvl-content-link">
+                <article class="lvls__lvl-item">
+                  <h3 class="lvls__lvl-item-title">Индивидуальные тренинги</h3>
+                  <p class="lvls__lvl-item-descr">Интенсивные тренинги для парикмахеров, тема по запросу</p>
+                </article>
+                <div class="lvls__lvl-arrow-r">
+                  <div class="orange-arrow-right"></div>
+                </div>
+              </a>
+            </div>
+          </article>
+          <article class="lvls__lvl">
+            <header class="lvls__lvl-header lvls__lvl-header--3">
+              <p class="lvls__lvl-value"><span class="lvls__lvl-value-inner">Уровень 3</span></p>
+              <h2 class="lvls__lvl-header-title">Курсы иностранных специалистов <br>(с переводчиком)</h2>
+            </header>
+            <div class="lvls__lvl-content lvls__lvl-content--4row">
+              <a class="lvls__lvl-content-link">
+                <article class="lvls__lvl-item">
+                  <h3 class="lvls__lvl-item-title">Vidal Sassoon Academy</h3>
+                </article>
+                <div class="lvls__lvl-arrow-r">
+                  <div class="orange-arrow-right"></div>
+                </div>
+              </a>
+              <a class="lvls__lvl-content-link">
+                <article class="lvls__lvl-item">
+                  <h3 class="lvls__lvl-item-title">ZGAT</h3>
+                </article>
+                <div class="lvls__lvl-arrow-r">
+                  <div class="orange-arrow-right"></div>
+                </div>
+              </a>
+              <a class="lvls__lvl-content-link">
+                <article class="lvls__lvl-item">
+                  <h3 class="lvls__lvl-item-title">Jan Przhemyk</h3>
+                </article>
+                <div class="lvls__lvl-arrow-r">
+                  <div class="orange-arrow-right"></div>
+                </div>
+              </a>
+              <a class="lvls__lvl-content-link">
+                <article class="lvls__lvl-item">
+                  <h3 class="lvls__lvl-item-title">Kim Martin</h3>
+                </article>
+                <div class="lvls__lvl-arrow-r">
+                  <div class="orange-arrow-right"></div>
+                </div>
+              </a>
+            </div>
+          </article>
+        </section>
+      </div>
       //= include/footer.html
     </div>
   </body>
