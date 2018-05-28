@@ -4,18 +4,33 @@
   overflow: hidden;
   padding-top: 20px;
 
-  & a {
+  &__line {
+    @extend %container;
+
+    @extend %grid-padding20;
+
+    box-sizing: border-box;
+    border-bottom: 1px solid $dividers;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__wrapper {
+    &--copyright {
+      border-top: 1px solid $dividers;
+    }
+  }
+
+  a {
     text-decoration: none;
     color: $white;
 
     &:hover {
-      color: $dividers;
+      color: $cream;
     }
   }
 
   &__title {
-    @extend %grid-padding;
-
     color: $titles;
     text-transform: uppercase;
     font-size: 12px;
@@ -24,11 +39,9 @@
   }
 
   &__contacts {
-    @extend %grid-padding;
-
     display: flex;
     flex-direction: column;
-    margin-bottom: 35px;
+    margin-bottom: 25px;
 
     &-bunch {
       display: flex;
@@ -47,16 +60,15 @@
   }
 
   &__nav {
-    @extend %grid-padding;
-
-    border-top: 1px solid $dividers;
-    border-bottom: 1px solid $dividers;
-    padding-top: 10px;
-    padding-bottom: 10px;
+    padding-top: 0px;
+    padding-bottom: 0px;
 
     &-menu {
+      display: flex;
+      flex-direction: column;
       list-style: none;
-      padding-left: 0;
+      padding: 20px 0;
+      margin: 0;
 
       a {
         text-transform: uppercase;
@@ -67,93 +79,68 @@
   }
 
   &__copyright {
-    @extend %grid-padding;
-
     padding-top: 20px;
     padding-bottom: 20px;
   }
 
-  &__social {
-    @extend %grid-padding;
-
+  &__payment {
+    box-sizing: border-box;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
     margin-bottom: 35px;
+    width: 280px;
 
-    &-item {
-      display: block;
-      width: 51px;
-      height: 51px;
-      background-position: 0;
-      background-repeat: no-repeat;
+    svg {
+      height: 32px;
+      fill: #fff;
+      margin: 0 auto;
 
-      &--facebook {
-        background-image: url(../img/facebook.svg);
-
-        &:hover {
-          background-image: url(../img/facebook-h.svg);
-        }
+      &:first-child {
+        margin-left: 0;
       }
 
-      &--vk {
-        background-image: url(../img/vk.svg);
-
-        &:hover {
-          background-image: url(../img/vk-h.svg);
-        }
+      &:last-child {
+        margin-right: 0;
       }
+    }
+  }
+}
 
-      &--youtube {
-        background-image: url(../img/youtube.svg);
+@media #{$tablet-widths} {
+  .page-footer {
+    &__line {
+      flex-direction: row;
+      justify-content: space-between;
+    }
 
-        &:hover {
-          background-image: url(../img/youtube-h.svg);
-        }
-      }
-
-      &--insta {
-        background-image: url(../img/insta.svg);
-
-        &:hover {
-          background-image: url(../img/insta-h.svg);
-        }
+    &__wrapper {
+      &--copyright {
+        border: 0;
       }
     }
   }
 
-  &__payment {
-    @extend %grid-padding;
+  @media #{$desktop-widths} {
+    .page-footer {
+      &__line2 {
+        display: flex;
+        flex-direction: row;
 
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    margin-bottom: 35px;
-
-    &-item {
-      display: block;
-      height: 32px;
-      background-repeat: no-repeat;
-      background-image: url(../img/payment-sprite.png);
-
-      &--visa {
-        width: 79px;
-        background-position: 0;
+        .page-footer__wrapper {
+          &--social {
+            margin-right: 100px;
+          }
+        }
       }
 
-      &--mastercard {
-        width: 54px;
-        background-position: -79px 0;
-      }
+      &__nav {
+        &-menu {
+          flex-direction: row;
 
-      &--maestro {
-        width: 53px;
-        background-position: -133px 0;
-      }
-
-      &--sber {
-        width: 30px;
-        background-position: -186px 0;
+          &-item {
+            margin-right: 30px;
+          }
+        }
       }
     }
   }

@@ -1,0 +1,51 @@
+.hnav {
+  display: none;
+}
+
+@media #{$tablet-widths} {
+  .hnav {
+    display: block;
+    margin-right: auto;
+
+    &__menu {
+      display: flex;
+      flex-direction: row;
+      list-style: none;
+      margin: 0;
+      padding-left: 0;
+
+      &-item {
+        display: flex;
+
+        a {
+          text-decoration: none;
+          text-transform: uppercase;
+          font-size: 13px;
+          font-weight: 400;
+          display: block;
+          line-height: 43px;
+          border-top: 3px solid transparent;
+          border-bottom: 3px solid transparent;
+          margin-left: auto;
+          color: $texty;
+          white-space: nowrap;
+
+          &:hover {
+            border-bottom: 3px solid $cream;
+          }
+
+          &:first-child {
+            margin-left: 20px;
+          }
+        }
+
+        &--active {
+          a {
+            border-bottom: 3px solid $orange;
+            font-weight: 700;
+          }
+        }
+      }
+    }
+  }
+}

@@ -21,6 +21,7 @@ var path = {
     js: 'build/js/',
     css: 'build/css/',
     img: 'build/css/images/',
+    svg: 'build/svg/',
     fonts: 'build/fonts/',
     htaccess: 'build/',
     contentImg: 'build/img/',
@@ -30,17 +31,19 @@ var path = {
     js: 'src/js/[^_]*.js', //В стилях и скриптах нам понадобятся только main файлы
     css: 'src/css/styles.scss',
     cssVendor: 'src/css/vendor/*.*', //Если мы хотим файлы библиотек отдельно хранить то раскоментить строчку
-    img: 'src/css/images/**/*.*', //Синтаксис img/**/*.* означает - взять все файлы всех расширений из папки и из вложенных каталогов
+    img: 'src/css/images/**/*.{jpg,png,gif}', //Синтаксис img/**/*.* означает - взять все файлы всех расширений из папки и из вложенных каталогов
+    svg: 'src/svg/**/*.svg',
     fonts: 'src/fonts/**/*.*',
-    contentImg: 'src/img/**/*.*',
+    contentImg: 'src/img/**/*.{jpg,png,gif}',
     htaccess: 'src/.htaccess'
   },
   watch: { //Тут мы укажем, за изменением каких файлов мы хотим наблюдать
     html: 'src/template/**/*.html',
     js: 'src/js/**/*.js',
     css: 'src/css/**/*.*',
-    img: 'src/css/images/**/*.*',
-    contentImg: 'src/img/**/*.*',
+    img: 'src/css/images/**/*.{jpg,png,gif}',
+    svg: 'src/svg/**/*.svg',
+    contentImg: 'src/img/**/*.{jpg,png,gif}',
     fonts: 'src/fonts/**/*.*',
     htaccess: 'src/.htaccess',
   },
@@ -74,11 +77,26 @@ gulp.task('image:build', function () {
       progressive: true, //сжатие .jpg
       svgoPlugins: [{
         removeViewBox: false
-			}], //сжатие .svg
+			}],  //сжатие .svg
       interlaced: true, //сжатие .gif
       optimizationLevel: 3 //степень сжатия от 0 до 7
     }))
     .pipe(gulp.dest(path.build.img)) //выгрузим в build
+    .pipe(connect.reload()) //перезагрузим сервер
+});
+
+// билдим статичные изображения
+gulp.task('svg:build', function () {
+  gulp.src(path.src.svg) //Выберем наши картинки
+    /*.pipe(imagemin({ //Сожмем их
+      progressive: true, //сжатие .jpg
+      svgoPlugins: [{
+        removeViewBox: false
+      }],  //сжатие .svg
+      interlaced: true, //сжатие .gif
+      optimizationLevel: 3 //степень сжатия от 0 до 7
+    }))*/
+    .pipe(gulp.dest(path.build.svg)) //выгрузим в build
     .pipe(connect.reload()) //перезагрузим сервер
 });
 
@@ -172,6 +190,7 @@ gulp.task('build', [
     'htaccess:build',
     'image:build',
     'imagescontent:build',
+    'svg:build',
 ]);
 
 // чистим папку билда

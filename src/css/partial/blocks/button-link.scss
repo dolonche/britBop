@@ -10,6 +10,8 @@
   text-align: center;
   border-radius: 50px;
   background-image: linear-gradient(to right, #dc4506, #fe8764);
+  min-width: 280px;
+  width: 280px;
 
   &__arrow-r {
     display: block;
