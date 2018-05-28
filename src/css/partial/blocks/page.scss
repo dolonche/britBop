@@ -3,5 +3,6 @@
 
   @include font;
 
-  @extend %container;
+  display: flex;
+  flex-direction: column;
 }

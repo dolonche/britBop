@@ -1,44 +1,88 @@
 <header class="page-header">
-    <div class="page-header__logo"><img src="img/logo-britbob.png" alt="Britbob logo"></div>
-    <div class="page-header__bar">
-      <nav class="mnav mnav--closed mnav--no-js">
-        <button class="mnav__toggle mnav__toggle--closed" type="button">Открыть меню</button>
-        <ul class="mnav__menu">
-          <li class="mnav__menu-item mnav__menu-item--opened parent">
-            <a href="">Курсы для начинающих<span class=" parent"><span></a>
-            <ul class="mnav__menu-stage2">
-              <li class="mnav__menu-item"><a href="">Британская классика</a></li>
-              <li class="mnav__menu-item"><a href="">Причёски из длинных волос</a></li>
-              <li class="mnav__menu-item"><a href="">Техники окрашивания волос</a></li>
-            </ul>
-          </li>
-          <li class="mnav__menu-item parent"><a href="">Курсы для практикующих</a></li>
-          <li class="mnav__menu-item parent"><a href="">Иностранные специалисты</a></li>
-          <li class="mnav__menu-item"><a href="">Расписание</a></li>
-          <li class="mnav__menu-item mnav__menu-item--opened">
-            <a href="">Магазин<span class=" parent"><span></a>
-            <ul class="mnav__menu-stage2">
-              <li class="mnav__menu-item mnav__menu-item--closed">
-                <a href="">Категория 1<span class=" parent"><span></a>
-                <ul class="mnav__menu-stage3">
-                  <li class="mnav__menu-item"><a href="">Пунтк 3го уровня 1</a></li>
-                  <li class="mnav__menu-item"><a href="">Пунтк 3го уровня 2</a></li>
-                  <li class="mnav__menu-item"><a href="">Пунтк 3го уровня 3</a></li>
-                </ul>
-              </li>
-              <li class="mnav__menu-item mnav__menu-item--opened">
-                <a href="">Категория 2<span class=" parent"><span></a>
-                <ul class="mnav__menu-stage3">
-                  <li class="mnav__menu-item"><a href="">Пунтк 3го уровня 1</a></li>
-                  <li class="mnav__menu-item active"><a href="">Пунтк 3го уровня 2</a></li>
-                </ul>
-              </li>
-            </ul>
-          </li>
-          <li class="mnav__menu-item"><a href="">Блог</a></li>
-          <li class="mnav__menu-item"><a href="">Наша школа</a></li>
-        </ul>
-      </nav>
-      <div class="page-header__bar-search"><img src="img/search.svg" alt=""></div>
+  <div class="page-header__cap" itemscope itemtype="http://schema.org/Organization">
+    <a class="page-header__cap-logo" href="/"><img src="svg/logo-britbob.svg" alt="Britbob logo"></a>
+    <div class="page-header__cap-info" itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
+      <a itemprop="telephone" href="tel: +79855007178">+7 (985) 500 71 78</a>
+      <p><span itemprop="addressLocality">Москва</span>, <span itemprop="streetAddress">Малая Дмитровка 23/15</span></p>
     </div>
-  </header>
+  </div>
+  <div class="page-header__bar">
+    <nav class="mnav mnav--closed mnav--no-js">
+      <button class="mnav__toggle mnav__toggle--closed" type="button">Открыть меню</button>
+      <ul class="mnav__menu">
+        <li class="mnav__menu-item parent">
+          <a href="">Курсы для начинающих</a><span class=" parent"></span>
+          <ul class="mnav__menu-stage2">
+            <li class="mnav__menu-item"><a href="">Британская классика</a></li>
+            <li class="mnav__menu-item"><a href="">Причёски из длинных волос</a></li>
+            <li class="mnav__menu-item"><a href="">Техники окрашивания волос</a></li>
+          </ul>
+        </li>
+        <li class="mnav__menu-item parent"><a href="">Курсы для практикующих</a></li>
+        <li class="mnav__menu-item parent"><a href="">Иностранные специалисты</a></li>
+        <li class="mnav__menu-item"><a href="">Расписание</a></li>
+        <li class="mnav__menu-item">
+          <a href="">Магазин</a><span class=" parent"></span>
+          <ul class="mnav__menu-stage2">
+            <li class="mnav__menu-item">
+              <a href="">Категория 1</a><span class=" parent"></span>
+              <ul class="mnav__menu-stage3">
+                <li class="mnav__menu-item"><a href="">Пунтк 3го уровня 1</a></li>
+                <li class="mnav__menu-item"><a href="">Пунтк 3го уровня 2</a></li>
+                <li class="mnav__menu-item"><a href="">Пунтк 3го уровня 3</a></li>
+              </ul>
+            </li>
+            <li class="mnav__menu-item">
+              <a href="">Категория 2</a><span class=" parent"></span>
+              <ul class="mnav__menu-stage3">
+                <li class="mnav__menu-item"><a href="">Пунтк 3го уровня 1</a></li>
+                <li class="mnav__menu-item active"><a href="">Пунтк 3го уровня 2</a></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li class="mnav__menu-item"><a href="">Блог</a></li>
+        <li class="mnav__menu-item"><a href="">Наша школа</a></li>
+      </ul>
+    </nav>
+    <nav class="hnav">
+      <ul class="hnav__menu">
+        <li class="hnav__menu-item"><a href="">Наши курсы</a></li>
+        <li class="hnav__menu-item hnav__menu-item--active"><a href="">Расписание</a></li>
+        <li class="hnav__menu-item"><a href="">Блог</a></li>
+        <li class="hnav__menu-item"><a href="">О школе</a></li>
+        <li class="hnav__menu-item"><a href="">Магазин</a></li>
+        <li class="hnav__menu-item"><a href="">Контакты</a></li>
+      </ul>
+    </nav>
+    <div class="social-icons social-icons--header">
+      <a href="" class="social-icons__item">
+        <svg class="social-icons__item-svg social-icons__item-svg--facebook" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 32 32">
+          <use xlink:href="svg/facebook.svg#facebook" />
+        </svg>
+      </a>
+      <a href="" class="social-icons__item">
+        <svg class="social-icons__item-svg social-icons__item-svg--vk" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 32 32">
+          <use xlink:href="svg/vk.svg#vk" />
+        </svg>
+      </a>
+      <a href="" class="social-icons__item">
+        <svg class="social-icons__item-svg social-icons__item-svg--youtube" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 32 32">
+          <use xlink:href="svg/youtube.svg#youtube" />
+        </svg>
+      </a>
+      <a href="" class="social-icons__item">
+        <svg class="social-icons__item-svg social-icons__item-svg--instagram" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 32 32">
+          <use xlink:href="svg/instagram.svg#instagram" />
+        </svg>
+      </a>
+    </div>
+    <div class="page-header__bar-search">
+      <a href="" class="page-header__bar-search-item">
+        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 20.91 21.06">
+          <use xlink:href="svg/search.svg#search" />
+        </svg>
+      </a>
+    </div>
+  </div>
+</header>

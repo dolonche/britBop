@@ -1,31 +1,92 @@
-.page-header__logo {
-  @extend %grid-padding;
+.page-header {
+  &__cap {
+    @extend %container;
 
-  img {
-    width: 200px;
-    margin-top: 22px;
+    @extend %grid-padding20;
+
+    margin-top: 20px;
+    margin-bottom: 20px;
+
+    &-logo {
+      display: block;
+      line-height: 0;
+
+      & img {
+        width: 200px;
+      }
+    }
+
+    &-info {
+      display: none;
+    }
   }
-}
 
-.page-header__bar {
-  @extend %grid-padding;
+  &__bar {
+    @extend %container;
 
-  display: flex;
-  border-top: 1px solid $lines-color;
-  border-bottom: 1px solid $lines-color;
+    @extend %grid-padding20;
 
-  &-search {
-    margin-left: auto;
-    padding-top: 15px;
-    padding-bottom: 7px;
-    padding-left: 20px;
-    border-left: 1px solid $lines-color;
+    display: flex;
+    border-top: 1px solid $lines-color;
+    border-bottom: 1px solid $lines-color;
 
-    img {
-      width: 19px;
-      height: 19px;
+    &-search {
+      margin-left: auto;
+      padding-top: 15px;
+      padding-bottom: 7px;
+      padding-left: 20px;
+      border-left: 1px solid $lines-color;
+
+      &-item {
+        svg {
+          width: 20px;
+          fill: #000;
+
+          &:hover {
+            fill: $orange;
+          }
+        }
+      }
+
+      @media #{$tablet-widths} {
+        margin-left: 0;
+      }
+
+      img {
+        width: 19px;
+        height: 19px;
+      }
     }
   }
 }
 
-@media #{$tablet-widths} {}
+@media #{$tablet-widths} {
+  .page-header {
+    &__cap {
+      display: flex;
+      flex-direction: row;
+
+      &-info {
+        display: block;
+        margin-left: auto;
+
+        a {
+          color: $text-light;
+          text-decoration: none;
+          font-size: 28px;
+        }
+
+        p {
+          margin: 0;
+          font-weight: 100;
+        }
+      }
+
+      &-logo {
+        img {
+          width: 262px;
+        }
+      }
+    }
+  }
+}
