@@ -10,15 +10,16 @@
   text-align: center;
   border-radius: 50px;
   background-image: linear-gradient(to right, #dc4506, #fe8764);
+
   &__arrow-r {
-      display: block;
-      position: absolute;
-      right: 18px;
-      top: 18px;
-      width: 9px;
-      height: 9px;
-      border-right: 3px solid $white;
-      border-bottom: 3px solid $white;
-      transform: rotate(-45deg);
+    display: block;
+    position: absolute;
+    right: 18px;
+    top: 18px;
+    width: 9px;
+    height: 9px;
+    border-right: 3px solid $white;
+    border-bottom: 3px solid $white;
+    transform: rotate(-45deg);
   }
 }
