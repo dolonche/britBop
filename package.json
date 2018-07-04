@@ -5,14 +5,15 @@
 	"author": "Ivan Ivanov",
 	"license": "MIT",
 	"dependencies": {
+		"gulp": "^4.0.0",
 		"npm": "^5.8.0"
 	},
 	"scripts": {
 		"gulp": "gulp"
 	},
 	"devDependencies": {
-		"gulp": "^3.9.1",
 		"gulp-autoprefixer": "latest",
+		"gulp-changed": "^3.2.0",
 		"gulp-connect": "^5.5.0",
 		"gulp-imagemin": "latest",
 		"gulp-minify-css": "latest",
@@ -21,6 +22,7 @@
 		"gulp-rename": "^1.2.2",
 		"gulp-rigger": "^0.5.8",
 		"gulp-sass": "^3.2.1",
+		"gulp-sftp": "^0.1.5",
 		"gulp-sourcemaps": "^2.6.4",
 		"gulp-uglify": "latest",
 		"gulp-watch": "^5.0.0",

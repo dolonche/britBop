@@ -1,0 +1,168 @@
+.kursy {
+  @extend %container;
+
+  display: flex;
+  flex-direction: column;
+
+  &__lvl {
+    display: flex;
+    flex-direction: column;
+    background-color: $bg-grey;
+    margin-bottom: 10px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    &-top {
+      cursor: pointer;
+
+      &:hover {
+        .pop-arrow--grey {
+          border-color: $orange;
+        }
+      }
+    }
+
+    &-title {
+      @extend %grid-padding20-footer;
+
+      height: 80px;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: 1px solid $lines-grey;
+
+      &-value {
+        text-transform: uppercase;
+        font-size: 12px;
+        color: $titles;
+        border-bottom: 2px solid $titles;
+      }
+    }
+
+    h2 {
+      @extend %grid-padding20-footer;
+    }
+
+    &--closed {
+      .kursy__list {
+        display: none;
+
+        @media #{$tablet-widths} {
+          display: flex;
+        }
+      }
+    }
+
+    &--opened {
+      .kursy__list {
+        display: flex;
+      }
+
+      .kursy__lvl-top {
+        &:hover {
+          .pop-arrow {
+            border-color: $cream;
+          }
+        }
+      }
+
+      .kursy__lvl-title {
+        background-color: $orange;
+
+        &-value {
+          color: $white;
+          border-bottom: 2px solid $white;
+        }
+
+        .pop-arrow {
+          border-color: $white;
+          transform: rotate(45deg);
+        }
+      }
+    }
+  }
+
+  &__list {
+    @extend %grid-padding20-footer;
+
+    display: none;
+    flex-direction: column;
+
+    @media #{$desktop-widths} {
+      flex-direction: row;
+    }
+
+    &-item {
+      background-color: $white;
+    }
+  }
+}
+
+@media #{$tablet-widths} {
+  .kursy {
+    padding-left: 94px;
+    padding-right: 94px;
+    padding-top: 30px;
+    background-color: $bg-grey;
+
+    &__wrapper {
+      background-color: $bg-grey;
+    }
+
+    &__lvl {
+      margin-bottom: 40px;
+
+      &-top {
+        cursor: auto;
+      }
+
+      &-title {
+        height: auto;
+        border: 0;
+
+        &-value {
+          color: $dividers;
+          border-color: $dividers;
+        }
+
+        .pop-arrow {
+          display: none;
+        }
+      }
+
+      &--opened {
+        .kursy__lvl-title {
+          background-color: transparent;
+
+          &-value {
+            color: $dividers;
+            border-color: $dividers;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media #{$desktop-widths} {
+  .kursy {
+    padding-left: 20px;
+    padding-right: 20px;
+
+    &__list {
+      flex-wrap: wrap;
+      justify-content: space-between;
+
+      &-item {}
+
+      &--four {
+        .kursy__list-item, .kurs__img {
+          width: 580px;
+        }
+      }
+    }
+  }
+}

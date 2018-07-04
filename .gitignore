@@ -2,3 +2,4 @@
 /build/
 /resource/
 /package-lock.json
+*.json

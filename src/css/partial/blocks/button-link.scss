@@ -9,9 +9,13 @@
   line-height: 15px;
   text-align: center;
   border-radius: 50px;
-  background-image: linear-gradient(to right, #dc4506, #fe8764);
+  background: linear-gradient(to right, #f86, #dc4405);
   min-width: 280px;
   width: 280px;
+
+  &:hover {
+    background: linear-gradient(to right, #dc4405, #f86);
+  }
 
   &__arrow-r {
     display: block;

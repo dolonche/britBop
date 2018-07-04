@@ -1,6 +1,6 @@
 $base-font: "Helvetica", "Arial", sans-serif;
-$lines-color: #dddddd;
-$text-color: #000000;
+$lines-color: #ddd;
+$text-color: #000;
 $orange: #dc4405;
 $brown: #603d20;
 $cream: #efd19f;
@@ -81,6 +81,6 @@ $white: #fff;
   }
 
   @media #{$desktop-widths} {
-    width: 1200px;
+    width: 1240px;
   }
 }

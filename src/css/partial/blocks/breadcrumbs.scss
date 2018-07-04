@@ -1,0 +1,46 @@
+.breadcrumbs {
+  display: none;
+
+  @media #{$tablet-widths} {
+    display: block;
+  }
+
+  @extend %grid-padding20;
+
+  font-size: 13px;
+  color: $titles;
+
+  &__list {
+    margin: 0;
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    padding: 0;
+    height: 50px;
+    align-items: center;
+
+    &-item {
+      display: flex;
+      flex-direction: row;
+      margin-right: 7px;
+
+      a {
+        margin-right: 7px;
+        color: $bg-foot;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+
+      .divider {
+        width: 11px;
+
+        svg {
+          fill: $titles;
+          padding-top: 6px;
+        }
+      }
+    }
+  }
+}

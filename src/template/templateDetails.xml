@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE install PUBLIC "-//Joomla! 3/0//DTD template 1.0//EN" "http://www.joomla.org/xml/dtd/3.0/template-install.dtd">
+<extension version="3.2" type="template" client="site">
+    <name>BritBob</name>
+    <creationDate>2018.06.05</creationDate>
+    <author>BritBob</author>
+    <authorEmail>rteown@gmail.com</authorEmail>
+    <authorUrl>https://uviera.com</authorUrl>
+    <copyright>BritBob</copyright>
+    <version>2.0</version>
+    <description>Специально разработанный шаблон для школы парикмахерского искусства Наташи Ценовой</description>
+    
+    <files>
+        <filename>error.php</filename>
+        <filename>index.html</filename>
+        <filename>index.php</filename>
+        <filename>template_preview.png</filename>
+        <filename>template_thumbnail.png</filename>
+        <filename>templateDetails.xml</filename>
+        <folder>css</folder>
+        <folder>fonts</folder>
+        <folder>html</folder>
+        <folder>img</folder>
+        <folder>svg</folder>
+        <folder>js</folder>
+        <folder>language</folder>
+    </files>
+    
+    <positions>
+        <position>page-header__bar</position>
+        <position>top</position>
+        <position>content-top</position>
+        <position>content-bottom</position>
+        <position>sidebar-left</position>
+        <position>sidebar-right</position>
+        <position>bottom</position>
+        <position>social-icons-footer</position>
+        <position>social-icons-header</position>
+        <position>payment</position>
+        <position>footer-nav</position>
+		<position>script-bottom</position>
+		<position>script-top</position>
+		<position>search</position>
+		<position>mnav</position>
+		<position>hnav</position>
+    </positions>
+
+<config>
+
+	<fields name="params" addfieldpath="/templates/ordasofttemplate-basetemplate/elements">
+ 		<fieldset name="info" label="Информация">
+			<field name="tel" label ="Телефон:" type="text" />
+            <field name="telauto" label ="Телефон формат +7XXXXXXXXXX:" type="text" />
+			<field name="gorod" label ="Город:" type="text" />
+			<field name="streetadress" label ="Улица дом:" type="text" />
+			<field name="email" label ="Email:" type="text" />
+            <field name="postalcode" label ="Индекс:" type="text" />
+		</fieldset>
+		<fieldset name="copyrights" label="Copyrights">
+			<field name="copyright" label ="Copyright:" type="text" />
+			<field name="god_os" label ="Год основания:" type="text" />
+		</fieldset>
+</fields>
+</config>
+		
+    <languages folder="language">
+        <language tag="ru-RU">ru-RU/ru-RU.BritBob.ini</language>
+        <language tag="ru-RU">ru-RU/ru-RU.tpl_britbob.sys.ini</language>
+    </languages>
+    
+ 
+</extension>

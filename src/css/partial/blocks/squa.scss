@@ -1,0 +1,56 @@
+.squa {
+  display: flex;
+  flex-direction: column;
+
+  @media #{$tablet-widths} {
+    flex-direction: row;
+
+    &__col {
+      margin-left: 70;
+    }
+  }
+
+  &__col {
+    display: flex;
+    flex-direction: column;
+    margin-left: 0;
+    width: 280px;
+    box-sizing: border-box;
+
+    &-line {
+      display: flex;
+      flex-direction: row;
+      padding: 5px 0;
+
+      &-left {
+        min-width: 80px;
+      }
+
+      &-right {}
+    }
+
+    &:first-child {
+      margin-left: 0;
+    }
+  }
+
+  &--contacts {
+    .squa__col {
+      &-line {
+        &-left {
+          font-size: 13px;
+          color: $titles;
+          text-transform: uppercase;
+        }
+
+        &-right {
+          font-weight: 700;
+          line-height: 20px;
+        }
+      }
+    }
+    a {
+      color: $texty;
+    }
+  }
+}
