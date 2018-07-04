@@ -35,3 +35,92 @@ ExpiresByType image/jpeg "access plus 1 month"
 ExpiresByType image/gif "access plus 1 month"
 ExpiresByType image/png "access plus 1 month"
 ExpiresByType text/css "access plus 1 months"
+
+## No directory listings
+<IfModule autoindex>
+  IndexIgnore *
+</IfModule>
+
+Options +FollowSymlinks
+Options -Indexes
+
+RewriteEngine On
+
+RewriteCond %{HTTP_HOST} ^www\.(.*)$ [NC]
+RewriteRule ^(.*)$ https://%1/$1 [R=301,L]
+#RewriteCond %{HTTPS} !on
+#RewriteRule (.*) https://%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
+
+# Для перенаправлени index.php в корень
+RewriteCond %{THE_REQUEST} ^[A-Z]{3,9}\ /index\.php\ HTTP/ 
+RewriteRule ^index\.php$ https://britbob.ru [R=301,L]
+
+# На страницы с суфиксом html
+RewriteCond %{REQUEST_URI} (.*/[^/.]+)($|\?)
+RewriteRule .* %1.html [R=301,L]
+RewriteRule ^(.*)/$ /$1.html [R=301,L]
+
+# Редирект на главную, если в ссылке несколько слешей(site.ru/catalog////article), от 2 до 14.
+RewriteCond %{REQUEST_URI} /{2,14} [NC]
+RewriteRule (.*) / [R=301,L]
+
+## Begin - Rewrite rules to block out some common exploits.
+# Block any script trying to base64_encode data within the URL.
+RewriteCond %{QUERY_STRING} base64_encode[^(]*\([^)]*\) [OR]
+# Block any script that includes a <script> tag in URL.
+RewriteCond %{QUERY_STRING} (<|%3C)([^s]*s)+cript.*(>|%3E) [NC,OR]
+# Block any script trying to set a PHP GLOBALS variable via URL.
+RewriteCond %{QUERY_STRING} GLOBALS(=|\[|\%[0-9A-Z]{0,2}) [OR]
+# Block any script trying to modify a _REQUEST variable via URL.
+RewriteCond %{QUERY_STRING} _REQUEST(=|\[|\%[0-9A-Z]{0,2})
+# Return 403 Forbidden header and show the content of the root home page
+RewriteRule .* index.php [F]
+#
+## End - Rewrite rules to block out some common exploits.
+
+
+
+## !!!***!!! Begin - Custom redirects
+
+
+Redirect 301 /o-nas/foto-backstage.html https://britbob.ru/gallery/backstage.html
+Redirect 301 /o-nas/prepodovateli.html https://britbob.ru/o-nas/prepodavateli.html
+Redirect 301 /o-nas/video-reportaji.html  https://britbob.ru/blog/video-reportaji.html
+Redirect 301 /o-nas/istorii-iz-jizni.html  https://britbob.ru/blog/istorii-iz-jizni.html
+Redirect 301 /novosti.html  https://britbob.ru/blog/news.html
+Redirect 301 /obuchenie.html  https://britbob.ru/blog/obuchenie.html
+
+#Redirect 301 /  https://britbob.ru/
+#Redirect 301 /  https://britbob.ru/
+#Redirect 301 /  https://britbob.ru/
+#Redirect 301 /  https://britbob.ru/
+#Redirect 301 /  https://britbob.ru/
+#Redirect 301 /  https://britbob.ru/
+#Redirect 301 /  https://britbob.ru/
+#Redirect 301 /  https://britbob.ru/
+
+# Catalogs redirect
+RewriteRule ^novosti/(.*)$ /blog/news/$1 [L,R=301]
+RewriteRule ^obuchenie/(.*)$ /blog/obuchenie/$1 [R=301,L]
+RewriteRule ^o-nas/istorii-iz-jizni/(.*)$ /blog/istorii-iz-jizni/$1 [R=301,L]
+
+
+## End - Custom redirects
+
+
+
+## Begin - Joomla! core SEF Section.
+#
+RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
+#
+# If the requested path and file is not /index.php and the request
+# has not already been internally rewritten to the index.php script
+RewriteCond %{REQUEST_URI} !^/index\.php
+# and the requested path and file doesn't directly match a physical file
+RewriteCond %{REQUEST_FILENAME} !-f
+# and the requested path and file doesn't directly match a physical folder
+RewriteCond %{REQUEST_FILENAME} !-d
+# internally rewrite the request to the index.php script
+RewriteRule .* index.php [L]
+#
+## End - Joomla! core SEF Section.

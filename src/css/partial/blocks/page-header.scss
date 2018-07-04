@@ -29,6 +29,7 @@
     display: flex;
     border-top: 1px solid $lines-color;
     border-bottom: 1px solid $lines-color;
+    position: relative;
 
     &-search {
       margin-left: auto;

@@ -1,0 +1,12 @@
+.sidebar-left {
+    order: -1;
+    display: none;
+    flex: none;
+    width: 220px;
+
+    @media #{$tablet-widths} {}
+
+    @media #{$desktop-widths} {
+      display: flex;
+    }
+  }

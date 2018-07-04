@@ -144,7 +144,7 @@
         margin-left: auto;
         flex: none;
 
-        .orange-arrow-right {
+        .pop-arrow {
           margin: auto;
         }
       }
@@ -152,7 +152,7 @@
       &-content {
         &-link {
           &:first-child {
-            .orange-arrow-right {
+            .pop-arrow {
               transform: translate(0, 10px) rotate(-45deg);
             }
           }

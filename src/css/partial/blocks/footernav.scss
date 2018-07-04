@@ -1,0 +1,26 @@
+.footernav {
+  padding-top: 0px;
+  padding-bottom: 0px;
+
+  &__menu {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    padding: 20px 0;
+    margin: 0;
+
+    a {
+      text-transform: uppercase;
+      font-size: 13px;
+      font-weight: 100;
+    }
+
+    @media #{$desktop-widths} {
+      flex-direction: row;
+
+      &-item {
+        margin-right: 30px;
+      }
+    }
+  }
+}

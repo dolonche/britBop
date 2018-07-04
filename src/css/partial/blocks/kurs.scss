@@ -1,0 +1,171 @@
+.kurs {
+  margin-bottom: 20px;
+  box-shadow: 0 5px 28px rgba(0, 0, 0, 0.25), 0 5px 10px rgba(0, 0, 0, 0.22);
+
+  &:hover {
+    background-color: $bg-grey;
+  }
+
+  &__img {
+    width: 280px;
+    height: 280px;
+    background-position: 50% 0;
+
+    &--1-1 {
+      background-image: url(../img/kursy/britanskaya-klassika.jpg);
+    }
+
+    &--1-2 {
+      background-image: url(../img/kursy/prichoski-dlinnyh.jpg);
+    }
+
+    &--1-3 {
+      background-image: url(../img/kursy/tehniki-okrashivaniya.jpg);
+    }
+
+    &--2-1 {
+      background-image: url(../img/kursy/master-klassy.jpg);
+    }
+
+    &--2-2 {
+      background-image: url(../img/kursy/seminary-po-koloristike.jpg);
+    }
+
+    &--2-3 {
+      background-image: url(../img/kursy/individualnye-treningi.jpg);
+    }
+
+    &--3-1 {
+      background-image: url(../img/kursy/vidal-sassoon-academy.jpg);
+    }
+
+    &--3-2 {
+      background-image: url(../img/kursy/zgat.jpg);
+    }
+
+    &--3-3 {
+      background-image: url(../img/kursy/jan-przhemyk.jpg);
+    }
+
+    &--3-4 {
+      background-image: url(../img/kursy/kim-martin.jpg);
+    }
+  }
+
+  &__title {
+    @extend %grid-padding20;
+
+    text-transform: uppercase;
+    height: 70px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid $lines-grey;
+  }
+
+  &__descr {
+    @extend %grid-padding20;
+  }
+}
+
+@media #{$tablet-widths} {
+  .kurs {
+    &__img {
+      width: 580px;
+      height: 280px;
+      background-position: 50% 0;
+
+      &--1-1 {
+        background-image: url(../img/kursy/britanskaya-klassika-tab.jpg);
+      }
+
+      &--1-2 {
+        background-image: url(../img/kursy/prichoski-dlinnyh-tab.jpg);
+      }
+
+      &--1-3 {
+        background-image: url(../img/kursy/tehniki-okrashivaniya-tab.jpg);
+      }
+
+      &--2-1 {
+        background-image: url(../img/kursy/master-klassy-tab.jpg);
+      }
+
+      &--2-2 {
+        background-image: url(../img/kursy/seminary-po-koloristike-tab.jpg);
+      }
+
+      &--2-3 {
+        background-image: url(../img/kursy/individualnye-treningi-tab.jpg);
+      }
+
+      &--3-1 {
+        background-image: url(../img/kursy/vidal-sassoon-academy-tab.jpg);
+      }
+
+      &--3-2 {
+        background-image: url(../img/kursy/zgat-tab.jpg);
+      }
+
+      &--3-3 {
+        background-image: url(../img/kursy/jan-przhemyk-tab.jpg);
+      }
+
+      &--3-4 {
+        background-image: url(../img/kursy/kim-martin-tab.jpg);
+      }
+    }
+  }
+}
+
+@media #{$desktop-widths} {
+  .kurs {
+  	width: 380px;
+    &__img {
+      width: 380px;
+      height: 280px;
+      background-position: 50% 0;
+
+      &--1-1 {
+        background-image: url(../img/kursy/britanskaya-klassika.jpg);
+      }
+
+      &--1-2 {
+        background-image: url(../img/kursy/prichoski-dlinnyh.jpg);
+      }
+
+      &--1-3 {
+        background-image: url(../img/kursy/tehniki-okrashivaniya.jpg);
+      }
+
+      &--2-1 {
+        background-image: url(../img/kursy/master-klassy.jpg);
+      }
+
+      &--2-2 {
+        background-image: url(../img/kursy/seminary-po-koloristike.jpg);
+      }
+
+      &--2-3 {
+        background-image: url(../img/kursy/individualnye-treningi.jpg);
+      }
+
+      &--3-1 {
+        background-image: url(../img/kursy/vidal-sassoon-academy.jpg);
+      }
+
+      &--3-2 {
+        background-image: url(../img/kursy/zgat.jpg);
+      }
+
+      &--3-3 {
+        background-image: url(../img/kursy/jan-przhemyk.jpg);
+      }
+
+      &--3-4 {
+        background-image: url(../img/kursy/kim-martin.jpg);
+      }
+    }
+  }
+}

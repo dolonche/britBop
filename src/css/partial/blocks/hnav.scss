@@ -45,6 +45,13 @@
             font-weight: 700;
           }
         }
+
+        &.active {
+          a {
+            border-bottom: 3px solid $orange;
+            font-weight: 700;
+          }
+        }
       }
     }
   }

@@ -6,7 +6,7 @@
   height: 462px;
   padding-bottom: 20px;
   position: relative;
-  overflow: visible;
+  overflow-x: hidden;
 
   &__title {
     margin: 0;
@@ -57,7 +57,7 @@
     }
 
     &__link {
-      position: static;
+      position: relative;
     }
 
     &__wrapper {}
