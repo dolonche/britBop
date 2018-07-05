@@ -23,7 +23,7 @@
           font-size: 13px;
           font-weight: 400;
           display: block;
-          line-height: 43px;
+          line-height: 44px;
           border-top: 3px solid transparent;
           border-bottom: 3px solid transparent;
           margin-left: auto;
@@ -31,7 +31,7 @@
           white-space: nowrap;
 
           &:hover {
-            border-bottom: 3px solid $cream;
+            border-bottom: 3px solid $lines-white;
           }
 
           &:first-child {

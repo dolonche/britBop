@@ -3,3 +3,4 @@
 /resource/
 /package-lock.json
 *.json
+*.DS_Store

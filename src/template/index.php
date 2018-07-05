@@ -8,7 +8,7 @@ $templateparams = $app->getTemplate(true)->params;
 $this->language = $doc->language;
 $this->direction = $doc->direction;
 $baseuri=JUri::base();
-$cssVersion="1.42";
+$cssVersion="1.51";
 $home =(JURI::getInstance()->toString()==JURI::base());
 //JHtml::script($this->baseurl.'templates/'.$this->template.'/js/main.js');
 ?>

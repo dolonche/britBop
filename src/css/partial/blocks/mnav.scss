@@ -61,7 +61,7 @@
       }
 
       &:hover {
-        border-color: $orange;
+        border-color: $titles;
       }
     }
 
@@ -111,7 +111,7 @@
     }
 
     &.active > a {
-      color: $cream;
+      color: $titles;
 
       &:hover {
         text-decoration: underline;
@@ -209,6 +209,7 @@
   from {
     max-height: 0;
   }
+
   to {
     max-height: 1000px;
   }
