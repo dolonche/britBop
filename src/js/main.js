@@ -25,7 +25,6 @@ navList.addEventListener('click', function (e) {
   }
 })
 body.addEventListener('click', function (e) {
-  console.log(e.target);
   if (!e.target.classList.contains('mnav__menu-item') && !e.target.classList.contains('mnav__toggle') && !e.target.classList.contains('parent') && nav.classList.length === 2) {
     nav.classList.add('mnav--closed');
     navToggle.classList.remove('mnav__toggle--opened');
