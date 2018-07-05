@@ -29,6 +29,9 @@
   padding: 0 0 9px 0;
   list-style: none;
   z-index: 100;
+  overflow-y: hidden;
+  animation: open linear 0.4s;
+  animation-fill-mode: forwards;
 
   &-item {
     padding: 0;
@@ -46,6 +49,7 @@
       border-right: 2px solid $white;
       border-bottom: 2px solid $white;
       transform: rotate(-45deg);
+      cursor: pointer;
 
       &::after {
         content: "";
@@ -61,12 +65,14 @@
       }
     }
 
-    & > .mnav__menu-stage2, & > .mnav__menu-stage3 {
+    & > .mnav__menu-stage2,
+    & > .mnav__menu-stage3 {
       display: none;
     }
 
     &--closed {
-      .mnav__menu-stage2, .mnav__menu-stage3 {
+      .mnav__menu-stage2,
+      .mnav__menu-stage3 {
         display: none;
       }
 
@@ -78,8 +84,12 @@
     &--opened {
       background-color: $bg-insta;
 
-      & > .mnav__menu-stage2, & > .mnav__menu-stage3 {
+      & > .mnav__menu-stage2,
+      & > .mnav__menu-stage3 {
         display: block;
+        overflow-y: hidden;
+        animation: open linear 0.4s;
+        animation-fill-mode: forwards;
       }
 
       & > span.parent {
@@ -145,7 +155,8 @@
   position: relative;
   transition: 0.3s background-color;
 
-  &::before, &::after {
+  &::before,
+  &::after {
     content: "";
     position: absolute;
     width: 20px;
@@ -191,5 +202,14 @@
     &__menu {
       width: 25%;
     }
+  }
+}
+
+@keyframes open {
+  from {
+    max-height: 0;
+  }
+  to {
+    max-height: 1000px;
   }
 }
