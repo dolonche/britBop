@@ -48,7 +48,9 @@
 
     &--closed {
       .kursy__list {
-        display: none;
+        visibility: hidden;
+        max-height: 0;
+        transition: 0.3s max-height;
 
         @media #{$tablet-widths} {
           display: flex;
@@ -59,6 +61,9 @@
     &--opened {
       .kursy__list {
         display: flex;
+        visibility: visible;
+        max-height: 4000px;
+        transition: 0.3s max-height;
       }
 
       .kursy__lvl-top {
@@ -88,7 +93,6 @@
   &__list {
     @extend %grid-padding20-footer;
 
-    display: none;
     flex-direction: column;
 
     @media #{$desktop-widths} {
