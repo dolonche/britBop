@@ -25,7 +25,7 @@ navList.addEventListener('click', function (e) {
   }
 })
 body.addEventListener('click', function (e) {
-  if (!e.target.classList.contains('mnav__menu-item') && !e.target.classList.contains('mnav__toggle') && !e.target.classList.contains('parent') && nav.classList.length === 2) {
+  if (!e.target.classList.contains('mnav__menu-item') && !e.target.classList.contains('mnav__toggle') && !e.target.classList.contains('parent') && !nav.classList.contains('mnav--closed')) {
     nav.classList.add('mnav--closed');
     navToggle.classList.remove('mnav__toggle--opened');
     navToggle.classList.add('mnav__toggle--closed');
