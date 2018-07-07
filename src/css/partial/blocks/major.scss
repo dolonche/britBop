@@ -1,33 +1,32 @@
 .major {
-  @extend %container;
+  @extend %container2;
 
   display: flex;
   flex-direction: row;
 
-  &__content {
+  &__center {
     width: 100%;
   }
 
-  &__wrapper {
-    flex: 1;
+  &__main {
+    &-wrapper {
+      &--solid {
+        background-color: $bg-grey;
+      }
+    }
 
-    &--index {
-      background-color: $bg-grey;
+    &--solid {
+      @extend %container3;
+
+      padding: 1px 20px;
     }
   }
-}
 
-.item-page, .blog {
-  @extend %grid-padding20;
+  &__elem {
+    > * {
+      @extend %container3;
 
-  padding: 1px 20px;
-  background-color: $bg-grey;
-
-  &--grey {
-    background-color: $bg-grey;
-  }
-
-  &--white {
-    background-color: transparent;
+      @extend %grid-padding20;
+    }
   }
 }

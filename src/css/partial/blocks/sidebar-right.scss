@@ -1,8 +1,8 @@
 .sidebar-right {
-    display: none;
-    background-color: yellow;
+  display: none;
+  width: 200px;
 
-    @media #{$desktop-widths} {
-      display: flex;
-    }
+  @media #{$desktop-widths} {
+    display: flex;
   }
+}

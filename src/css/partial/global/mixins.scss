@@ -1,6 +1,7 @@
 $base-font: "Helvetica", "Arial", sans-serif;
 $lines-color: #ddd;
 $text-color: #000;
+$black: #000;
 $orange: #dc4405;
 $orange2: #de470a;
 $brown: #603d20;
@@ -83,5 +84,34 @@ $white: #fff;
 
   @media #{$desktop-widths} {
     width: 1240px;
+  }
+}
+
+%container2 {
+  width: 100%;
+  margin: 0 auto;
+  box-sizing: border-box;
+
+  @media #{$tablet-widths} {
+    width: 100%;
+  }
+
+  @media #{$desktop-widths} {
+    width: 1240px;
+  }
+}
+
+%container3 {
+  width: 320px;
+  margin-left: auto;
+  margin-right: auto;
+  box-sizing: border-box;
+
+  @media #{$tablet-widths} {
+    width: 768px;
+  }
+
+  @media #{$desktop-widths} {
+    width: 100%;
   }
 }
