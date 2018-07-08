@@ -1,6 +1,4 @@
 .kursy {
-  @extend %container;
-
   display: flex;
   flex-direction: column;
 
@@ -44,7 +42,9 @@
 
     h2 {
       margin: 0;
+
       @extend %grid-padding20-footer;
+
       padding-top: 20px;
       padding-bottom: 20px;
     }
@@ -114,10 +114,6 @@
     padding-right: 94px;
     padding-top: 30px;
     background-color: $bg-grey;
-
-    &__wrapper {
-      background-color: $bg-grey;
-    }
 
     &__lvl {
       margin-bottom: 40px;
