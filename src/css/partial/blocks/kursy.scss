@@ -50,6 +50,9 @@
     }
 
     &--closed {
+      .kurs {
+        display: none;
+      }
       .kursy__list {
         visibility: hidden;
         max-height: 0;
@@ -62,6 +65,9 @@
     }
 
     &--opened {
+      .kurs {
+        display: block;
+      }
       .kursy__list {
         display: flex;
         visibility: visible;
@@ -150,11 +156,26 @@
   }
 }
 
+@media #{$tablet-widths} {
+  .kursy {
+    &__lvl {
+      &--closed {
+        .kurs {
+          display: block;
+        }
+        .kursy__list {
+          visibility: visible;
+          max-height: 100%;
+        }
+      }
+    }
+  }
+}
+
 @media #{$desktop-widths} {
   .kursy {
     padding-left: 20px;
     padding-right: 20px;
-
     &__list {
       flex-wrap: wrap;
       justify-content: space-between;
@@ -162,7 +183,8 @@
       &-item {}
 
       &--four {
-        .kursy__list-item, .kurs__img {
+        .kursy__list-item,
+        .kurs__img {
           width: 580px;
         }
       }
