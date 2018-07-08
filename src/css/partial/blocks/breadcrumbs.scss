@@ -1,11 +1,13 @@
 .breadcrumbs {
+  @extend %container3;
+
+  @extend %grid-padding20;
+
   display: none;
 
   @media #{$tablet-widths} {
     display: block;
   }
-
-  @extend %grid-padding20;
 
   font-size: 13px;
   color: $titles;
