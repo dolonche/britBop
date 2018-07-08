@@ -1,7 +1,13 @@
-.breadcrumbs {
-  @extend %container3;
+.major--mid {
+  .breadcrumbs {
+    @extend %container3;
+  }
+}
 
+.breadcrumbs {
   @extend %grid-padding20;
+
+  @extend %container5;
 
   display: none;
 

@@ -1,17 +1,37 @@
 .major {
-  @extend %container2;
-
   display: flex;
   flex-direction: row;
 
+  &--mid {
+    @extend %container2;
+
+    .major__m {
+      &-elem {
+        > * {
+          @extend %container3;
+        }
+      }
+    }
+  }
+
   &__center {
-    width: 100%;
+    flex: 1;
   }
 
   &__m {
     &-elem {
+      padding: 1px 0;
+
       > * {
-        @extend %container3;
+        @extend %container5;
+
+        padding: 1px 20px;
+      }
+
+      &--pad0 {
+        > * {
+          padding: 1px 0;
+        }
       }
 
       &--grey {
