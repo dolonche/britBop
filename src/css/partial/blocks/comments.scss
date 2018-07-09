@@ -1,0 +1,27 @@
+.comments {
+  background-color: #ebecf3;
+  &__title {
+    font-size: 25px;
+    font-weight: lighter;
+  }
+  &__item {
+    border-bottom: 1px solid #ddddee;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    &-title {
+      font-weight: bold;
+    }
+    &-text {
+      p {
+        margin-top: 0;
+        margin-bottom: 0;
+      }
+    }
+    &-answer {
+      text-transform: uppercase;
+      font-weight: bold;
+      font-size: 12px;
+      text-align: right;
+    }
+  }
+}

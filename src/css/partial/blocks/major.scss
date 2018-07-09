@@ -37,6 +37,26 @@
       &--grey {
         background-color: $bg-grey;
       }
+      h1 {
+        padding-right: 0;
+      }
+      &-date {
+        padding-top: 10px;
+        background-color: $bg-grey;
+        div {
+          padding-left: 20px;
+          padding-right: 20px;
+          box-sizing: border-box;
+        }
+        span {
+          font-size: 13px;
+          color: #bbc;
+          white-space: nowrap;
+          &:nth-of-type(2) {
+            text-transform: lowercase;
+          }
+        }
+      }
     }
 
     &-wrapper {
@@ -64,5 +84,16 @@
     .major__m {
       @extend %container;
     }
+  }
+}
+
+.prime__category {
+  background-color: $bg-grey;
+  padding-top: 10px;
+}
+
+@media #{$tablet-widths} {
+  .prime__title {
+    background-color: $bg-grey;
   }
 }
