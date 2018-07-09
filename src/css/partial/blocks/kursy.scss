@@ -1,6 +1,4 @@
 .kursy {
-  @extend %container;
-
   display: flex;
   flex-direction: column;
 
@@ -15,6 +13,8 @@
     }
 
     &-top {
+      @extend %container5;
+
       cursor: pointer;
 
       &:hover {
@@ -44,7 +44,9 @@
 
     h2 {
       margin: 0;
+
       @extend %grid-padding20-footer;
+
       padding-top: 20px;
       padding-bottom: 20px;
     }
@@ -53,10 +55,11 @@
       .kurs {
         display: none;
       }
+
       .kursy__list {
         visibility: hidden;
         max-height: 0;
-        transition: 0.3s max-height;
+        transition: 0.9s max-height;
 
         @media #{$tablet-widths} {
           display: flex;
@@ -68,11 +71,12 @@
       .kurs {
         display: block;
       }
+
       .kursy__list {
         display: flex;
         visibility: visible;
         max-height: 4000px;
-        transition: 0.3s max-height;
+        transition: 0.9s max-height;
       }
 
       .kursy__lvl-top {
@@ -102,6 +106,8 @@
   &__list {
     @extend %grid-padding20-footer;
 
+    @extend %container5;
+
     flex-direction: column;
 
     @media #{$desktop-widths} {
@@ -116,20 +122,16 @@
 
 @media #{$tablet-widths} {
   .kursy {
-    padding-left: 94px;
-    padding-right: 94px;
     padding-top: 30px;
     background-color: $bg-grey;
-
-    &__wrapper {
-      background-color: $bg-grey;
-    }
 
     &__lvl {
       margin-bottom: 40px;
 
       &-top {
         cursor: auto;
+        padding-left: 94px;
+        padding-right: 94px;
       }
 
       &-title {
@@ -157,6 +159,11 @@
         }
       }
     }
+
+    &__list {
+      padding-left: 94px;
+      padding-right: 94px;
+    }
   }
 }
 
@@ -167,6 +174,7 @@
         .kurs {
           display: block;
         }
+
         .kursy__list {
           visibility: visible;
           max-height: 100%;
@@ -178,12 +186,18 @@
 
 @media #{$desktop-widths} {
   .kursy {
-    padding-left: 20px;
-    padding-right: 20px;
+    &__lvl {
+      &-top {
+        padding-left: 20px;
+        padding-right: 20px;
+      }
+    }
+
     &__list {
       flex-wrap: wrap;
       justify-content: space-between;
-
+      padding-left: 20px;
+      padding-right: 20px;
       &-item {}
 
       &--four {

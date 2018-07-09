@@ -1,14 +1,44 @@
 .major {
-  @extend %container2;
-
   display: flex;
   flex-direction: row;
 
-  &__center {
-    width: 100%;
+  &--mid {
+    @extend %container2;
+
+    .major__m {
+      &-elem {
+        > * {
+          @extend %container3;
+        }
+      }
+    }
   }
 
-  &__main {
+  &__center {
+    flex: 1;
+  }
+
+  &__m {
+    &-elem {
+      padding: 1px 0;
+
+      > * {
+        @extend %container5;
+
+        padding: 1px 20px;
+      }
+
+      &--pad0 {
+        > * {
+          padding: 1px 0;
+        }
+      }
+
+      &--grey {
+        background-color: $bg-grey;
+      }
+    }
+
     &-wrapper {
       &--solid {
         background-color: $bg-grey;
@@ -19,14 +49,20 @@
       @extend %container3;
 
       padding: 1px 20px;
+
+      .major__m-elem {
+        > * {
+          width: auto;
+        }
+      }
     }
   }
 
-  &__elem {
-    > * {
-      @extend %container3;
+  &--index {
+    width: 100%;
 
-      @extend %grid-padding20;
+    .major__m {
+      @extend %container;
     }
   }
 }

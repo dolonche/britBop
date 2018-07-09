@@ -8,7 +8,7 @@ $templateparams = $app->getTemplate(true)->params;
 $this->language = $doc->language;
 $this->direction = $doc->direction;
 $baseuri=JUri::base();
-$cssVersion="1.51";
+$cssVersion="1.54";
 $home =(JURI::getInstance()->toString()==JURI::base());
 //JHtml::script($this->baseurl.'templates/'.$this->template.'/js/main.js');
 ?>
@@ -56,26 +56,24 @@ $home =(JURI::getInstance()->toString()==JURI::base());
 				</div>
 			</header>
 			<jdoc:include type="modules" name="top" style="none" />
-			<div class="major__wrapper <?php if ($home):?>major__wrapper--index<?php endif; ?>">
-				<div class="major">
-					<div class="major__content">
-						<jdoc:include type="modules" name="content-top" style="none" />
-						<jdoc:include type="component" />
-						<jdoc:include type="modules" name="content-bottom" style="none" />
-						<jdoc:include type="message" />
-					</div>
-					<?php if($this->countModules("sidebar-left")):?>
-					<div class="sidebar-left">
-						<jdoc:include type="modules" name="sidebar-left" style="none" />
-					</div>
-					<?php endif;?>
-					<?php if($this->countModules("sidebar-right")):?>
-					<div class="sidebar-right">
-						<jdoc:include type="modules" name="sidebar-right" style="none" />
-					</div>
-					<?php endif;?>
+			<div class="major <?php if ($home):?>major--index<?php endif; ?> <?php if($this->countModules("sidebar-left") || $this->countModules("sidebar-right")):?>major--mid<?php endif;?>">
+				<div class="major__center">
+					<jdoc:include type="modules" name="content-top" style="none" />
+					<jdoc:include type="component" />
+					<jdoc:include type="modules" name="content-bottom" style="none" />
+					<jdoc:include type="message" />
 				</div>
-		  </div>
+				<?php if($this->countModules("sidebar-left")):?>
+				<div class="sidebar-left">
+					<jdoc:include type="modules" name="sidebar-left" style="none" />
+				</div>
+				<?php endif;?>
+				<?php if($this->countModules("sidebar-right")):?>
+				<div class="sidebar-right">
+					<jdoc:include type="modules" name="sidebar-right" style="none" />
+				</div>
+				<?php endif;?>
+			</div>
 			<jdoc:include type="modules" name="bottom" style="none" />
 			<footer class="page-footer">
 				<div class="page-footer__line">
@@ -132,7 +130,7 @@ $home =(JURI::getInstance()->toString()==JURI::base());
 				</div>
 			</footer>
 		</div>
-		<jdoc:include type="modules" name="script-bottom" style="none" />
 		<script src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template; ?>/js/main.js?v=<?php echo $cssVersion; ?>"></script>
+		<jdoc:include type="modules" name="script-bottom" style="none" />
 	</body>
 </html>
