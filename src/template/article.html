@@ -1,75 +1,80 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    //= include/head.html
-  </head>
-  <body>
-    <div class="container">
-      //= include/header.html
-      <div class="major major--mid">
-        <div class="major__center">
-          //= include/breadcrumbs.html
-          <main class="major__m prime item-page">
-            <div class="major__m-elem prime__title">
-              <h1>Статья Немного о геометрии стрижки и далее длинное название</h1>
-            </div>
-            <div class="major__m-elem major__m-elem--pad0 prime__image"><img src="/" alt=""></div>
-            <div class="major__m-elem prime__category"><div><a href="">Обучение</a></div></div>
-            <div class="major__m-elem major__m-elem--pad0 prime__extra">
-              <p>Опубликовано: 12.01.2018</p>
-              <p>Отредактировано: 12.01.2018</p>
-              <p>Автор: Administrator</p>
-            </div>
-            <div class="prime__descr">
-              <div class="major__m-elem major__m-elem--grey">
-                <h2>Дополнительный подзаголовок в статье h2</h2>
-                <p>Скажем по секрету, что всю базовую теорию стрижки можно вычитать за 10 дней, это так, но это никак не научит вас стричь людей, потому что стричь – это навык, он приходит с постоянной тренировкой.</p>
-              </div>
-              <div class="major__m-elem">
-                <h2>Дополнительный подзаголовок в статье h2</h2>
-                <p>Скажем по секрету, что всю базовую теорию стрижки можно вычитать за 10 дней, это так, но это никак не научит вас стричь людей, потому что стричь – это навык, он приходит с постоянной тренировкой.</p>
-              </div>
-            </div>
-            <div class="major__m-elem comment">
-              <p class="comment__title">Оставить комментарий</p>
-              <form action="">
-                <input type="text" class="name">
-                <input type="text" class="email">
-                <input type="text" class="text">
-                <a href="" class="button-link">Отправить комментарий</a>
-              </form>
-            </div>
-            <div class="major__m-elem comments">
-              <p class="comments__title">Комментарии</p>
-              <div class="comments__item">
-                <div class="comments__item-title"><span class="comments__item-title-name">Екатерина</span><span class="comments__item-title-date">2018-03-07 12:45</span></div>
-                <div class="comments__item-text"><p>Текст комментария в одну или не одну
-                строку текст</p></div>
-                <div class="comments__item-answer"><a href="">Ответить</a></div>
-              </div>
-              <div class="comments__item">
-                <div class="comments__item-title"><span class="comments__item-title-name">Иван</span><span class="comments__item-title-date">2018-04-08 12:45</span></div>
-                <div class="comments__item-text"><p>Текст комментария в одну или не одну
-                строку текст</p></div>
-                <div class="comments__item-answer"><a href="">Ответить</a></div>
-                <div class="comments__item">
-                  <div class="comments__item-title"><span class="comments__item-title-name">Роман</span><span class="comments__item-title-date">2018-07-18 12:45</span></div>
-                  <div class="comments__item-text"><p>Текст комментария в одну или не одну
-                  строку текст</p></div>
-                  <div class="comments__item-answer"><a href="">Ответить</a></div>
-                </div>
-              </div>
-            </div>
-          </main>
-          <div id="system-message-container">
-            <div id="system-message"></div>
+
+<head>
+  //= include/head.html
+</head>
+
+<body>
+  <div class="container">
+    //= include/header.html
+    <div class="major major--mid">
+      <div class="major__center">
+        //= include/breadcrumbs.html
+        <main class="major__m prime item-page">
+          <div class="major__m-elem prime__title">
+            <h1>Немного о геометрии стрижки и далее длинное название</h1>
           </div>
+          <div class="major__m-elem major__m-elem--pad0 prime__image"><img src="/" alt=""></div>
+          <div class="major__m-elem prime__category">
+            <div><a href="">Обучение</a></div>
+          </div>
+          <div class="major__m-elem major__m-elem-date major__m-elem--pad0 prime__extra">
+            <div>
+              <span>12.01.2018,</span>
+              <span>Отредактировано 12.01.2018</span>
+            </div>
+          </div>
+          <div class="prime__descr">
+            <div class="major__m-elem major__m-elem--grey">
+              <h2>Дополнительный подзаголовок в статье h2</h2>
+              <p>Скажем по секрету, что всю базовую теорию стрижки можно вычитать за 10 дней, это так, но это никак не научит вас стричь людей, потому что стричь – это навык, он приходит с постоянной тренировкой.</p>
+            </div>
+          </div>
+          <div class="major__m-elem comment">
+            <p class="comment__title">Оставить комментарий</p>
+            <form action="">
+              <input type="text" class="name" placeholder="Ваше имя">
+              <input type="email" class="email" placeholder="Электронная почта">
+              <textarea name="" id="" cols="30" rows="10" placeholder="Комментарий"></textarea>
+              <button type="submit">Отправить комментарий</button>
+            </form>
+          </div>
+          <div class="major__m-elem comments">
+            <p class="comments__title">Комментарии</p>
+            <div class="comments__item">
+              <div class="comments__item-title"><span class="comments__item-title-name">Екатерина </span><span class="comments__item-title-date">2018-03-07 12:45</span></div>
+              <div class="comments__item-text">
+                <p>Текст комментария в одну или не одну строку текст</p>
+              </div>
+              <div class="comments__item-answer"><a href="">Ответить</a></div>
+            </div>
+            <div class="comments__item">
+              <div class="comments__item-title"><span class="comments__item-title-name">Иван </span><span class="comments__item-title-date">2018-04-08 12:45</span></div>
+              <div class="comments__item-text">
+                <p>Текст комментария в одну или не одну строку текст</p>
+              </div>
+              <div class="comments__item-answer"><a href="">Ответить</a></div>
+            </div>
+              <div class="comments__item">
+                <div class="comments__item-title"><span class="comments__item-title-name">Роман </span><span class="comments__item-title-date">2018-07-18 12:45</span></div>
+                <div class="comments__item-text">
+                  <p>Текст комментария в одну или не одну строку текст</p>
+                </div>
+                <div class="comments__item-answer"><a href="">Ответить</a></div>
+              </div>
+            </div>
+        </main>
+        <div id="system-message-container">
+          <div id="system-message"></div>
         </div>
-        //= include/sidebar-left.html
-        //= include/sidebar-right.html
       </div>
-      //= include/footer.html
+      //= include/sidebar-left.html
+      //= include/sidebar-right.html
     </div>
-    <script src="js/main.min.js"></script>
-  </body>
+    //= include/footer.html
+  </div>
+  <script src="js/main.min.js"></script>
+</body>
+
 </html>

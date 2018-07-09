@@ -1,0 +1,49 @@
+.comment {
+  background-color: #dde;
+  padding-bottom: 30px;
+  box-sizing: border-box;
+  &__title {
+    font-size: 25px;
+    font-weight: lighter;
+  }
+  form {
+    input {
+      margin-bottom: 10px;
+      width: 100%;
+      border-radius: 40px;
+      border: none;
+      background-color: #fff;
+      padding: 15px;
+      padding-bottom: 13px;
+      box-sizing: border-box;
+    }
+    textarea {
+      height: 100px;
+      width: 100%;
+      border-radius: 20px;
+      border: none;
+      padding: 15px;
+      box-sizing: border-box;
+    }
+    button {
+      display: block;
+      cursor: pointer;
+      padding: 17px 0;
+      text-decoration: none;
+      text-transform: uppercase;
+      color: $white;
+      font-weight: 700;
+      font-size: 15px;
+      line-height: 15px;
+      text-align: center;
+      border-radius: 50px;
+      background: linear-gradient(to right, #f86, #dc4405);
+      min-width: 280px;
+      width: 280px;
+
+      &:hover {
+        background: linear-gradient(to right, #dc4405, #f86);
+      }
+    }
+  }
+}
