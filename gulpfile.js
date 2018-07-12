@@ -434,49 +434,96 @@ gulp.task('build', building);
 
 
 gulp.task('watch-html', function(done) {
-  gulp.watch(path.watch.html, gulp.series('html:build-ftp'))
+  gulp.watch(path.watch.html, gulp.series('html:build'))
   done();
 })
 gulp.task('watch-imagescontent', function(done) {
-  gulp.watch(path.watch.contentImg, gulp.series('imagescontent:build-ftp'))
+  gulp.watch(path.watch.contentImg, gulp.series('imagescontent:build'))
   done();
 })
 gulp.task('watch-image', function(done) {
-  gulp.watch(path.watch.img, gulp.series('image:build-ftp'))
+  gulp.watch(path.watch.img, gulp.series('image:build'))
   done();
 })
 gulp.task('watch-svg', function(done) {
-  gulp.watch(path.watch.svg, gulp.series('svg:build-ftp'))
+  gulp.watch(path.watch.svg, gulp.series('svg:build'))
   done();
 })
 gulp.task('watch-js', function(done) {
-  gulp.watch(path.watch.js, gulp.series('js:build-ftp'))
+  gulp.watch(path.watch.js, gulp.series('js:build'))
   done();
 })
 gulp.task('watch-css', function(done) {
-  gulp.watch(path.watch.css, gulp.series('css:build-ftp'))
+  gulp.watch(path.watch.css, gulp.series('css:build'))
   done();
 })
 gulp.task('watch-fonts', function(done) {
-  gulp.watch(path.watch.fonts, gulp.series('fonts:build-ftp'))
+  gulp.watch(path.watch.fonts, gulp.series('fonts:build'))
   done();
 })
 gulp.task('watch-htaccess', function(done) {
-  gulp.watch(path.watch.htaccess, gulp.series('htaccess:build-ftp'))
+  gulp.watch(path.watch.htaccess, gulp.series('htaccess:build'))
   done();
 })
 gulp.task('watch-other', function(done) {
-  gulp.watch([path.watch.language, path.watch.htmlfolder], gulp.series('other:build-ftp'))
+  gulp.watch([path.watch.language, path.watch.htmlfolder], gulp.series('other:build'))
   done();
 })
 gulp.task('watch-indexfiles', function(done) {
+  gulp.watch(path.watch.indexfiles, gulp.series('indexfiles:build'))
+  done();
+})
+
+
+gulp.task('watch-html-ftp', function(done) {
+  gulp.watch(path.watch.html, gulp.series('html:build-ftp'))
+  done();
+})
+gulp.task('watch-imagescontent-ftp', function(done) {
+  gulp.watch(path.watch.contentImg, gulp.series('imagescontent:build-ftp'))
+  done();
+})
+gulp.task('watch-image-ftp', function(done) {
+  gulp.watch(path.watch.img, gulp.series('image:build-ftp'))
+  done();
+})
+gulp.task('watch-svg-ftp', function(done) {
+  gulp.watch(path.watch.svg, gulp.series('svg:build-ftp'))
+  done();
+})
+gulp.task('watch-js-ftp', function(done) {
+  gulp.watch(path.watch.js, gulp.series('js:build-ftp'))
+  done();
+})
+gulp.task('watch-css-ftp', function(done) {
+  gulp.watch(path.watch.css, gulp.series('css:build-ftp'))
+  done();
+})
+gulp.task('watch-fonts-ftp', function(done) {
+  gulp.watch(path.watch.fonts, gulp.series('fonts:build-ftp'))
+  done();
+})
+gulp.task('watch-htaccess-ftp', function(done) {
+  gulp.watch(path.watch.htaccess, gulp.series('htaccess:build-ftp'))
+  done();
+})
+gulp.task('watch-other-ftp', function(done) {
+  gulp.watch([path.watch.language, path.watch.htmlfolder], gulp.series('other:build-ftp'))
+  done();
+})
+gulp.task('watch-indexfiles-ftp', function(done) {
   gulp.watch(path.watch.indexfiles, gulp.series('indexfiles:build-ftp'))
   done();
 })
 
 var watcher = gulp.parallel('watch-html', 'watch-image', 'watch-imagescontent', 'watch-svg', 'watch-js', 'watch-css', 'watch-fonts', 'watch-htaccess', 'watch-other', 'watch-indexfiles');
+var watcher2 = gulp.parallel('watch-html-ftp', 'watch-image-ftp', 'watch-imagescontent-ftp', 'watch-svg-ftp', 'watch-js-ftp', 'watch-css-ftp', 'watch-fonts-ftp', 'watch-htaccess-ftp', 'watch-other-ftp', 'watch-indexfiles-ftp');
+var ftpall = gulp.series('indexfiles:build-ftp', 'other:build-ftp', 'htaccess:build-ftp', 'css:build-ftp', 'js:build-ftp', 'imagescontent:build-ftp');
 
 gulp.task('watch', watcher);
+gulp.task('watch2', watcher2);
+
+gulp.task('mass-ftp', ftpall);
 
 
 
