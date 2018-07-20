@@ -1,11 +1,13 @@
 .extra {
   padding-top: 10px;
   background-color: $bg-grey;
-
-  div {
-    @extend %grid-padding20;
+  margin: 0;
+  dd {
+    padding-left: 20px;
+    @extend %container5;
+    margin-left: auto;
+    margin-right: auto;
   }
-
   span {
     font-size: 13px;
     color: #bbc;
@@ -25,6 +27,14 @@
   &__duration {
     span {
       font-weight: bold;
+    }
+  }
+}
+
+@media #{$desktop-widths} {
+  .extra {
+    dd {
+      width: auto;
     }
   }
 }

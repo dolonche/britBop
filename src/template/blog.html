@@ -1,17 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    //= include/head.html
-  </head>
-  <body>
-    <div class="container">
-      //= include/header.html
-      <div class="major major--mid">
-        <div class="major__center">
-          //= include/breadcrumbs.html
-          <div class="major__m-wrapper major__m-wrapper--grey">
-            <main class="major__m major__m--solid blog">
-              <h1>Блог (blog.html)</h1>
+
+<head>
+  //= include/head.html
+</head>
+
+<body>
+  <div class="container">
+    //= include/header.html
+    <div class="major major--mid">
+      <div class="major__center">
+        //= include/breadcrumbs.html
+        <div class="major__m-wrapper major__m-wrapper--grey">
+          <main class="major__m major__m--solid blog">
+            <h1>Блог</h1>
+            <div class="lenta">
+              <div class="lenta__item" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+                <a class="lenta__link" href="/blog/obuchenie/alcina-model-rita.html" itemprop="url">
+                  <!--                    <h2 itemprop="name">Техника окрашивания с использованием медной линии Alcina. Модель Рита</h2>-->
+                  <figure class="pull-left lenta__image">
+                    <img class="caption" src="/img/obrazec2.jpg" alt="" itemprop="thumbnailUrl" />
+<!--                    <figcaption>Подпись</figcaption>-->
+                  </figure>
+                  <h2 class="lenta__item-title">заголовок записи в блоге в одну или две строки</h2>
+                  <p class="lenta__item-descr">Школа Парикмахеров BritBob была образована в 2012 году группой «инициативных товарищей», куда входили лучшие преподавател и...</p>
+                  <!--
+                    <p>Модель: Рита</p>
+                    <p>Окрашивание: Виктория Инбер</p>
+                    <p>Фото: Катя Труба</p>
+-->
+                </a>
+                //= include/extra.html
+              </div>
+            </div>
+            <!--
               <div class="lenta">
                 <div class="lenta__item" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
                   <a class="lenta__link" href="/blog/obuchenie/alcina-model-rita.html" itemprop="url">
@@ -42,33 +64,20 @@
                   //= include/extra.html
                 </div>
               </div>
-              <div class="lenta">
-                <div class="lenta__item" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-                  <a class="lenta__link" href="/blog/obuchenie/alcina-model-rita.html" itemprop="url">
-                    <h2 itemprop="name">Техника окрашивания с использованием медной линии Alcina. Модель Рита</h2>
-                    <figure class="pull-left lenta__image">
-                      <img class="caption" src="/img/obrazec2.jpg" alt="" itemprop="thumbnailUrl"/>
-                      <figcaption>Подпись</figcaption>
-                    </figure>
-                    <p>Модель: Рита</p>
-                    <p>Окрашивание: Виктория Инбер</p>
-                    <p>Фото: Катя Труба</p>
-                  </a>
-                  //= include/extra.html
-                </div>
-              </div>
-              //= include/pagination.html
-            </main>
-          </div>
-          <div id="system-message-container">
-            <div id="system-message"></div>
-          </div>
+-->
+            //= include/pagination.html
+          </main>
         </div>
-        //= include/sidebar-left.html
-        //= include/sidebar-right.html
+        <div id="system-message-container">
+          <div id="system-message"></div>
+        </div>
       </div>
-      //= include/footer.html
+      //= include/sidebar-left.html
+      //= include/sidebar-right.html
     </div>
-    <script src="js/main.min.js"></script>
-  </body>
+    //= include/footer.html
+  </div>
+  <script src="js/main.min.js"></script>
+</body>
+
 </html>

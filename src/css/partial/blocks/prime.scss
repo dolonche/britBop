@@ -30,6 +30,8 @@
       background-image: linear-gradient(to top, rgba(69, 69, 86, 1), rgba(188, 188, 194, 0));
       padding-top: 40px;
       padding-bottom: 40px;
+      left: 50%;
+      transform: translateX(-50%);
     }
   }
 
@@ -58,8 +60,6 @@
   .prime {
     &__image {
       box-sizing: border-box;
-      padding-left: 20px;
-      padding-right: 20px;
     }
 
     &__title {

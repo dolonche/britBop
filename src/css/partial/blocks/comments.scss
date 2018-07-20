@@ -8,6 +8,10 @@
     border-bottom: 1px solid $lines-grey;
     padding-top: 20px;
     padding-bottom: 20px;
+    & > .comments__item{
+      padding-left: 20px;
+      border-bottom: none;
+    }
     &-title {
       font-weight: bold;
     }

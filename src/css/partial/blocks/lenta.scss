@@ -1,0 +1,56 @@
+.lenta {
+  margin-bottom: 20px;
+  &__item {
+    box-shadow: 0 20px 100px -30px;
+    &-title {
+      text-transform: uppercase;
+      font-weight: bold;
+      font-size: 15px;
+      line-height: 20px;
+      padding: 20px;
+      background-color: #fff;
+      margin-bottom: 0;
+      margin-top: -8px;
+      border-bottom: 1px solid #ddd;
+    }
+    &-descr {
+      background-color: #fff;
+      margin: 0;
+      margin-bottom: 0;
+      padding: 20px;
+    }
+    &-extra {
+      background-color: #fff;
+      padding-top: 0;
+      padding-bottom: 30px;
+    }
+  }
+  &__image {
+    margin: 0;
+    text-align: center;
+    overflow-x: hidden;
+    img {
+      width: auto;
+      height: 100%;
+      margin-left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+}
+
+@media #{$tablet-widths} {
+  .lenta {
+    &__item {
+      &-title {
+        color: #dc4405;
+        padding-bottom: 18px;
+      }
+    }
+    &__image {
+      img {
+        width: 100%;
+        height: auto;
+      }
+    }
+  }
+}
