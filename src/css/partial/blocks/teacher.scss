@@ -1,0 +1,65 @@
+.teacher {
+  @extend %container;
+  padding-bottom: 15px;
+  &__title {
+    font-size: 25px;
+    line-height: 30px;
+    font-weight: lighter;
+    text-align: center;
+  }
+  &__img {
+    text-align: center;
+  }
+  &__content {
+    h4 {
+      font-size: 15px;
+      text-transform: uppercase;
+      text-align: center;
+      color: #000;
+    }
+    &-descr {
+      blockquote {
+        font-size: 20px;
+        text-align: center;
+        margin: 0;
+        font-weight: lighter;
+      }
+    }
+  }
+}
+
+@media #{$tablet-widths} {
+  .teacher {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    &__img {
+      float: left;
+    }
+    &__title {
+      float: right;
+      margin-right: 240px;
+    }
+    &__content {
+      width: 300px;
+      float: left;
+      margin-left: 20px;
+      h4 {
+        text-align: left;
+      }
+      &-descr {
+        blockquote {
+          text-align: left;
+        }
+      }
+    }
+  }
+}
+@media #{$desktop-widths}{
+  .teacher{
+    padding-left: 80px;
+    padding-right: 80px;
+    &__title{
+      margin-right: 50%;
+    }
+  }
+}

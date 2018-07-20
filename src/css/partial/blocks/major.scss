@@ -33,7 +33,9 @@
           padding: 1px 0;
         }
       }
-
+      &--blue{
+         background-color: $lines-grey;
+      }
       &--grey {
         background-color: $bg-grey;
       }
@@ -91,37 +93,8 @@
   background-color: $bg-grey;
   padding-top: 10px;
 }
-
-.prime__image {
-  margin: 0;
-  padding: 0;
-  position: relative;
-  &::after {
-    position: absolute;
-    content: "";
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-  }
-  img {
-    padding-top: 0;
-    margin-bottom: -9px;
-  }
-  figcaption {
-    font-size: 13px;
-    color: $titles;
-    position: absolute;
-    text-align: center;
-    bottom: 0;
-    background-image: linear-gradient(to top, rgba(69, 69, 86, 1), rgba(188, 188, 194, 0.0));
-    padding-top: 40px;
-    padding-bottom: 40px;
-  }
-}
-
-@media #{$tablet-widths} {
-  .prime__title {
+@media #{$tablet-widths}{
+  .major__m-elem--grey-mob{
     background-color: $bg-grey;
   }
 }

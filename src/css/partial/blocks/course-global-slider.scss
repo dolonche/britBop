@@ -1,0 +1,14 @@
+.course-global-slider {
+  background-color: $bg-insta;
+  &__title {
+    @extend %container;
+    text-align: center;
+    font-size: 25px;
+    line-height: 30px;
+    font-weight: lighter;
+    color: #fff;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding: 25px;
+  }
+}
