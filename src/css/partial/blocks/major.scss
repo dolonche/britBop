@@ -33,31 +33,13 @@
           padding: 1px 0;
         }
       }
-      &--blue{
-         background-color: $lines-grey;
+
+      &--blue {
+        background-color: $lines-grey;
       }
+
       &--grey {
         background-color: $bg-grey;
-      }
-      h1 {
-        padding-right: 0;
-      }
-      &-date {
-        padding-top: 10px;
-        background-color: $bg-grey;
-        div {
-          padding-left: 20px;
-          padding-right: 20px;
-          box-sizing: border-box;
-        }
-        span {
-          font-size: 13px;
-          color: #bbc;
-          white-space: nowrap;
-          &:nth-of-type(2) {
-            text-transform: lowercase;
-          }
-        }
       }
     }
 
@@ -93,8 +75,9 @@
   background-color: $bg-grey;
   padding-top: 10px;
 }
-@media #{$tablet-widths}{
-  .major__m-elem--grey-mob{
+
+@media #{$tablet-widths} {
+  .major__m-elem--grey-mob {
     background-color: $bg-grey;
   }
 }
