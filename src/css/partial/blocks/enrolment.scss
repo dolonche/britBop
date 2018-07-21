@@ -1,9 +1,10 @@
-.enrolment{
-  padding-top: 15px;
-  padding-bottom: 10px;
+.enrolment {
+  padding-top: 25px;
+  padding-bottom: 25px;
   display: flex;
   flex-direction: column;
-  &__near{
+
+  &__near {
     font-size: 13px;
     text-align: center;
     font-weight: bold;
@@ -11,16 +12,19 @@
     margin-bottom: 0;
   }
 }
-@media #{$tablet-widths}{
-  .enrolment{
+
+@media #{$tablet-widths} {
+  .enrolment {
     flex-direction: row;
     justify-content: space-between;
-    &__near{
+
+    &__near {
       margin-top: auto;
       margin-bottom: auto;
       order: 1;
     }
-    &__button{
+
+    &__button {
       order: 2;
     }
   }
