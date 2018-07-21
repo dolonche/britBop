@@ -1,13 +1,23 @@
 .extra {
   padding-top: 10px;
-  background-color: $bg-grey;
   margin: 0;
+  font-size: 13px;
+  color: $titles;
+
   dd {
-    padding-left: 20px;
     @extend %container5;
-    margin-left: auto;
-    margin-right: auto;
+
+    padding: 1px 20px;
+
+    a {
+      text-transform: uppercase;
+      font-size: 12px;
+      &:hover {
+        color: $titles;
+      }
+    }
   }
+
   span {
     font-size: 13px;
     color: #bbc;
