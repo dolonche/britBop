@@ -1,4 +1,9 @@
 .prime {
+  &__title,
+  &__level-value {
+    background-color: $white;
+  }
+
   &__image {
     margin: 0;
     padding: 0;
@@ -34,17 +39,16 @@
       transform: translateX(-50%);
     }
   }
-
-  &__title {
-    &-courses {
-      margin-bottom: 0;
-    }
+  &__level-value {
+    padding-bottom: 30px;
+    margin-top: -10px;
   }
 }
 
 @media #{$tablet-widths} {
   .prime {
-    &__title {
+    &__title,
+    &__level-value {
       background-color: $bg-grey;
     }
 
@@ -60,12 +64,6 @@
   .prime {
     &__image {
       box-sizing: border-box;
-    }
-
-    &__title {
-      &-courses {
-        padding-left: 20px;
-      }
     }
   }
 }

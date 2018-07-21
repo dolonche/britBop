@@ -1,7 +1,12 @@
 .lenta {
   margin-bottom: 20px;
+
   &__item {
+    background-color: #fff;
     box-shadow: 0 20px 100px -30px;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+
     &-title {
       text-transform: uppercase;
       font-weight: bold;
@@ -13,28 +18,32 @@
       margin-top: -8px;
       border-bottom: 1px solid #ddd;
     }
+
     &-descr {
+      padding: 1px 20px;
       background-color: #fff;
-      margin: 0;
-      margin-bottom: 0;
-      padding: 20px;
-    }
-    &-extra {
-      background-color: #fff;
-      padding-top: 0;
-      padding-bottom: 30px;
     }
   }
+
   &__image {
     margin: 0;
     text-align: center;
     overflow-x: hidden;
+
     img {
       width: auto;
       height: 100%;
       margin-left: 50%;
       transform: translateX(-50%);
     }
+
+    figcaption {
+      display: none;
+    }
+  }
+
+  .extra {
+    font-size: 14px;
   }
 }
 
@@ -46,6 +55,7 @@
         padding-bottom: 18px;
       }
     }
+
     &__image {
       img {
         width: 100%;

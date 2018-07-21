@@ -60,6 +60,10 @@
         }
       }
     }
+
+    &--grey {
+      background-color: $bg-grey;
+    }
   }
 
   &--index {
@@ -76,8 +80,3 @@
   padding-top: 10px;
 }
 
-@media #{$tablet-widths} {
-  .major__m-elem--grey-mob {
-    background-color: $bg-grey;
-  }
-}

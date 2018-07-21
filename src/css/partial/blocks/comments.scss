@@ -1,26 +1,33 @@
 .comments {
   background-color: $bg-grey;
+
   &__title {
     font-size: 25px;
     font-weight: lighter;
   }
+
   &__item {
     border-bottom: 1px solid $lines-grey;
     padding-top: 20px;
     padding-bottom: 20px;
-    & > .comments__item{
+    font-size: 13px;
+
+    & > .comments__item {
       padding-left: 20px;
       border-bottom: none;
     }
+
     &-title {
       font-weight: bold;
     }
+
     &-text {
       p {
-        margin-top: 0;
-        margin-bottom: 0;
+        margin-top: 5px;
+        margin-bottom: 5px;
       }
     }
+
     &-answer {
       text-transform: uppercase;
       font-weight: bold;
