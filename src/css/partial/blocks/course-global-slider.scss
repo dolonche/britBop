@@ -1,5 +1,6 @@
 .course-global-slider {
   background-color: $bg-insta;
+  position: relative;
   &__title {
     @extend %container;
     text-align: center;
@@ -10,5 +11,63 @@
     margin-top: 0;
     margin-bottom: 0;
     padding: 25px;
+  }
+  .owl-carousel {
+    .owl-nav {
+      display: flex;
+      width: 100%;
+      position: absolute;
+      top: -80px;
+      justify-content: space-between;
+      button.owl-prev,
+      button.owl-next {
+        background-color: transparent;
+        border: none;
+        outline: none;
+        &::before {
+          border-left: 2px solid #fff;
+          border-bottom: 2px solid #fff;
+          width: 16px;
+          height: 16px;
+        }
+        &:hover {
+          background-color: transparent;
+          &::before {
+            border-color: #dc4405;
+          }
+        }
+      }
+      button.owl-prev {
+        left: 4px;
+      }
+      button.owl-next {
+        right: 8px;
+      }
+    }
+  }
+}
+
+@media #{$tablet-widths} {
+  .course-global-slider {
+    padding-bottom: 40px;
+  }
+}
+
+@media #{$desktop-widths} {
+  .course-global-slider {
+    .owl-carousel {
+      .owl-item {
+        opacity: 0.5;
+        &.active {
+          opacity: 1;
+        }
+      }
+      .owl-nav {
+        max-width: 1200px;
+        left: 50%;
+        transform: translateX(-50%);
+        top: -64px;
+      }
+    }
   }
 }

@@ -31,3 +31,47 @@ body.addEventListener('click', function (e) {
     navToggle.classList.add('mnav__toggle--closed');
   }
 })
+$(document).ready(function () {
+  $(".purple-slider").owlCarousel();
+  $(".teacher-slider").owlCarousel();
+});
+$('.purple-slider').owlCarousel({
+  loop: true,
+  margin: 10,
+  nav: true,
+  dots: false,
+  responsive: {
+    0: {
+      items: 1
+    },
+    768: {
+      items: 1,
+      nav: false
+    },
+    1200: {
+      nav: true,
+      items: 1,
+      stagePadding: 250
+    }
+  }
+});
+$('.teacher-slider').owlCarousel({
+  loop: true,
+  margin: 20,
+  nav: true,
+  dots: false,
+  responsive: {
+    0: {
+      items: 1,
+      nav: true
+    },
+    768: {
+      items: 2,
+      nav: false, 
+    },
+    1200: {
+      items: 3,
+      nav: true
+    }
+  }
+})
