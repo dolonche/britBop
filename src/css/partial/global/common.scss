@@ -23,6 +23,36 @@ p {
 }
 
 a {
-	color: $orange;
-	text-decoration: none;
+  color: $orange;
+  text-decoration: none;
+}
+
+h3,
+h4,
+h5 {
+  text-transform: uppercase;
+}
+
+.title1 {
+  text-transform: uppercase;
+}
+
+.prime {
+  li {
+    list-style-type: none;
+    position: relative;
+    padding-left: 15px;
+
+    &::before {
+      position: absolute;
+      content: "";
+      background-color: $orange;
+      width: 5px;
+      height: 5px;
+      border-radius: 100%;
+      left: 0;
+      top: 50%;
+      transform: translateY(-4px);
+    }
+  }
 }

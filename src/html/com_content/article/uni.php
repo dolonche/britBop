@@ -19,6 +19,12 @@ $canEdit = $params->get('access-edit');
 $user    = JFactory::getUser();
 $info    = $params->get('info_block_position', 0);
 
+// GET CUSTOM FIELDS
+    $myCustomFields = array();
+    foreach($this->item->jcfields as $field) {
+        $myCustomFields[$field->name] = $field->value;
+} 
+
 // Check if associations are implemented. If they are, define the parameter.
 $assocParam = (JLanguageAssociations::isEnabled() && $params->get('show_associations'));
 JHtml::_('behavior.caption');
@@ -30,7 +36,13 @@ JHtml::_('behavior.caption');
 	<div class="major__m-elem prime__title">
 		<h1> <?php echo $this->escape($this->params->get('page_heading')); ?> </h1>
 	</div>
-	<?php endif;
+	<?php endif; ?>
+	<?php if (isset($myCustomFields['level-value']) and !empty($myCustomFields['level-value'])) : ?>
+	  <div class="major__m-elem prime__level-value">
+	    <div><span class="level-value"><?php echo $myCustomFields['level-value']; ?></span></div>
+	  </div>
+	<?php endif; ?>
+	<?php 
 	if (!empty($this->item->pagination) && $this->item->pagination && !$this->item->paginationposition && $this->item->paginationrelative)
 	{
 		echo $this->item->pagination;
