@@ -41,6 +41,7 @@
       width: 100%;
     }
   }
+
   &__level-value {
     padding-bottom: 30px;
     margin-top: -10px;
@@ -54,11 +55,7 @@
       background-color: $bg-grey;
     }
 
-    &__image {
-      &--grey {
-        background-color: $bg-grey;
-      }
-    }
+    &__image {}
   }
 }
 
