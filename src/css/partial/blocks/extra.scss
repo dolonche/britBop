@@ -28,12 +28,8 @@
     }
   }
 
-  &__price {
-    span {
-      font-weight: bold;
-    }
-  }
-
+  &__item,
+  &__price,
   &__duration {
     span {
       font-weight: bold;
