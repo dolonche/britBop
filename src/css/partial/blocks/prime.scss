@@ -40,6 +40,14 @@
       transform: translateX(-50%);
       width: 100%;
     }
+    blockquote {
+      font-weight: lighter;
+      font-size: 20px;
+      line-height: 30px;
+      margin: 0;
+      margin-top: 15px;
+      position: relative;
+    }
   }
 
   &__level-value {
@@ -55,7 +63,37 @@
       background-color: $bg-grey;
     }
 
-    &__image {}
+    &__image {
+      &--right {
+        img {
+          float: right;
+          width: auto;
+          margin-top: 20px;
+          margin-bottom: 20px;
+        }
+        blockquote {
+          text-align: left;
+          margin-top: 40px;
+          max-width: 50%;
+          &::before {
+            content: "«";
+            position: absolute;
+            top: 0;
+            left: -40px;
+            font-size: 40px;
+            color: #bbc;
+          }
+          &::after {
+            content: "»";
+            position: absolute;
+            bottom: 0;
+            font-size: 40px;
+            margin-left: 40px;
+            color: #bbc;
+          }
+        }
+      }
+    }
   }
 }
 
@@ -63,6 +101,21 @@
   .prime {
     &__image {
       box-sizing: border-box;
+      &--right {
+        img {
+          width: 50%;
+          margin-top: -60px;
+        }
+        blockquote{
+          margin-bottom: 160px;
+          &::before{
+            left: -20px;
+          }
+          &::after{
+            margin-left: 0;
+          }
+        }
+      }
     }
   }
 }
