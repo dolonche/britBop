@@ -1,31 +1,84 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    //= include/head.html
-  </head>
-  <body>
-    <div class="container">
-      //= include/header.html
-      <div class="major major--mid">
-        <div class="major__center">
-          //= include/breadcrumbs.html
-          <div class="major__m-wrapper major__m-wrapper--grey">
-            <main class="major__m major__m--solid">
-              <h1>Расписание</h1>
-              <div class="rasp">
-                
+
+<head>
+  //= include/head.html
+</head>
+
+<body>
+  <div class="container">
+    //= include/header.html
+    <div class="major major--mid">
+      <div class="major__center">
+        //= include/breadcrumbs.html
+        <div class="major__m-wrapper major__m-wrapper--grey">
+          <main class="major__m major__m--solid">
+            <h1>Расписание</h1>
+            <div class="timetable">
+              <form action="" class="timetable__form">
+                <select class="timetable__form-select"><option value="" selected="true" disabled="disabled">Выберите уровень</option><option value="">Уровень 1</option><option value="">Уровень 1</option><option value="">Уровень 1</option></select><select class="timetable__form-select"><option value="" selected="true" disabled="disabled">Выберите курс</option><option value="">Курс 1</option><option value="">Курс 1</option><option value="">Курс 1</option></select>
+              </form>
+              <div class="timetable__item">
+                <div class="timetable__item-left"><img src="img/content/mob-rijaya-model3.jpg" alt="" class="timetable__item-left-image"></div>
+                <div class="timetable__item-right">
+                  <div class="timetable__item-right-top">
+                    <span class="timetable__item-right-top-level">уровень 1</span>
+                    <span class="timetable__item-right-top-status">Запись открыта</span></div>
+                  <h2 class="timetable__item-right-title">Британская классика Январь-Март
+                  </h2>
+                  <p class="timetable__item-right-descr">Британская классика с углублённым изучением геометрии стрижки и дополнительной практикой для начинающих.</p>
+                  <div class="timetable__item-right-spec">
+                    <div class="timetable__item-right-spec-bunch"><span>Дата проведения:</span><span>9 января — 9 марта 2018</span></div>
+                    <div class="timetable__item-right-spec-bunch"><span>Стоимость</span><span>100 000 ₽</span></div>
+                  </div>
+                  <a class="orange-button orange-button--left-tablet" href="#">Записатья на курс</a>
+                </div>
               </div>
-              //= include/pagination.html
-            </main>
-          </div>
-          <div id="system-message-container">
-            <div id="system-message"></div>
-          </div>
+              <div class="timetable__item">
+                <div class="timetable__item-left"><img src="img/content/mob-rijaya-model3.jpg" alt="" class="timetable__item-left-image"></div>
+                <div class="timetable__item-right">
+                  <div class="timetable__item-right-top">
+                    <span class="timetable__item-right-top-level">уровень 1</span>
+                    <span class="timetable__item-right-top-status">Запись открыта</span></div>
+                  <h2 class="timetable__item-right-title">Британская классика Январь-Март
+                  </h2>
+                  <p class="timetable__item-right-descr">Британская классика с углублённым изучением геометрии стрижки и дополнительной практикой для начинающих.</p>
+                  <div class="timetable__item-right-spec">
+                    <div class="timetable__item-right-spec-bunch"><span>Дата проведения:</span><span>9 января — 9 марта 2018</span></div>
+                    <div class="timetable__item-right-spec-bunch"><span>Стоимость</span><span>100 000 ₽</span></div>
+                  </div>
+                  <a class="orange-button orange-button--left-tablet" href="#">Записатья на курс</a>
+                </div>
+              </div>
+              <div class="timetable__item">
+                <div class="timetable__item-left"><img src="img/content/mob-rijaya-model3.jpg" alt="" class="timetable__item-left-image"></div>
+                <div class="timetable__item-right">
+                  <div class="timetable__item-right-top">
+                    <span class="timetable__item-right-top-level">уровень 1</span>
+                    <span class="timetable__item-right-top-status">Запись открыта</span></div>
+                  <h2 class="timetable__item-right-title">Британская классика Январь-Март
+                  </h2>
+                  <p class="timetable__item-right-descr">Британская классика с углублённым изучением геометрии стрижки и дополнительной практикой для начинающих.</p>
+                  <div class="timetable__item-right-spec">
+                    <div class="timetable__item-right-spec-bunch"><span>Дата проведения:</span><span>9 января — 9 марта 2018</span></div>
+                    <div class="timetable__item-right-spec-bunch"><span>Стоимость</span><span>100 000 ₽</span></div>
+                  </div>
+                  <a class="orange-button orange-button--left-tablet" href="#">Записатья на курс</a>
+                </div>
+              </div>
+            </div>
+            //= include/pagination.html
+          </main>
         </div>
-        //= include/sidebar-left.html
+        <div id="system-message-container">
+          <div id="system-message"></div>
+        </div>
       </div>
-      //= include/footer.html
+      //= include/sidebar-left.html
     </div>
-    <script src="js/main.min.js"></script>
-  </body>
+    //= include/footer.html
+  </div>
+  <script src="js/main.min.js"></script>
+</body>
+
 </html>
