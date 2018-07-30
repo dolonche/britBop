@@ -46,7 +46,7 @@ $('.purple-slider').owlCarousel({
     },
     768: {
       items: 1,
-      nav: false
+      nav: true
     },
     1200: {
       nav: true,
@@ -67,7 +67,7 @@ $('.teacher-slider').owlCarousel({
     },
     768: {
       items: 2,
-      nav: false, 
+      nav: true, 
     },
     1200: {
       items: 3,

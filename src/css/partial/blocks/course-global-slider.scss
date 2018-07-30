@@ -50,6 +50,11 @@
 @media #{$tablet-widths} {
   .course-global-slider {
     padding-bottom: 40px;
+    .owl-carousel{
+      .owl-nav{
+        top: -64px;
+      }
+    }
   }
 }
 
@@ -66,7 +71,6 @@
         max-width: 1200px;
         left: 50%;
         transform: translateX(-50%);
-        top: -64px;
       }
     }
   }
