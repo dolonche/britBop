@@ -14,11 +14,14 @@
       &:hover {
         color: $orange;
       }
+      &:active {
+        color: #f86;
+      }
     }
-   	&-count {
-   		padding-left: 6px;
-   		font-size: 12px;
-   		color: $titles;
-   	}
+    &-count {
+      padding-left: 6px;
+      font-size: 12px;
+      color: $titles;
+    }
   }
 }

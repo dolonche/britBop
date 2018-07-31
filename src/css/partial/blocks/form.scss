@@ -3,21 +3,33 @@
     margin-bottom: 10px;
     width: 100%;
     border-radius: 40px;
-    border: none;
+    border: 1px solid #fff;
     background-color: #fff;
     padding: 15px;
     padding-bottom: 13px;
     box-sizing: border-box;
+    outline: none;
+    &:hover,
+    &:active,
+    &:focus {
+      border-color: #dd4a0d;
+    }
   }
 
   textarea {
     height: 100px;
     width: 100%;
     border-radius: 20px;
-    border: none;
+    border: 1px solid #fff;
     padding: 15px;
     box-sizing: border-box;
     resize: vertical;
+    outline: none;
+    &:hover,
+    &:active,
+    &:focus {
+      border-color: #dd4a0d;
+    }
   }
 
   button {

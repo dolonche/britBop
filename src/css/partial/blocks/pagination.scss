@@ -9,8 +9,14 @@
     justify-content: space-between;
     padding: 0;
     margin: 0;
-    li{
-      
+  }
+  a {
+    color: $titles;
+    &:hover {
+      color: #dc4405;
+    }
+    &:active {
+      color: #445;
     }
   }
   &-prev,
@@ -20,6 +26,9 @@
     border-left: 1.5px solid #dc4405;
     width: 10px;
     height: 10px;
+    &:hover {
+      opacity: 0.5;
+    }
   }
   &-prev {
     transform: rotate(-45deg) translateY(7px);
@@ -29,6 +38,14 @@
   }
   &-start,
   &-end {
+    span,
+    a {
+      color: #dc4405;
+      &:hover {
+        opacity: 0.5;
+        color: #dc4405;
+      }
+    }
     font-size: 40px;
     transform: translateY(-1px);
     font-weight: lighter;

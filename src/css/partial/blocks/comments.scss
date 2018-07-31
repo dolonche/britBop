@@ -33,6 +33,14 @@
       font-weight: bold;
       font-size: 12px;
       text-align: right;
+      a{
+        &:hover{
+          text-decoration: underline;
+        }
+        &:active{
+          color: #f86;
+        }
+      }
     }
   }
 }

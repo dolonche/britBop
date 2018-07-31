@@ -13,6 +13,14 @@
   margin-right: auto;
   text-align: center;
   text-transform: uppercase;
+  &:hover{
+    color: #f86;
+    border-color: #f86;
+  }
+  &:active{
+    background-color: #f86;
+    color: #fff;
+  }
 }
 @media #{$tablet-widths}{
   .orange-button{
