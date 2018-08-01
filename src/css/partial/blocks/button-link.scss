@@ -3,6 +3,7 @@
   padding: 17px 0;
   text-decoration: none;
   text-transform: uppercase;
+  border: none;
   color: $white;
   font-weight: 700;
   font-size: 15px;
@@ -27,5 +28,12 @@
     border-right: 3px solid $white;
     border-bottom: 3px solid $white;
     transform: rotate(-45deg);
+  }
+}
+@media #{$tablet-widths}{
+  .button-link{
+    &--fullenroll{
+      margin-top: 10px;
+    }
   }
 }

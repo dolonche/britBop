@@ -1,0 +1,104 @@
+.shop {
+  &__item {
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    box-shadow: 0 5px 28px rgba(0, 0, 0, .25), 0 5px 10px rgba(0, 0, 0, .22);
+    margin-bottom: 20px;
+    &-left {
+      &-image {
+        width: 100%;
+        height: auto;
+      }
+    }
+    &-right {
+      display: flex;
+      flex-direction: column;
+      padding-bottom: 10px;
+      &-title {
+        padding-left: 18px;
+        padding-right: 18px;
+        border-bottom: 1px solid $lines-color;
+        padding-bottom: 13px;
+        margin-top: 10px;
+      }
+      &-descr {
+        padding-left: 18px;
+        padding-right: 18px;
+        margin-top: -10px;
+      }
+      &-spec {
+        padding-left: 18px;
+        padding-right: 18px;
+        display: flex;
+        flex-direction: column;
+        &-bunch {
+          display: flex;
+          flex-direction: column;
+          margin-bottom: 10px;
+          span {
+            &:first-of-type {
+              color: $titles;
+              font-size: 13px;
+              line-height: 15px;
+            }
+            &:last-of-type {
+              text-transform: uppercase;
+              font-size: 15px;
+              line-height: 20px;
+              font-weight: bold;
+              margin-top: 6px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media #{$tablet-widths} {
+  .shop {
+    &__item {
+      flex-direction: row;
+      max-height: 280px;
+      &-left {
+        &-image {
+          width: 280px;
+          height: 280px;
+        }
+      }
+      &-right {
+        max-height: 280px;
+        padding-bottom: 0;
+        &-title {
+          margin-top: 12px;
+          margin-bottom: 12px;
+          padding-bottom: 8px;
+        }
+        &-descr {
+          padding-top: 8px;
+        }
+        &-spec {
+          flex-direction: row;
+          margin-bottom: 0;
+          &-bunch {
+            margin-right: 40px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media #{$desktop-widths} {
+  .shop {
+    &__item {
+      &-right {
+        &-spec {
+          margin-top: 10px;
+          margin-bottom: 12px;
+        }
+      }
+    }
+  }
+}
