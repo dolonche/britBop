@@ -64,6 +64,19 @@
     }
 
     &__image {
+      &--left {
+        img {
+          float: left;
+          width: auto;
+          margin-top: 20px;
+          margin-bottom: 20px;
+        }
+        blockquote {
+          float: left;
+          margin-top: 40px;
+          max-width: 50%;
+        }
+      }
       &--right {
         img {
           float: right;
@@ -82,6 +95,7 @@
             left: -40px;
             font-size: 40px;
             color: #bbc;
+            margin-left: 0;
           }
           &::after {
             content: "»";
@@ -101,17 +115,32 @@
   .prime {
     &__image {
       box-sizing: border-box;
+      &--left {
+        img {
+          width: 50%;
+          margin-top: 0px;
+        }
+        blockquote {
+          margin-bottom: 160px;
+          &::before {
+            left: -20px;
+          }
+          &::after {
+            margin-left: 0;
+          }
+        }
+      }
       &--right {
         img {
           width: 50%;
           margin-top: -60px;
         }
-        blockquote{
+        blockquote {
           margin-bottom: 160px;
-          &::before{
+          &::before {
             left: -20px;
           }
-          &::after{
+          &::after {
             margin-left: 0;
           }
         }

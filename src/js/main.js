@@ -36,7 +36,8 @@ $(document).ready(function () {
   $(".teacher-slider").owlCarousel();
 });
 $('.purple-slider').owlCarousel({
-  loop: true,
+  loop: false,
+  startPosition: 1,
   margin: 10,
   nav: true,
   dots: false,
@@ -56,7 +57,7 @@ $('.purple-slider').owlCarousel({
   }
 });
 $('.teacher-slider').owlCarousel({
-  loop: true,
+  loop: false,
   margin: 20,
   nav: true,
   dots: false,
@@ -67,11 +68,28 @@ $('.teacher-slider').owlCarousel({
     },
     768: {
       items: 2,
-      nav: true, 
+      nav: true,
     },
     1200: {
       items: 3,
       nav: true
     }
   }
-})
+});
+$(document).ready(function () {
+  $('.popup-gallery').magnificPopup({
+    delegate: 'a',
+    type: 'image',
+    tLoading: 'Loading image #%curr%...',
+    mainClass: 'mfp-img-mobile',
+    gallery: {
+      tCounter: '',
+      enabled: true,
+      navigateByImgClick: true,
+      preload: [0, 1] // Will preload 0 - before current, and 1 after the current image
+    },
+    image: {
+      tError: '<a href="%url%">The image #%curr%</a> could not be loaded.',
+    }
+  });
+});

@@ -38,6 +38,12 @@
         .teacher__img {
           text-align: center;
           float: none;
+          img
+          {
+            max-width: 280px;
+            margin-left: auto;
+            margin-right: auto;
+          }
         }
         .teacher__link {
           font-size: 0;
@@ -108,6 +114,10 @@
 }
 
 @media #{$tablet-widths} {
+  .owl-carousel.teacher-slider .owl-stage {
+    margin-left: auto;
+    margin-right: auto;
+  }
   .teachers {
 
     .teacher-slider {
@@ -124,6 +134,8 @@
               text-align: center;
             }
             &-descr {
+              padding-left: 25px;
+              padding-right: 25px;
               blockquote {
                 text-align: center;
               }
@@ -161,7 +173,7 @@
       }
 
       .owl-nav {
-        top: 355px;
+        top: 281px;
         button.owl-prev,
         button.owl-next {
           background-color: transparent;
@@ -193,11 +205,15 @@
 
 @media #{$desktop-widths} {
   .teachers {
-    .teacher-slider {
-      .owl-nav.disabled {
-        display: flex;
-        top: 388px;
+    &.teachers--course {
+      .teacher-slider {
+        .owl-nav.disabled {
+          display: none;
+          top: 388px;
+        }
       }
+    }
+    .teacher-slider {
     }
   }
 }

@@ -10,8 +10,21 @@
     padding: 0;
     margin: 0;
   }
+  li {
+    flex-grow: 2;
+    text-align: center;
+  }
+  span {
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
   a {
     color: $titles;
+    display: block;
+    width: 100%;
+    height: 100%;
+    text-align: center;
     &:hover {
       color: #dc4405;
     }
@@ -21,20 +34,17 @@
   }
   &-prev,
   &-next {
-    font-size: 0;
-    border-top: 1.5px solid #dc4405;
-    border-left: 1.5px solid #dc4405;
-    width: 10px;
-    height: 10px;
+    font-size: 40px;
+    font-weight: lighter;
+    transform: translateY(-1px);
     &:hover {
       opacity: 0.5;
     }
-  }
-  &-prev {
-    transform: rotate(-45deg) translateY(7px);
-  }
-  &-next {
-    transform: rotate(135deg) translateY(-7px);
+    a {
+      display: block;
+      width: 100%;
+      height: 100%;
+    }
   }
   &-start,
   &-end {
@@ -50,25 +60,10 @@
     transform: translateY(-1px);
     font-weight: lighter;
   }
-  &-start {
-    margin-left: 10px;
-    margin-right: -8px;
-  }
-  &-end {
-    margin-right: 10px;
-  }
 }
 
 @media #{$tablet-widths} {
   .pagination {
     margin-bottom: 40px;
-    &-start {
-      margin-left: 25px;
-      margin-right: -20px;
-    }
-    &-end {
-      margin-right: 29px;
-      margin-left: -20px;
-    }
   }
 }
