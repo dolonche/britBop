@@ -56,3 +56,26 @@ h5 {
     }
   }
 }
+
+@media #{$tablet-widths} {
+  blockquote {
+    position: relative;
+    text-align: left;
+    &::before {
+      content: "«";
+      position: absolute;
+      top: 0;
+      margin-left: -25px;
+      font-size: 40px;
+      color: #bbc;
+    }
+    &::after {
+      content: "»";
+      position: absolute;
+      bottom: 0;
+      font-size: 40px;
+      margin-left: 10px;
+      color: #bbc;
+    }
+  }
+}
