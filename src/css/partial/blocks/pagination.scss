@@ -12,7 +12,6 @@
   }
   a {
     color: $titles;
-    padding: 10px;
     &:hover {
       color: #dc4405;
     }
@@ -68,6 +67,9 @@
 @media #{$tablet-widths} {
   .pagination {
     margin-bottom: 40px;
+    a{
+      padding: 10px;
+    }
     &-start {
       margin-left: 25px;
       margin-right: -20px;
