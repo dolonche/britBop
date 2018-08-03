@@ -29,11 +29,10 @@ $results = $dispatcher->trigger('onContentAfterDisplay', array($this->category->
 $afterDisplayContent = trim(implode("\n", $results));
 
 ?>
-<div class="blog<?php echo $this->pageclass_sfx; ?>" itemscope itemtype="https://schema.org/Blog">
+<div class="major__m-wrapper major__m-wrapper--grey">
+<main class="major__m major__m--solid blog<?php echo $this->pageclass_sfx; ?>" itemscope itemtype="https://schema.org/Blog">
 	<?php if ($this->params->get('show_page_heading')) : ?>
-		<div class="page-header">
-			<h1> <?php echo $this->escape($this->params->get('page_heading')); ?> </h1>
-		</div>
+		<h1> <?php echo $this->escape($this->params->get('page_heading')); ?> </h1>
 	<?php endif; ?>
 
 	<?php if ($this->params->get('show_category_title', 1) or $this->params->get('page_subheading')) : ?>
@@ -71,9 +70,9 @@ $afterDisplayContent = trim(implode("\n", $results));
 
 	<?php $leadingcount = 0; ?>
 	<?php if (!empty($this->lead_items)) : ?>
-		<div class="items-leading clearfix">
+		<div class="lenta items-leading clearfix">
 			<?php foreach ($this->lead_items as &$item) : ?>
-				<div class="leading-<?php echo $leadingcount; ?><?php echo $item->state == 0 ? ' system-unpublished' : null; ?>"
+				<div class="lenta__item leading-<?php echo $leadingcount; ?><?php echo $item->state == 0 ? ' system-unpublished' : null; ?>"
 					itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
 					<?php
 					$this->item = &$item;
@@ -82,7 +81,7 @@ $afterDisplayContent = trim(implode("\n", $results));
 				</div>
 				<?php $leadingcount++; ?>
 			<?php endforeach; ?>
-		</div><!-- end items-leading -->
+		</div><!-- end lenta items-leading -->
 	<?php endif; ?>
 
 	<?php
@@ -121,11 +120,13 @@ $afterDisplayContent = trim(implode("\n", $results));
 	<?php endif; ?>
 
 	<?php if ($this->maxLevel != 0 && !empty($this->children[$this->category->id])) : ?>
+		<!--
 		<div class="cat-children">
 			<?php if ($this->params->get('show_category_heading_title_text', 1) == 1) : ?>
 				<h3> <?php echo JText::_('JGLOBAL_SUBCATEGORIES'); ?> </h3>
 			<?php endif; ?>
 			<?php echo $this->loadTemplate('children'); ?> </div>
+		-->
 	<?php endif; ?>
 	<?php if (($this->params->def('show_pagination', 1) == 1 || ($this->params->get('show_pagination') == 2)) && ($this->pagination->get('pages.total') > 1)) : ?>
 		<div class="pagination">
@@ -134,4 +135,6 @@ $afterDisplayContent = trim(implode("\n", $results));
 			<?php endif; ?>
 			<?php echo $this->pagination->getPagesLinks(); ?> </div>
 	<?php endif; ?>
+
+</main>
 </div>
