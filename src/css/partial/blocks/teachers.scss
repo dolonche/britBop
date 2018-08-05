@@ -118,8 +118,31 @@
     margin-left: auto;
     margin-right: auto;
   }
+    .teacher__link {
+            font-size: 0;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            border-radius: 100%;
+            border: 1px solid #bbc;
+            width: 40px;
+            height: 40px;
+            margin-top: 14px;
+            position: relative;
+            &::after {
+              position: absolute;
+              content: "";
+              left: 50%;
+              top: 50%;
+              transform: translate(-50%, -50%) rotate(135deg);
+              width: 8px;
+              height: 8px;
+              border-top: 2px solid #bbc;
+              border-left: 2px solid #bbc;
+              margin-left: -2px;
+            }
+          }
   .teachers {
-
     .teacher-slider {
       padding-left: 20px;
       padding-right: 20px;
@@ -144,30 +167,6 @@
           .teacher__img {
             text-align: center;
             float: none;
-          }
-          .teacher__link {
-            font-size: 0;
-            display: block;
-            margin-left: auto;
-            margin-right: auto;
-            border-radius: 100%;
-            border: 1px solid #bbc;
-            width: 40px;
-            height: 40px;
-            margin-top: 14px;
-            position: relative;
-            &::after {
-              position: absolute;
-              content: "";
-              left: 50%;
-              top: 50%;
-              transform: translate(-50%, -50%) rotate(135deg);
-              width: 8px;
-              height: 8px;
-              border-top: 2px solid #bbc;
-              border-left: 2px solid #bbc;
-              margin-left: -2px;
-            }
           }
         }
       }

@@ -16,6 +16,11 @@
     flex-direction: column;
     &-item{
       margin-bottom: 20px;
+      &:hover{
+        h5{
+          color: $orange;
+        }
+      }
       &-info{
         background-color: #fff;
         margin-top: -7px;
@@ -42,6 +47,7 @@
   .kursend {
     &__list {
       flex-direction: row;
+      flex-wrap: wrap;
       &-item {
         width: calc(50% - 20px);
         margin-left: auto;
@@ -49,9 +55,6 @@
         img{
           width: 100%;
           height: auto;
-        }
-        &:nth-of-type(n+3) {
-          display: none;
         }
       }
     }

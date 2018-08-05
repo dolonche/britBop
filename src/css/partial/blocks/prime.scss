@@ -3,7 +3,12 @@
   &__level-value {
     background-color: $white;
   }
-
+  &__descr {
+    &--dropdown {
+      height: 240px;
+      overflow-y: hidden;
+    }
+  }
   &__image {
     margin: 0;
     padding: 0;
@@ -47,6 +52,25 @@
       margin: 0;
       margin-top: 15px;
       position: relative;
+      padding-left: 20px;
+      padding-right: 20px;
+      &::before {
+        content: "«";
+        position: absolute;
+        top: 0;
+        left: 0px;
+        font-size: 40px;
+        color: #bbc;
+        margin-left: 0;
+      }
+      &::after {
+        content: "»";
+        position: absolute;
+        bottom: 0;
+        font-size: 40px;
+        margin-left: 8px;
+        color: #bbc;
+      }
     }
   }
 
@@ -62,19 +86,32 @@
     &__level-value {
       background-color: $bg-grey;
     }
+    &__descr {
+      &--dropdown {
+        height: 100%;
+        overflow-y: none;
+      }
+    }
 
     &__image {
       &--left {
         img {
           float: left;
-          width: auto;
           margin-top: 20px;
           margin-bottom: 20px;
+          width: calc(50% - 20px);
+          margin-top: 0;
+          margin-right: 20px;
         }
         blockquote {
           float: left;
           margin-top: 40px;
           max-width: 50%;
+          margin-bottom: 20px;
+          padding-left: 0;
+          padding-right: 0;
+          padding-left: 22px;
+          box-sizing: border-box;
         }
       }
       &--right {
@@ -88,6 +125,8 @@
           text-align: left;
           margin-top: 40px;
           max-width: 50%;
+          padding-left: 0;
+          padding-right: 0;
           &::before {
             content: "«";
             position: absolute;
@@ -117,8 +156,9 @@
       box-sizing: border-box;
       &--left {
         img {
-          width: 50%;
-          margin-top: 0px;
+          width: calc(50% - 20px);
+          margin-top: 0;
+          margin-right: 20px;
         }
         blockquote {
           margin-bottom: 160px;

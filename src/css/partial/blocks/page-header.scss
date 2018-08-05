@@ -3,7 +3,7 @@
     @extend %container;
 
     @extend %grid-padding20;
-
+    display: flex;
     margin-top: 20px;
     margin-bottom: 20px;
 
@@ -15,7 +15,37 @@
         width: 200px;
       }
     }
+    &-arrow {
 
+      font-size: 0;
+      width: 40px;
+      height: 40px;
+      transform: rotate(-45deg) translateY(-4px);
+      margin-top: auto;
+      margin-bottom: auto;
+      a {
+        display: block;
+        height: 100%;
+        width: 100%;
+        position: relative;
+        &::before {
+          content: "";
+          border-top: 2px solid #333;
+          border-left: 2px solid #333;
+          width: 12px;
+          height: 12px;
+          @extend %center
+        }
+        &:hover::before {
+          border-top-color: $orange;
+          border-left-color: $orange;
+        }
+        &:active::before {
+          opacity: 0.5;
+        }
+      }
+
+    }
     &-info {
       display: none;
     }
