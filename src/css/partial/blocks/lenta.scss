@@ -13,6 +13,7 @@
       }
       h2 {
         margin-top: -16px;
+        padding-bottom: 10px;
       }
     }
   }
@@ -27,6 +28,9 @@
       .lenta__item-descr,
       .extra {
         background-color: #ebecf3;
+      }
+      .lenta__item-title {
+        color: #dc4405;
       }
     }
     &-title {
@@ -73,18 +77,15 @@
   .lenta {
     &--blog {
       flex-direction: row;
+      flex-wrap: wrap;
       .lenta__item {
         width: calc(50% - 20px);
         margin-left: auto;
         margin-right: auto;
-        &:nth-of-type(n+3) {
-          display: none;
-        }
       }
     }
     &__item {
       &-title {
-        color: #dc4405;
         padding-bottom: 18px;
       }
     }

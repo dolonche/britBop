@@ -34,47 +34,47 @@ body.addEventListener('click', function (e) {
 $(document).ready(function () {
   $(".purple-slider").owlCarousel();
   $(".teacher-slider").owlCarousel();
-});
-$('.purple-slider').owlCarousel({
-  loop: false,
-  startPosition: 1,
-  margin: 10,
-  nav: true,
-  dots: false,
-  responsive: {
-    0: {
-      items: 1
-    },
-    768: {
-      items: 1,
-      nav: true
-    },
-    1200: {
-      nav: true,
-      items: 1,
-      stagePadding: 250
+  $('.purple-slider').owlCarousel({
+    loop: false,
+    startPosition: 1,
+    margin: 10,
+    nav: true,
+    dots: false,
+    responsive: {
+      0: {
+        items: 1
+      },
+      768: {
+        items: 1,
+        nav: true
+      },
+      1200: {
+        nav: true,
+        items: 1,
+        stagePadding: 250
+      }
     }
-  }
-});
-$('.teacher-slider').owlCarousel({
-  loop: false,
-  margin: 20,
-  nav: true,
-  dots: false,
-  responsive: {
-    0: {
-      items: 1,
-      nav: true
-    },
-    768: {
-      items: 2,
-      nav: true,
-    },
-    1200: {
-      items: 3,
-      nav: true
+  });
+  $('.teacher-slider').owlCarousel({
+    loop: false,
+    margin: 20,
+    nav: true,
+    dots: false,
+    responsive: {
+      0: {
+        items: 1,
+        nav: true
+      },
+      768: {
+        items: 2,
+        nav: true,
+      },
+      1200: {
+        items: 3,
+        nav: true
+      }
     }
-  }
+  });
 });
 $(document).ready(function () {
   $('.popup-gallery').magnificPopup({

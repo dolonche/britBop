@@ -3,6 +3,33 @@
   color: $white;
   overflow: hidden;
   padding-top: 20px;
+  position: relative;
+  &__arrow {
+    display: none;
+    position: absolute;
+    width: 110px;
+    height: 110px;
+    background-color: #334;
+    top: 0;
+    right: 0;
+    a {
+      display: block;
+      width: 100%;
+      height: 100%;
+      position: relative;
+      &::before {
+        position: absolute;
+        content: "";
+        width: 20px;
+        height: 20px;
+        border-top: 3px solid #fff;
+        border-left: 3px solid #fff;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) rotate(45deg);
+      }
+    }
+  }
 
   &__line {
     @extend %container;
@@ -114,5 +141,22 @@
         }
       }
     }
+  }
+}
+
+@media (min-width: 988px) {
+  .page-footer__arrow {
+    display: block;
+  }
+}
+
+@media (min-width: 1260px) {
+  .page-footer__arrow {
+    display: none;
+  }
+}
+@media (min-width: 1480px) {
+  .page-footer__arrow {
+    display: block;
   }
 }
