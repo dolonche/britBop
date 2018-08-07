@@ -11,32 +11,35 @@
     @extend %container;
     padding-left: 20px;
     padding-right: 20px;
-    
+
     display: flex;
     flex-direction: column;
-    &-item{
+    &-item {
       margin-bottom: 20px;
-      &:hover{
-        h5{
+      &:hover {
+        h5 {
           color: $orange;
         }
       }
-      &-info{
+      &-info {
         background-color: #fff;
         margin-top: -7px;
         padding: 18px;
-        h5{
-          margin-top: 0;
+        h5 {
+          margin-top: 10px;
           margin-bottom: 0;
           font-weight: lighter;
           font-size: 25px;
           line-height: 30px;
+          color: #000;
+
         }
-        &-status{
+        &-status {
           color: #000;
           float: right;
           font-size: 13px;
           font-weight: bold;
+          margin-top: 2px;
         }
       }
     }
@@ -52,7 +55,7 @@
         width: calc(50% - 20px);
         margin-left: auto;
         margin-right: auto;
-        img{
+        img {
           width: 100%;
           height: auto;
         }
@@ -60,12 +63,13 @@
     }
   }
 }
+
 @media #{$desktop-widths} {
-  .kursend{
-    &__list{
-      &-item{
+  .kursend {
+    &__list {
+      &-item {
         width: calc(25% - 20px);
-        &:nth-of-type(n+3){
+        &:nth-of-type(n+3) {
           display: block;
         }
       }

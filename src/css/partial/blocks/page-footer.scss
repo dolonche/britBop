@@ -5,18 +5,23 @@
   padding-top: 20px;
   position: relative;
   &__arrow {
-    display: none;
-    position: absolute;
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.5s all;
+    position: fixed;
     width: 110px;
     height: 110px;
     background-color: #334;
-    top: 0;
+    bottom: 0;
     right: 0;
     a {
       display: block;
       width: 100%;
       height: 100%;
       position: relative;
+      &:hover{
+      background-color: #556;
+      }
       &::before {
         position: absolute;
         content: "";
@@ -146,17 +151,27 @@
 
 @media (min-width: 988px) {
   .page-footer__arrow {
-    display: block;
+    &.block {
+      visibility: visible;
+      opacity: 1;
+    }
   }
 }
 
 @media (min-width: 1260px) {
   .page-footer__arrow {
-    display: none;
+    &.block {
+      visibility: hidden;
+      opacity: 0;
+    }
   }
 }
+
 @media (min-width: 1480px) {
   .page-footer__arrow {
-    display: block;
+    &.block {
+      visibility: visible;
+      opacity: 1;
+    }
   }
 }

@@ -36,6 +36,26 @@ $(document).ready(function () {
   $(".teacher-slider").owlCarousel();
 });
 
+$(window).scroll(function () {
+  if ($(this).scrollTop() > 200) {
+    $('.page-footer__arrow').addClass('block');
+  } else {
+    $('.page-footer__arrow').removeClass('block');
+  }
+})
+var pageFooterArrow = document.querySelector('.page-footer__arrow');
+pageFooterArrow.addEventListener('click', function (e) {
+  e.preventDefault();
+})
+var inputSearch = document.querySelector('.search');
+var inputSearchWrapper = document.querySelector('.page-header__bar-search')
+inputSearch.onfocus = function () {
+  inputSearchWrapper.classList.add('page-header__bar-search--open');
+}
+inputSearch.onblur = function () {
+  inputSearchWrapper.classList.remove('page-header__bar-search--open');
+}
+
 $('.purple-slider').owlCarousel({
   loop: false,
   startPosition: 1,
