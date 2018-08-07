@@ -59,6 +59,15 @@ h5 {
       transform: translateY(-4px);
     }
   }
+  ol {
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
+    span{
+      color: $orange;
+      margin-right: 5px;
+    }
+  }
 }
 
 blockquote {
