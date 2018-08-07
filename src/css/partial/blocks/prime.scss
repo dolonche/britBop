@@ -5,6 +5,7 @@
   }
   &__descr {
     &--dropdown {
+      transition: 0.8s all;
       height: 240px;
       overflow-y: hidden;
     }

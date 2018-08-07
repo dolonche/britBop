@@ -1,22 +1,28 @@
 .rubriki {
-  margin-top: 10px;
+  margin-top: 0px;
   text-transform: uppercase;
   border-bottom: 1px solid $lines-white;
   width: 100%;
   & > p {
     display: none;
+    cursor: pointer;
   }
   &__list {
     list-style: none;
     padding: 0;
-    padding-top: 20px;
-    margin-top: 40px;
-    border-top: 1px solid $lines-white;
+    margin: 0;
+    margin-top: 14px;
     &-item {
       text-align: right;
       text-transform: uppercase;
       margin-bottom: 5px;
+      &.active {
+        a {
+          border-bottom: 1px solid $orange;
+        }
+      }
       a {
+        padding: 2px;
         color: $black;
         font-weight: 700;
         font-size: 15px;
@@ -38,6 +44,7 @@
   &.rubriki--mob {
     @extend %container;
     & > p {
+      cursor: pointer;
       display: block;
       color: $orange;
       font-weight: bold;
@@ -63,9 +70,6 @@
           transform: rotate(225deg) translateY(-50%);
           right: 20px;
         }
-      }
-      .rubriki__list {
-        display: block;
       }
     }
     .rubriki__list {
@@ -95,6 +99,7 @@
           padding-left: 6px;
           font-size: 12px;
           color: $titles;
+          vertical-align: bottom;
         }
       }
     }

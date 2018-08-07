@@ -67,15 +67,48 @@
       padding-bottom: 7px;
       padding-left: 20px;
       border-left: 1px solid $lines-color;
-
+      transition: 0.5s all;
+      &--open {
+        padding-left: 85px;
+      }
       &-item {
+        position: relative;
+        display: block;
+        min-width: 20px;
+        min-height: 20px;
+        &:hover {
+          svg {
+            fill: $orange;
+          }
+        }
+        input {
+          outline: none;
+          width: 20px;
+          opacity: 0;
+          height: 100%;
+          left: 0;
+          top: 0;
+          background-color: transparent;
+          border: none;
+          transition: 0.5s all;
+          z-index: 10;
+          &:focus {
+            opacity: 1;
+            margin-left: -80px;
+            border-bottom: 2px solid $orange;
+            width: 80px;
+            padding-right: 20px;
+            transition: 0.5s all;
+
+          }
+        }
         svg {
           width: 20px;
           fill: #000;
-
-          &:hover {
-            fill: $orange;
-          }
+          position: absolute;
+          @extend %center;
+          z-index: -1;
+          padding-bottom: 2px;
         }
       }
 

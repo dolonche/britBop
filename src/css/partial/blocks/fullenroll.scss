@@ -98,8 +98,15 @@
       margin: 0;
       width: 1020px;
       padding-right: 40px;
+      &-bunch {
+        input {
+          width: calc(50% - 20px);
+        }
+      }
       &-select {
         background: #fff url(../img/arrow-down-select.png) no-repeat 96% center;
+        width: calc(50% - 20px);
+
       }
     }
   }
