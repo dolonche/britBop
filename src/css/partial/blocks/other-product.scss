@@ -1,0 +1,208 @@
+.other-product {
+  background-color: #ebecf3;
+  h4 {
+    background-color: #fff;
+    font-weight: lighter;
+    color: #000;
+    margin-top: 0;
+    margin-bottom: 0;
+    text-align: center;
+    font-size: 25px;
+    padding: 25px;
+    padding-bottom: 60px;
+  }
+  .owl-carousel {
+    .owl-nav {
+      display: flex;
+      width: 100%;
+      position: absolute;
+      top: -55px;
+      left: 0;
+      justify-content: space-between;
+      button.owl-prev,
+      button.owl-next {
+        background-color: transparent;
+        border: none;
+        outline: none;
+        &::before {
+          border-left: 2px solid $orange;
+          border-bottom: 2px solid $orange;
+          width: 16px;
+          height: 16px;
+        }
+        &:hover {
+          background-color: transparent;
+          &::before {
+            border-color: #dc4405;
+          }
+        }
+      }
+      button.owl-prev {
+        left: 6px;
+      }
+      button.owl-next {
+        right: 13px;
+      }
+    }
+  }
+  .other-product__slider {
+    @extend %container;
+    margin-top: -35px;
+    padding-left: 20px;
+    padding-right: 20px;
+    .shop {
+      &__item {
+        display: flex;
+        flex-direction: column;
+        background-color: #fff;
+        box-shadow: 0 5px 28px rgba(0, 0, 0, .25), 0 5px 10px rgba(0, 0, 0, .22);
+        margin-bottom: 20px;
+        &:hover {
+          .shop__item-right-title {
+            color: $orange;
+          }
+          .shop__item-right-descr {
+            text-decoration: underline;
+          }
+        }
+        &-left {
+          &-image {
+            width: 100%;
+            height: auto;
+          }
+        }
+        &-right {
+          display: flex;
+          flex-direction: column;
+          padding-bottom: 10px;
+          &-title {
+            padding-left: 18px;
+            padding-right: 18px;
+            border-bottom: 1px solid $lines-color;
+            padding-bottom: 13px;
+            margin-top: 17px;
+          }
+          &-descr {
+            padding-left: 18px;
+            padding-right: 18px;
+            margin-top: -10px;
+          }
+          &-spec {
+            padding-left: 18px;
+            padding-right: 18px;
+            display: flex;
+            flex-direction: column;
+            &-bunch {
+              display: flex;
+              flex-direction: column;
+              margin-bottom: 10px;
+              span {
+                &:first-of-type {
+                  color: $titles;
+                  font-size: 13px;
+                  line-height: 15px;
+                }
+                &:last-of-type {
+                  color: #000;
+                  text-transform: uppercase;
+                  font-size: 15px;
+                  line-height: 20px;
+                  font-weight: bold;
+                  margin-top: 6px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media #{$tablet-widths} {
+  .other-product {
+    position: relative;
+    h4 {
+      background-color: #ebecf3;
+      padding-top: 40px;
+      margin-bottom: 30px;
+    }
+    .owl-carousel {
+      position: unset;
+      .owl-nav {
+        top: 25px;
+        left: 0;
+        button.owl-prev {
+          left: calc(5% + 6px);
+        }
+        button.owl-next {
+          right: calc(5% + 13px);
+        }
+      }
+    }
+  }
+  .other-product__slider {
+    .shop {
+      &__item {
+        flex-direction: column;
+        max-height: 100%;
+        &-left {
+          &-image {
+            width: 280px;
+            height: 280px;
+          }
+        }
+        &-right {
+          max-height: 280px;
+          padding-bottom: 0;
+          &-title {
+            margin-top: 12px;
+            margin-bottom: 12px;
+            padding-bottom: 8px;
+          }
+          &-descr {
+            padding-top: 8px;
+          }
+          &-spec {
+            flex-direction: row;
+            margin-bottom: 0;
+            &-bunch {
+              margin-right: 40px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media #{$desktop-widths} {
+  .shop {
+    &__item {
+      &-right {
+        &-spec {
+          margin-top: 10px;
+          margin-bottom: 12px;
+        }
+      }
+    }
+  }
+  .other-product {
+    .owl-carousel {
+      position: unset;
+      padding-bottom: 20px;
+      .owl-nav {
+        top: 25px;
+        width: 1280px;
+        left: 50%;
+        transform: translateX(-50%);
+        button.owl-prev {
+          left: 26px;
+        }
+        button.owl-next {
+          right: 33px;
+        }
+      }
+    }
+  }
+}
