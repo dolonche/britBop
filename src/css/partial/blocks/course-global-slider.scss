@@ -1,6 +1,26 @@
 .course-global-slider {
   background-color: $bg-insta;
   position: relative;
+  &.course-global-slider--shop {
+    .owl-carousel {
+      .owl-nav {
+        top: calc(100% - 50px);
+      }
+      figcaption {
+        font-size: 13px;
+        color: $titles;
+        position: absolute;
+        text-align: center;
+        bottom: 0;
+        background-image: linear-gradient(to top, rgba(69, 69, 86, 1), rgba(188, 188, 194, 0));
+        padding-top: 12px;
+        padding-bottom: 12px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 100%;
+      }
+    }
+  }
   &__title {
     @extend %container;
     text-align: center;
@@ -50,8 +70,29 @@
 @media #{$tablet-widths} {
   .course-global-slider {
     padding-bottom: 40px;
-    .owl-carousel{
-      .owl-nav{
+    &.course-global-slider--shop {
+      padding-bottom: 0;
+      .owl-carousel {
+        .owl-nav {
+          top: calc(100% - 70px);
+        }
+        figcaption {
+          font-size: 13px;
+          color: $titles;
+          position: absolute;
+          text-align: center;
+          bottom: 0;
+          background-image: linear-gradient(to top, rgba(69, 69, 86, 1), rgba(188, 188, 194, 0));
+          padding-top: 32px;
+          padding-bottom: 32px;
+          left: 50%;
+          transform: translateX(-50%);
+          width: 100%;
+        }
+      }
+    }
+    .owl-carousel {
+      .owl-nav {
         top: -64px;
       }
     }

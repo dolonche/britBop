@@ -92,6 +92,7 @@
           border: none;
           transition: 0.5s all;
           z-index: 10;
+          cursor: pointer;
           &:focus {
             opacity: 1;
             margin-left: -80px;
@@ -99,7 +100,7 @@
             width: 80px;
             padding-right: 20px;
             transition: 0.5s all;
-
+            cursor: text;
           }
         }
         svg {

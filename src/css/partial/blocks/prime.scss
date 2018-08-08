@@ -3,6 +3,11 @@
   &__level-value {
     background-color: $white;
   }
+  &__title {
+    &--white {
+      background-color: #fff;
+    }
+  }
   &__descr {
     &--dropdown {
       transition: 0.8s all;
@@ -86,6 +91,11 @@
     &__title,
     &__level-value {
       background-color: $bg-grey;
+    }
+    &__title {
+      &--white {
+        background-color: #fff;
+      }
     }
     &__descr {
       &--dropdown {

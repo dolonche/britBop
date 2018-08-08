@@ -34,6 +34,7 @@ body.addEventListener('click', function (e) {
 $(document).ready(function () {
   $(".purple-slider").owlCarousel();
   $(".teacher-slider").owlCarousel();
+  $(".other-product__slider").owlCarousel();
 });
 
 $(window).scroll(function () {
@@ -70,15 +71,55 @@ $('.purple-slider').owlCarousel({
       items: 1,
       nav: true
     },
-    1200: {
+    1280: {
       nav: true,
       items: 1,
       stagePadding: 250
     }
   }
 });
-$('.teacher-slider').owlCarousel({
+$('.purple-slider-shop').owlCarousel({
   loop: false,
+  margin: 10,
+  nav: true,
+  dots: false,
+  responsive: {
+    0: {
+      items: 1
+    },
+    768: {
+      items: 1,
+      margin: 0,
+      nav: true
+    },
+    1280: {
+      nav: true,
+      items: 1,
+    }
+  }
+});
+$('.other-product__slider').owlCarousel({
+  loop: true,
+  startPosition: 1,
+  margin: 20,
+  nav: true,
+  dots: false,
+  responsive: {
+    0: {
+      items: 1
+    },
+    768: {
+      items: 2,
+      nav: true
+    },
+    1280: {
+      nav: true,
+      items: 4,
+    }
+  }
+});
+$('.teacher-slider').owlCarousel({
+  loop: true,
   margin: 20,
   nav: true,
   dots: false,
@@ -91,7 +132,7 @@ $('.teacher-slider').owlCarousel({
       items: 2,
       nav: true,
     },
-    1200: {
+    1280: {
       items: 3,
       nav: true
     }

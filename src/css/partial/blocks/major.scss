@@ -79,3 +79,28 @@
   padding-top: 10px;
 }
 
+@media #{$tablet-widths} {
+  .major {
+    &__m {
+      &--tablet {
+        border-bottom: 1px solid $lines-grey;
+      }
+    }
+  }
+}
+
+@media #{$desktop-widths} {
+  .major {
+    &__m {
+      &--tablet {
+        border-bottom: none;
+        width: 768px;
+        padding-left: 0;
+        padding-right: 0;
+      }
+      &-wrapper--desktop-border {
+        border-bottom: 1px solid $lines-grey;
+      }
+    }
+  }
+}
