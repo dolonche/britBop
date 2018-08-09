@@ -10,6 +10,12 @@
         width: 100%;
         height: auto;
       }
+      &:hover + .shop__item-right .shop__item-right-title {
+        color: $orange;
+      }
+      &:hover + .shop__item-right .shop__item-right-descr {
+        text-decoration: underline;
+      }
     }
     &-right {
       display: flex;
@@ -48,6 +54,7 @@
               line-height: 20px;
               font-weight: bold;
               margin-top: 6px;
+              color: #000;
             }
           }
         }
