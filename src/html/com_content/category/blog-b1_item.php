@@ -24,7 +24,7 @@ $assocParam = (JLanguageAssociations::isEnabled() && $params->get('show_associat
 	<div class="system-unpublished">
 <?php endif; ?>
 
-<a class="lenta__link" href="<?php echo JRoute::_(ContentHelperRoute::getArticleRoute($this->item->slug, $this->item->catid, $this->item->language)); ?>">
+<a class="lenta__link" href="<?php echo JRoute::_(ContentHelperRoute::getArticleRoute($this->item->slug, $this->item->catid, $this->item->language)); ?>" itemprop="url">
 
 
 <?php echo JLayoutHelper::render('joomla.content.intro_image_b1', $this->item); ?>

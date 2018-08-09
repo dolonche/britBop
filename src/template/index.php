@@ -8,7 +8,7 @@ $templateparams = $app->getTemplate(true)->params;
 $this->language = $doc->language;
 $this->direction = $doc->direction;
 $baseuri=JUri::base();
-$cssVersion="1.58";
+$cssVersion="1.61";
 $home =(JURI::getInstance()->toString()==JURI::base());
 //JHtml::script($this->baseurl.'templates/'.$this->template.'/js/main.js');
 ?>
@@ -76,6 +76,9 @@ $home =(JURI::getInstance()->toString()==JURI::base());
 			</div>
 			<jdoc:include type="modules" name="bottom" style="none" />
 			<footer class="page-footer">
+				<div class="page-footer__arrow">
+					<a href="#" onclick="$('body').animatescroll({scrollSpeed:500,easing:'easeInQuint'});"></a>
+				</div>
 				<div class="page-footer__line">
 					<div class="page-footer__wrapper">
 						<div class="page-footer__title">Контакты</div>
@@ -130,7 +133,7 @@ $home =(JURI::getInstance()->toString()==JURI::base());
 				</div>
 			</footer>
 		</div>
-		<script src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template; ?>/js/main.js?v=<?php echo $cssVersion; ?>"></script>
 		<jdoc:include type="modules" name="script-bottom" style="none" />
+		<script src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template; ?>/js/main.js?v=<?php echo $cssVersion; ?>"></script>
 	</body>
 </html>
