@@ -4,6 +4,12 @@ var navToggle = nav.querySelector('.mnav__toggle');
 var navList = nav.querySelector('.mnav__menu');
 var navListItem = navList.querySelector('.mnav__menu-item');
 var navListArrow = navList.querySelector('.mnav__menu-item a .parent');
+var pageFooterArrow = document.querySelector('.page-footer__arrow');
+pageFooterArrow.addEventListener('click', function (e) {
+  e.preventDefault();
+})
+var inputSearch = document.querySelector('.search');
+var inputSearchWrapper = document.querySelector('.page-header__bar-search');
 navToggle.addEventListener('click', function (e) {
   if (e.target.classList.contains('mnav__toggle--closed')) {
     e.target.classList.remove('mnav__toggle--closed');
@@ -31,12 +37,12 @@ body.addEventListener('click', function (e) {
     navToggle.classList.add('mnav__toggle--closed');
   }
 })
-$(document).ready(function () {
-  $(".purple-slider").owlCarousel();
-  $(".teacher-slider").owlCarousel();
-  $(".other-product__slider").owlCarousel();
-});
-
+inputSearch.onfocus = function () {
+  inputSearchWrapper.classList.add('page-header__bar-search--open');
+}
+inputSearch.onblur = function () {
+  inputSearchWrapper.classList.remove('page-header__bar-search--open');
+}
 $(window).scroll(function () {
   if ($(this).scrollTop() > 200) {
     $('.page-footer__arrow').addClass('block');
@@ -44,114 +50,3 @@ $(window).scroll(function () {
     $('.page-footer__arrow').removeClass('block');
   }
 })
-var pageFooterArrow = document.querySelector('.page-footer__arrow');
-pageFooterArrow.addEventListener('click', function (e) {
-  e.preventDefault();
-})
-var inputSearch = document.querySelector('.search');
-var inputSearchWrapper = document.querySelector('.page-header__bar-search')
-inputSearch.onfocus = function () {
-  inputSearchWrapper.classList.add('page-header__bar-search--open');
-}
-inputSearch.onblur = function () {
-  inputSearchWrapper.classList.remove('page-header__bar-search--open');
-}
-
-$('.purple-slider').owlCarousel({
-  loop: false,
-  startPosition: 1,
-  margin: 10,
-  nav: true,
-  dots: false,
-  responsive: {
-    0: {
-      items: 1
-    },
-    768: {
-      items: 1,
-      nav: true
-    },
-    1280: {
-      nav: true,
-      items: 1,
-      stagePadding: 250
-    }
-  }
-});
-$('.purple-slider-shop').owlCarousel({
-  loop: false,
-  margin: 10,
-  nav: true,
-  dots: false,
-  responsive: {
-    0: {
-      items: 1
-    },
-    768: {
-      items: 1,
-      margin: 0,
-      nav: true
-    },
-    1280: {
-      nav: true,
-      items: 1,
-    }
-  }
-});
-$('.other-product__slider').owlCarousel({
-  loop: true,
-  startPosition: 1,
-  margin: 20,
-  nav: true,
-  dots: false,
-  responsive: {
-    0: {
-      items: 1
-    },
-    768: {
-      items: 2,
-      nav: true
-    },
-    1280: {
-      nav: true,
-      items: 4,
-    }
-  }
-});
-$('.teacher-slider').owlCarousel({
-  loop: true,
-  margin: 20,
-  nav: true,
-  dots: false,
-  responsive: {
-    0: {
-      items: 1,
-      nav: true
-    },
-    768: {
-      items: 2,
-      nav: true,
-    },
-    1280: {
-      items: 3,
-      nav: true
-    }
-  }
-});
-$(document).ready(function () {
-  $('.popup-gallery').magnificPopup({
-    delegate: 'a',
-    type: 'image',
-    tLoading: 'Loading image #%curr%...',
-    mainClass: 'mfp-img-mobile',
-    gallery: {
-      tCounter: '',
-      enabled: true,
-      navigateByImgClick: true,
-      preload: [0, 1] // Will preload 0 - before current, and 1 after the current image
-    },
-    image: {
-      tError: '<a href="%url%">The image #%curr%</a> could not be loaded.',
-    }
-  });
-});
