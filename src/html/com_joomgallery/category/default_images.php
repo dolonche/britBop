@@ -1,7 +1,6 @@
 <?php defined('_JEXEC') or die('Direct Access to this location is not allowed.');
-$lang=JFactory::getLanguage();
-$lang->load("lib_joomla", JPATH_SITE."/language");
       if($this->_config->get('jg_anchors')): ?>
+  <a name="category"></a>
 <?php endif;
       if($this->params->get('show_count_img_top')): ?>
   <div class="jg_catcountimg">
@@ -18,11 +17,7 @@ $lang->load("lib_joomla", JPATH_SITE."/language");
     <?php echo $this->pagination->getPagesLinks(); ?>
   </div>
 <?php endif;
-      if($this->_config->get('jg_coolirislink')): ?>
-  <a id="jg_cooliris" href="javascript:PicLensLite.start({feedUrl:'<?php echo JRoute::_('index.php?view=category&amp;catid='.$this->category->cid.'&amp;page='.$this->page.'&amp;format=raw', true); ?>',maxScale:0});">
-    <?php echo JText::_('COM_JOOMGALLERY_CATEGORY_COOLIRISLINK_TEXT'); ?></a>
-<?php endif; ?>
-<?php if($this->params->get('show_all_in_popup')):
+      if($this->params->get('show_all_in_popup')):
         echo $this->popup['before'];
       endif;
       $count_pics = count($this->images);
@@ -38,7 +33,6 @@ $lang->load("lib_joomla", JPATH_SITE."/language");
       <div class="jg_imgalign_catimgs">
         <a <?php echo $row->atagtitle; ?> href="<?php echo $row->link; ?>" class="jg_catelem_photo jg_catelem_photo_align">
           <img src="<?php echo $row->thumb_src; ?>" class="jg_photo" <?php echo $row->imgwh; ?> alt="<?php echo $row->imgtitle; ?>" /></a>
-          <div class="overlay"></div>
       </div>
 <?php if($row->show_elems): ?>
       <div class="jg_catelem_txt">
