@@ -40,14 +40,20 @@
   .shop-category {
     padding-top: 40px;
     padding-bottom: 40px;
+    flex-direction: row;
+    flex-wrap: wrap;
     &__wrapper {
       background-color: #ebecf3;
     }
     &__item {
-      width: 380px;
-      margin-left: auto;
+      width: calc(50% - 10px);
+      margin-left: 0;
       margin-right: auto;
       margin-bottom: 20px;
+      &:nth-last-of-type(2n) {
+        margin-left: auto;
+        margin-right: 0;
+      }
     }
   }
 }
@@ -58,10 +64,20 @@
     justify-content: space-between;
     padding-left: 20px;
     padding-right: 20px;
+    justify-content: flex-start;
     &__item {
       margin: 0;
-      margin-right: 0;
+      margin-right: 20px;
+      margin-bottom: 20px;
       width: calc(33.333333% - 20px);
+      &:nth-last-of-type(2n) {
+        margin-left: 0;
+        margin-right: 20px;
+      }
+      &:nth-last-of-type(3n) {
+        margin-left: 0;
+        margin-right: 0;
+      }
     }
   }
 }
