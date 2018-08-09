@@ -8,25 +8,29 @@
 <body>
   <div class="container">
     //= include/header.html
-    <div class="major">
+    <div class="major major--mid">
       <div class="major__center">
         //= include/breadcrumbs.html
-        <main class="major__m item-page">
-          <div class="major__m-elem prime__title">
-            <h1>Фотогалерея</h1>
-          </div>
-          //= include/gallery.html
-        </main>
+        //= include/rubriki--mob.html
+        <div class="major__m-wrapper">
+          <main class="major__m major__m--solid">
+              <h1>Фотогалерея</h1>
+            //= include/gallery.html
+          </main>
+        </div>
         <div id="system-message-container">
           <div id="system-message"></div>
         </div>
       </div>
+      //= include/sidebar-left.html
+      //= include/sidebar-right.html
     </div>
     //= include/footer.html
   </div>
   <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
   <script src="js/jquery.magnific-popup.min.js"></script>
   <script src="js/gallery.min.js"></script>
+  <script src="js/category.min.js"></script>
   <script src="js/animatescroll.min.js"></script>
   <script src="js/main.min.js"></script>
 </body>

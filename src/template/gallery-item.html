@@ -1,27 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    //= include/head.html
-  </head>
-  <body>
-    <div class="container">
-      //= include/header.html
-      <div class="major">
-        <div class="major__center">
-          //= include/breadcrumbs.html
-          <main class="major__m item-page">
-            <div class="major__m-elem prime__title">
-              <h1>Фотогалерея</h1>
-            </div>
+
+<head>
+  //= include/head.html
+</head>
+
+<body>
+  <div class="container">
+    //= include/header.html
+    <div class="major major--mid">
+      <div class="major__center">
+        //= include/breadcrumbs.html
+        //= include/rubriki--mob.html
+        <div class="major__m-wrapper">
+          <main class="major__m major__m--solid">
+            <h1>Фотогалерея</h1>
             //= include/gallery-item.html
           </main>
-          <div id="system-message-container">
-            <div id="system-message"></div>
-          </div>
+        </div>
+        <div id="system-message-container">
+          <div id="system-message"></div>
         </div>
       </div>
-      //= include/footer.html
+      //= include/sidebar-left.html
+      //= include/sidebar-right.html
     </div>
-    <script src="js/main.min.js"></script>
-  </body>
+    //= include/footer.html
+  </div>
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+  <script src="js/category.min.js"></script>
+  <script src="js/animatescroll.min.js"></script>
+  <script src="js/main.min.js"></script>
+</body>
+
 </html>
