@@ -1,12 +1,13 @@
 .page-header {
   &__cap {
-    @extend %container;
-
+    width: 100%;
+    max-width: 1280px;
+    margin-left: auto;
+    margin-right: auto;
     @extend %grid-padding20;
     display: flex;
     margin-top: 20px;
     margin-bottom: 20px;
-
     &-logo {
       display: block;
       line-height: 0;
@@ -16,7 +17,6 @@
       }
     }
     &-arrow {
-
       font-size: 0;
       width: 40px;
       height: 40px;
@@ -44,23 +44,21 @@
           opacity: 0.5;
         }
       }
-
     }
     &-info {
       display: none;
     }
   }
-
   &__bar {
-    @extend %container;
-
+    width: 100%;
+    max-width: 1280px;
+    margin-left: auto;
+    margin-right: auto;
     @extend %grid-padding20;
-
     display: flex;
     border-top: 1px solid $lines-color;
     border-bottom: 1px solid $lines-color;
     position: relative;
-
     &-search {
       margin-left: auto;
       padding-top: 15px;
@@ -130,23 +128,19 @@
     &__cap {
       display: flex;
       flex-direction: row;
-
       &-info {
         display: block;
         margin-left: auto;
-
         a {
           color: $text-light;
           text-decoration: none;
           font-size: 28px;
         }
-
         p {
           margin: 0;
           font-weight: 100;
         }
       }
-
       &-logo {
         img {
           width: 262px;

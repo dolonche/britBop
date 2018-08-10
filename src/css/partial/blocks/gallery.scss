@@ -1,9 +1,11 @@
 .gallery {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  padding-top: 20px;
-  width: 100%;
+  &--elite {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding-top: 20px;
+    width: 100%;
+  }
   .jg_row {
     display: flex;
     flex-direction: column;
@@ -52,8 +54,10 @@
 
 @media #{$tablet-widths} {
   .gallery {
-    justify-content: space-between;
-    flex-wrap: wrap;
+    &--elite {
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
     .jg_row {
       flex-direction: row;
       flex-wrap: wrap;
@@ -75,8 +79,10 @@
 
 @media #{$desktop-widths} {
   .gallery {
-    justify-content: space-between;
-    flex-wrap: wrap;
+    &--elite {
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
     .jg_row {
       flex-direction: row;
       flex-wrap: wrap;
