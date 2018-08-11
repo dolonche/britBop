@@ -1,0 +1,206 @@
+.bb_jgallery {
+  &--cat {
+    width: 100%;
+    padding-left: 0;
+    padding-right: 0;
+    h2 {
+      display: none;
+    }
+    .jg_row {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      .jg_element_cat {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        margin-bottom: 10px;
+        background-color: rgba(214, 214, 214, 0.15);
+        img {
+          vertical-align: middle;
+          width: 100%;
+          height: auto;
+        }
+      }
+    }
+  }
+  @extend %container;
+  .jg-header {
+    display: none;
+  }
+  .jg_row {
+    display: flex;
+    flex-direction: column;
+    .jg_element_gal {
+      img {
+        width: 100%;
+        height: auto;
+        clip-path: ellipse(95% 55% at 50% 42%);
+      }
+      a {
+        &:hover {
+          color: $orange;
+        }
+      }
+      ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        padding-left: 20px;
+        padding-right: 20px;
+        margin-top: -20px;
+        li {
+          &:nth-of-type(1) {
+            &:hover {
+              color: $orange;
+              & + li {
+                text-decoration: underline;
+              }
+            }
+          }
+          a {
+            text-transform: uppercase;
+            margin-bottom: 0;
+            margin-top: 20px;
+            color: #000;
+            display: block;
+          }
+          &:nth-of-type(2) {
+            p {
+              margin: 0;
+              font-size: 16px;
+              line-height: 25px;
+              font-weight: 400;
+              color: #333;
+              &:last-of-type {
+                margin-bottom: 16px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media #{$tablet-widths} {
+  .bb_jgallery {
+    &--cat {
+      .jg_row {
+        flex-direction: row;
+        flex-wrap: wrap;
+        width: 100%;
+        justify-content: flex-start;
+        .jg_element_cat {
+          width: calc(33.333333% - 10px);
+          margin-right: auto;
+          &:nth-of-type(3n) {
+            margin-right: 0;
+          }
+        }
+      }
+    }
+    &--full {
+      .jg_row {
+        flex-direction: row;
+        flex-wrap: wrap;
+        width: 100%;
+        justify-content: flex-start;
+        .jg_element_cat {
+          width: calc(50% - 10px);
+          margin-right: auto;
+          &:nth-of-type(2n) {
+            margin-right: 0;
+          }
+          &:nth-of-type(3n) {
+            margin-right: auto;
+          }
+        }
+      }
+    }
+  }
+  .bb_jgallery {
+    &-wrapper {
+      background-color: #ebecf3;
+    }
+    .jg_row {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+    }
+    .jg_element_gal {
+      width: calc(50% - 10px);
+      margin-left: 0;
+      margin-right: auto;
+      margin-bottom: 20px;
+      background-color: #fff;
+      &:nth-of-type(2n) {
+        margin-right: 0;
+      }
+    }
+  }
+}
+
+@media #{$desktop-widths} {
+  .bb_jgallery {
+    padding-left: 20px;
+    padding-right: 20px;
+    &--cat {
+      padding-left: 0;
+      padding-right: 0;
+      .jg_row {
+        flex-direction: row;
+        flex-wrap: wrap;
+        width: 100%;
+        justify-content: flex-start;
+        .jg_element_cat {
+          width: calc(33.333333% - 10px);
+          margin-right: auto;
+          margin-bottom: 13px;
+        }
+      }
+    }
+    &--full {
+      .jg_row {
+        flex-direction: row;
+        flex-wrap: wrap;
+        width: 100%;
+        justify-content: flex-start;
+        .jg_element_cat {
+          width: calc(25% - 10px);
+          margin-right: auto;
+          margin-bottom: 13px;
+          &:nth-of-type(2n) {
+            margin-right: auto;
+          }
+          &:nth-of-type(4n) {
+            margin-right: 0;
+          }
+        }
+      }
+    }
+    &-wrapper {
+      background-color: #ebecf3;
+    }
+    .jg_row {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: flex-start;
+    }
+    .jg_element_gal {
+      width: calc(25% - 20px);
+      margin-right: auto;
+      margin-bottom: 20px;
+      background-color: #fff;
+      margin-left: 0;
+      &:nth-of-type(2n) {
+        margin-left: 0;
+        margin-right: auto;
+      }
+      &:nth-of-type(4) {
+        margin-right: 0;
+      }
+    }
+  }
+}

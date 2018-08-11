@@ -1,63 +1,3 @@
-.bb_jgallery {
-  @extend %container;
-  .jg-header {
-    display: none;
-  }
-  .jg_row {
-    display: flex;
-    flex-direction: column;
-    .jg_element_gal {
-      img {
-        width: 100%;
-        height: auto;
-        clip-path: ellipse(95% 55% at 50% 42%);
-      }
-      a {
-        &:hover {
-          color: $orange;
-        }
-      }
-      ul {
-        list-style: none;
-        margin: 0;
-        padding: 0;
-        padding-left: 20px;
-        padding-right: 20px;
-        margin-top: -20px;
-        li {
-          &:nth-of-type(1) {
-            &:hover {
-              color: $orange;
-              & + li {
-                text-decoration: underline;
-              }
-            }
-          }
-          a {
-            text-transform: uppercase;
-            margin-bottom: 0;
-            margin-top: 20px;
-            color: #000;
-            display: block;
-          }
-          &:nth-of-type(2) {
-            p {
-              margin: 0;
-              font-size: 16px;
-              line-height: 25px;
-              font-weight: 400;
-              color: #333;
-              &:last-of-type {
-                margin-bottom: 16px;
-              }
-            }
-          }
-        }
-      }
-    }
-  }
-}
-
 .shop-category {
   display: flex;
   flex-direction: column;
@@ -98,26 +38,6 @@
 }
 
 @media #{$tablet-widths} {
-  .bb_jgallery {
-    &-wrapper {
-      background-color: #ebecf3;
-    }
-    .jg_row {
-      display: flex;
-      flex-direction: row;
-      flex-wrap: wrap;
-    }
-    .jg_element_gal {
-      width: calc(50% - 10px);
-      margin-left: 0;
-      margin-right: auto;
-      margin-bottom: 20px;
-      background-color: #fff;
-      &:nth-of-type(2n){
-        margin-right: 0;
-      }
-    }
-  }
   .shop-category {
     padding-top: 40px;
     padding-bottom: 40px;
@@ -140,33 +60,6 @@
 }
 
 @media #{$desktop-widths} {
-  .bb_jgallery {
-    padding-left: 20px;
-    padding-right: 20px;
-    &-wrapper {
-      background-color: #ebecf3;
-    }
-    .jg_row {
-      display: flex;
-      flex-direction: row;
-      flex-wrap: wrap;
-      justify-content: flex-start;
-    }
-    .jg_element_gal {
-      width: calc(25% - 20px);
-      margin-right: auto;
-      margin-bottom: 20px;
-      background-color: #fff;
-      margin-left: 0;
-       &:nth-of-type(2n) {
-        margin-left: 0;
-        margin-right: auto;
-      }
-      &:nth-of-type(4) {
-        margin-right: 0;
-      }
-    }
-  }
   .shop-category {
     flex-direction: row;
     justify-content: space-between;
