@@ -1,5 +1,5 @@
     $(document).ready(function () {
-      $('.gallery').magnificPopup({
+      $('.bb_mgallery').magnificPopup({
         delegate: 'a',
         type: 'image',
         closeOnContentClick: false,
