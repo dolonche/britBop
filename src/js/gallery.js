@@ -9,7 +9,7 @@
           verticalFit: true,
         },
         gallery: {
-          enabled: true
+          enabled: true,
         },
         zoom: {
           enabled: true,
@@ -18,6 +18,5 @@
             return element.find('img');
           }
         }
-
       });
     });
