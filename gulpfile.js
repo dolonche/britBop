@@ -313,9 +313,9 @@ gulp.task('js:build-ftp', function (done) {
       auth: 'keyMain',
       remotePath: remotePath + 'js/'
     }))
-    .pipe(sourcemaps.init()) //Инициализируем sourcemap
+    //.pipe(sourcemaps.init()) //Инициализируем sourcemap
     .pipe(uglify()) //Сожмем наш js
-    .pipe(sourcemaps.write()) //Пропишем карты
+    //.pipe(sourcemaps.write()) //Пропишем карты
     .pipe(rename({
       suffix: '.min'
     })) //добавим суффикс .min к выходному файлу
@@ -329,7 +329,7 @@ gulp.task('js:build-ftp', function (done) {
 // билдинг домашнего css
 gulp.task('css:build-ftp', function (done) {
   gulp.src(path.src.css) //Выберем наш основной файл стилей
-    .pipe(sourcemaps.init()) //инициализируем soucemap
+    //.pipe(sourcemaps.init()) //инициализируем soucemap
     .pipe(sass().on('error', function () {
     gulp.src(path.src.css)
     .pipe(notify("🤔🤔🤔🤔🤔")) //уведомление об ошибке
@@ -341,7 +341,7 @@ gulp.task('css:build-ftp', function (done) {
     //.pipe(changed(path.build.css))
     .pipe(gulp.dest(path.build.css)) //выгрузим в build
     .pipe(cssmin()) //Сожмем
-    .pipe(sourcemaps.write()) //пропишем sourcemap
+    //.pipe(sourcemaps.write()) //пропишем sourcemap
     .pipe(rename({
       suffix: '.min'
     })) //добавим суффикс .min к имени выходного файла
@@ -356,16 +356,7 @@ gulp.task('css:build-ftp', function (done) {
     .pipe(connect.reload()) //перезагрузим сервер
   done();
 });
-// билдинг вендорного css
-gulp.task('cssVendor:build-ftp', function (done) {
-  gulp.src(path.src.cssVendor) // Берем папку vendor
-    .pipe(sourcemaps.init()) //инициализируем soucemap
-    .pipe(cssmin()) //Сожмем
-    .pipe(sourcemaps.write()) //пропишем sourcemap
-    .pipe(gulp.dest(path.build.css)) //выгрузим в build
-    .pipe(connect.reload()) //перезагрузим сервер
-  done();
-});
+
 
 
 // билдим шрифты
