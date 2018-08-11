@@ -321,6 +321,12 @@ gulp.task('js:build-ftp', function (done) {
     })) //добавим суффикс .min к выходному файлу
     .pipe(changed(path.build.js))
     .pipe(gulp.dest(path.build.js)) //выгрузим готовый файл в build
+    .pipe(mysftp({
+      host: host,
+      authFile: 'ftppass.json',
+      auth: 'keyMain',
+      remotePath: remotePath + 'js/'
+    }))
     .pipe(connect.reload()) //И перезагрузим сервер
   done();
 });
