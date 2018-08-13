@@ -40,6 +40,7 @@
         <position>footer-nav</position>
 		<position>script-bottom</position>
 		<position>script-top</position>
+        <position>script-top-prehead</position>
 		<position>search</position>
 		<position>mnav</position>
 		<position>hnav</position>
