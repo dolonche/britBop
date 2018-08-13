@@ -1,9 +1,9 @@
 <?php defined('_JEXEC') or die('Direct Access to this location is not allowed.'); ?>
 <div class="gallery">
 <?php if($this->params->get('show_page_heading', 0)): ?>
-  <h2>
+  <h1>
     <?php echo $this->escape($this->params->get('page_heading')); ?>
-  </h2>
+  </h1>
 <?php endif;
       if($this->params->get('show_top_modules', 0)): ?>
   <div class="jg_topmodules">

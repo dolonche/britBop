@@ -8,7 +8,7 @@ $templateparams = $app->getTemplate(true)->params;
 $this->language = $doc->language;
 $this->direction = $doc->direction;
 $baseuri=JUri::base();
-$cssVersion="1.62";
+$cssVersion="1.66";
 $home =(JURI::getInstance()->toString()==JURI::base());
 //JHtml::script($this->baseurl.'templates/'.$this->template.'/js/main.js');
 ?>
@@ -30,6 +30,7 @@ $home =(JURI::getInstance()->toString()==JURI::base());
 		<meta name="msapplication-config" content="<?php echo $this->baseurl ?>/templates/<?php echo $this->template; ?>/img/favicons/browserconfig.xml">
 		<meta name="theme-color" content="#ffffff">
 		<link rel="stylesheet" href="<?php echo $this->baseurl ?>/templates/<?php echo $this->template; ?>/css/styles.min.css?v=<?php echo $cssVersion; ?>" />
+		<jdoc:include type="modules" name="script-top-prehead" style="none" />
 		<jdoc:include type="head" />
 		<jdoc:include type="modules" name="script-top" style="none" />
 	</head>
