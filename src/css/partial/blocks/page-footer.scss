@@ -4,6 +4,11 @@
   overflow: hidden;
   padding-top: 20px;
   position: relative;
+  a {
+    &:hover {
+      text-decoration: none;
+    }
+  }
   &__arrow {
     visibility: hidden;
     opacity: 0;
@@ -20,8 +25,8 @@
       width: 100%;
       height: 100%;
       position: relative;
-      &:hover{
-      background-color: #556;
+      &:hover {
+        background-color: #556;
       }
       &::before {
         position: absolute;

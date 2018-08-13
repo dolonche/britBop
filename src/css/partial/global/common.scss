@@ -25,6 +25,20 @@ p {
 a {
   color: $orange;
   text-decoration: none;
+  &:link{
+    &:active{
+      opacity: 0.5;
+    }
+    &:visited{
+      color: #603d20;
+      &:hover{
+        text-decoration: underline;
+      }
+      &:active{
+        color: #efd19f;
+      }
+    }
+  }
 }
 
 h3,
@@ -42,10 +56,12 @@ h5 {
 }
 
 .prime {
+  ul{
+    padding-left: 0;
   li {
     list-style-type: none;
     position: relative;
-    padding-left: 15px;
+    padding-left: 13px;
 
     &::before {
       position: absolute;
@@ -59,13 +75,21 @@ h5 {
       transform: translateY(-4px);
     }
   }
+  }
   ol {
     list-style: none;
     padding-left: 0;
     margin: 0;
-    span{
+    & li {
+      padding-left: 0;
+      &::before {
+        display: none;
+      }
+    }
+    span {
       color: $orange;
       margin-right: 5px;
+      font-weight: bold;
     }
   }
 }
@@ -111,6 +135,105 @@ blockquote {
       font-size: 40px;
       margin-left: 10px;
       color: #bbc;
+    }
+  }
+}
+
+input[type="radio"] {
+  display: none;
+  & + label {
+    position: relative;
+    padding-left: 35px;
+    cursor: pointer;
+    &::before {
+      position: absolute;
+      content: "";
+      width: 20px;
+      height: 20px;
+      left: 0;
+      background-color: #fff;
+      border-radius: 100%;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+    &::after {
+      display: none;
+    }
+  }
+  &:checked + label {
+    &::after {
+      display: block;
+      width: 10px;
+      height: 10px;
+      position: absolute;
+      content: "";
+      background-color: $orange;
+      border-radius: 100%;
+      top: 50%;
+      transform: translateY(-50%);
+      left: 5px;
+    }
+  }
+}
+
+input[type="checkbox"] {
+  display: none;
+  & + label {
+    position: relative;
+    padding-left: 35px;
+    cursor: pointer;
+    &::before {
+      position: absolute;
+      content: "";
+      width: 20px;
+      height: 20px;
+      left: 0;
+      background-color: #fff;
+      border-radius: 2px;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+    &::after {
+      display: none;
+    }
+  }
+  &:checked + label {
+    &::after {
+      content: "";
+      display: block;
+      left: 7px;
+      top: 1px;
+      display: block;
+      position: absolute;
+      width: 5px;
+      height: 11px;
+      border: solid $orange;
+      border-width: 0 2px 2px 0;
+      transform: rotate(45deg);
+    }
+  }
+}
+
+table {
+  border-collapse: separate;
+  border-spacing: 0 5px;
+  tr {
+    &:first-of-type {
+      font-weight: 700;
+      text-transform: uppercase;
+      font-size: 12px;
+    }
+    td {
+      padding-bottom: 20px;
+      padding-left: 20px;
+      padding-top: 20px;
+      padding-right: 20px;
+    }
+    &:nth-of-type(n) {
+      background-color: #dde;
+    }
+    &:nth-of-type(2n) {
+      background-color: #f5f6fb;
     }
   }
 }
