@@ -6,7 +6,7 @@
 	"license": "MIT",
 	"dependencies": {
 		"gulp": "^4.0.0",
-		"npm": "^5.8.0"
+		"npm": "^6.4.1"
 	},
 	"scripts": {
 		"gulp": "gulp"
@@ -14,7 +14,7 @@
 	"devDependencies": {
 		"gulp-autoprefixer": "latest",
 		"gulp-changed": "^3.2.0",
-		"gulp-connect": "^5.5.0",
+		"gulp-connect": "^5.6.1",
 		"gulp-imagemin": "latest",
 		"gulp-minify-css": "latest",
 		"gulp-notify": "^3.2.0",
@@ -23,9 +23,10 @@
 		"gulp-rigger": "^0.5.8",
 		"gulp-sass": "^3.2.1",
 		"gulp-sftp": "^0.1.5",
+		"gulp-sftp-up4": "^0.1.8",
 		"gulp-sourcemaps": "^2.6.4",
 		"gulp-uglify": "latest",
-		"gulp-watch": "^5.0.0",
+		"gulp-watch": "^5.0.1",
 		"gulp.spritesmith": "latest",
 		"rimraf": "^2.6.2"
 	}
