@@ -14,7 +14,7 @@ var gulp = require('gulp'), //основной плагин gulp
   plumber = require("gulp-plumber"), //предохранитель для остановки гальпа
   watch = require('gulp-watch'), //расширение возможностей watch
   connect = require('gulp-connect'), //livereload
-  mysftp = require('gulp-sftp-edit'), // sftp
+  mysftp = require('gulp-sftp-up4'), // sftp
   changed = require('gulp-changed');
 
 var path = {
